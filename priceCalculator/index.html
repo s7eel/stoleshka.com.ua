@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="./styles.css">
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="main.js"></script>
@@ -17,114 +18,102 @@
 <div class="modal fade" tabindex="-1" role="dialog" id="calcModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-body">
-                <form class="form-horizontal" id="calculator">
+            <div class="modal-body row">
+                <div class="col-md-8">
+                    <form id="calculator">
 
-                    <!--Basic requirements-->
+                        <!--Basic requirements-->
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="itemName">Наименование товара</label>
-                        <div class="col-md-4">
-                            <select id="itemName" name="itemName" class="form-control">
-                                <option>столешница</option>
-                                <option>ступени</option>
-                                <option>подоконник</option>
-                                <option>фасад прямой</option>
-                                <option>мебельный щит</option>
+                        <div class="form-group">
+                            <label class="control-label" for="itemName">Наименование товара</label>
+                            <select id="itemName" name="itemName" class="form-control itemName">
+                                <option value="tabletop">столешница</option>
+                                <option value="steps">ступени</option>
+                                <option value="windowsill">подоконник</option>
+                                <option value="frontFacade">фасад прямой</option>
+                                <option value="furnitureBoard">мебельный щит</option>
                             </select>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Порода дерева</label>
-                        <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Порода дерева</label>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="woodBreed">
+                                    <input type="checkbox" name="woodBreed" value="ash">
                                     Ясень
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="woodBreed">
+                                    <input type="checkbox" name="woodBreed" value="oak">
                                     Дуб
                                 </label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Тип склейки</label>
-                        <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Тип склейки</label>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="bondingType">
+                                    <input type="checkbox" name="bondingType" value="glued">
                                     Клеенный массив
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="bondingType">
+                                    <input type="checkbox" name="bondingType" value="spliced">
                                     Срощенный
                                 </label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Толщина</label>
-                        <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Толщина</label>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="gauge">
+                                    <input type="checkbox" name="gauge" value="20">
                                     20 мм
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="gauge">
+                                    <input type="checkbox" name="gauge" value="30">
                                     30 мм
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="gauge">
+                                    <input type="checkbox" name="gauge" value="40">
                                     40 мм
                                 </label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Вид клея</label>
-                        <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Вид клея</label>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="glueType">
+                                    <input type="checkbox" name="glueType" value="waterproof">
                                     Влагостойкий
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="glueType">
+                                    <input type="checkbox" name="glueType" value="notWaterproof">
                                     Не влагостойкий
                                 </label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="detailsNumber">Количество деталей</label>
-                        <div class="col-md-4">
-                            <input name="detailsNumber" id="detailsNumber" type="number" min="0" step="1" class="form-control input-md"
-                                   required>
+                        <div class="form-group">
+                            <label class="control-label" for="detailsNumber">Количество деталей</label>
+                            <input name="detailsNumber" id="detailsNumber" type="number" min="0" step="1"
+                                   class="form-control input-md" required>
                             <span>шт.</span>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Габаритные размеры</label>
-                        <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="ontrol-label">Габаритные размеры</label>
                             <div class="input-group">
                                 <input name="size" type="text" placeholder="длина"
                                        class="form-control input-md" required>
@@ -132,112 +121,100 @@
                                        class="form-control input-md" required>
                             </div>
                         </div>
-                    </div>
 
-                    <!--Additional requirements-->
+                        <!--Additional requirements-->
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Снятие фаски по периметру</label>
-                        <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Снятие фаски по периметру</label>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="chamferRemoving">
+                                    <input type="checkbox" name="chamferRemoving" value="1">
                                     Да
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="chamferRemoving">
+                                    <input type="checkbox" name="chamferRemoving" value="0">
                                     Нет
                                 </label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Криволинейное форматирование / сложный
-                            радиус</label>
-                        <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Криволинейное форматирование / сложный
+                                радиус</label>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="complexRadius">
+                                    <input type="checkbox" name="complexRadius" value="1">
                                     Да
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="complexRadius">
+                                    <input type="checkbox" name="complexRadius" value="0">
                                     Нет
                                 </label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Подготовка к покрытию</label>
-                        <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Подготовка к покрытию</label>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="preparationForCovering">
+                                    <input type="checkbox" name="сoveringPreparation" value="1">
                                     Да
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="preparationForCovering">
+                                    <input type="checkbox" name="сoveringPreparation" value="0">
                                     Нет
                                 </label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Покрытие</label>
-                        <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Покрытие</label>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="covering">
+                                    <input type="checkbox" name="covering" value="polish">
                                     лак
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="covering">
+                                    <input type="checkbox" name="covering" value="polishWithColor">
                                     лак + тон
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="covering">
+                                    <input type="checkbox" name="covering" value="noCovering">
                                     без покрытия
                                 </label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Выбор цвета тонирования</label>
-                        <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Выбор цвета тонирования</label>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="toningColor">
+                                    <input type="checkbox" name="toningColor" value="wenge">
                                     венге
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="toningColor">
+                                    <input type="checkbox" name="toningColor" value="bleached">
                                     выбеленный
                                 </label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">
-                            Заказать весь комплекс услуг и получить скидку - 13 %
-                        </label>
-                        <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">
+                                Заказать весь комплекс услуг и получить скидку - 13 %
+                            </label>
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" name="discount">
@@ -245,30 +222,59 @@
                                 </label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Упаковка изделия / деталей</label>
-                        <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Упаковка изделия / деталей</label>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="packaging">
+                                    <input type="checkbox" name="packaging" value="1">
                                     Да
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="packaging">
+                                    <input type="checkbox" name="packaging" value="0">
                                     Нет
                                 </label>
                             </div>
                         </div>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <div id="calculatedSums" class="calculated-sums">
+                    <p>Изготовление
+                        <span id="productionCost"></span>
+                        грн
+                    </p>
+                    <p>Снятие фаски
+                        <span id="chamferRemovingCost"></span>
+                        грн
+                    </p>
+                    <p>Криволинейное форматирование
+                        <span id="complexRadiusCost"></span>
+                        грн
+                    </p>
+                    <p>Подготовка к покраске
+                        <span id="сoveringPreparationCost"></span>
+                        грн
+                    </p>
+                    <p>Покрытие
+                        <span id="coveringCost"></span>
+                        грн
+                    </p>
+                    <div class="total-sums">
+                        <hr>
+                        <hr>
+                        <p >Итого: <span id="total"></span> грн</p>
+                        <p>Скидка: <span id="discount"></span> грн</p>
+                        <p>Итого со скидкой: <span id="totalWithDiscount"></span> грн</p>
                     </div>
-
-                </form>
+                </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 </body>
 </html>
