@@ -1,0 +1,62 @@
+//RATIOS need to be updated from the server side
+
+const RATIOS = {
+  chamferRemovingPrice: 150,
+  complexRadiusPrice: 150,
+  coveringPreparationPrice: 150,
+  coveringPrice: {
+    polish: 300,
+    polishWithColor: 400,
+    noCovering: 0
+  },
+  packagingPrice: 35,
+  woodBreedPrice: {
+    ash: 2200,
+    oak: 2500
+  },
+  bondingType: {
+    glued: 1,
+    spliced: .8
+  },
+  gauge: {
+    20: .7,
+    30: .9,
+    40: 1
+  },
+  discount: .07
+};
+
+function calcSums (inputData) {
+  var sums = {
+    productionCost: calcProductionCost(inputData),
+    chamferRemovingCost: calcChamferRemovingCost(inputData),
+    complexRadiusCost: calcComplexRadiusCost(inputData),
+    coveringPreparationCost: calcCoveringPreparationCost(inputData),
+    coveringCost: calcCoveringCost(inputData)
+  };
+  sums.total = sums.productionCost + sums.chamferRemovingCost + sums.complexRadiusCost + sums.coveringPreparationCost + sums.coveringCost;
+  sums.discount = inputData.discount ? sums.total * RATIOS.discount : 0;
+  sums.totalWithDiscount = sums.total + sums.discount;
+
+  return sums;
+}
+
+function calcProductionCost (inputData) {
+  return RATIOS.woodBreedPrice[inputData.woodBreed] * inputData.size * RATIOS.gauge[inputData.gauge] * RATIOS.bondingType[inputData.bondingType] * inputData.detailsNumber;
+}
+
+function calcChamferRemovingCost (inputData) {
+  return parseInt(inputData.chamferRemoving) ? 2 * inputData.size * RATIOS.chamferRemovingPrice * inputData.detailsNumber : 0;
+}
+
+function calcComplexRadiusCost (inputData) {
+  return parseInt(inputData.complexRadius) ? RATIOS.complexRadiusPrice * inputData.detailsNumber : 0;
+}
+
+function calcCoveringPreparationCost (inputData) {
+  return parseInt(inputData.chamferRemoving) ? RATIOS.chamferRemovingPrice * inputData.size * inputData.detailsNumber : 0;
+}
+
+function calcCoveringCost (inputData) {
+  return RATIOS.coveringPrice[inputData.covering] * inputData.size * inputData.detailsNumber;
+}
