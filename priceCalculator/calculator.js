@@ -4,6 +4,10 @@ const RATIOS = {
   chamferRemovingPrice: 150,
   complexRadiusPrice: 150,
   coveringPreparationPrice: 150,
+  glueType: {
+    waterproof: 1.2,
+    notWaterproof: 1
+  },
   coveringPrice: {
     polish: 300,
     polishWithColor: 400,
@@ -42,7 +46,7 @@ function calcSums (inputData) {
 }
 
 function calcProductionCost (inputData) {
-  return RATIOS.woodBreedPrice[inputData.woodBreed] * inputData.size * RATIOS.gauge[inputData.gauge] * RATIOS.bondingType[inputData.bondingType] * inputData.detailsNumber;
+  return RATIOS.woodBreedPrice[inputData.woodBreed] * inputData.size * RATIOS.glueType[inputData.glueType] * RATIOS.gauge[inputData.gauge] * RATIOS.bondingType[inputData.bondingType] * inputData.detailsNumber;
 }
 
 function calcChamferRemovingCost (inputData) {
@@ -54,7 +58,7 @@ function calcComplexRadiusCost (inputData) {
 }
 
 function calcCoveringPreparationCost (inputData) {
-  return parseInt(inputData.chamferRemoving) ? RATIOS.chamferRemovingPrice * inputData.size * inputData.detailsNumber : 0;
+  return parseInt(inputData.coveringPreparation) ? RATIOS.chamferRemovingPrice * inputData.size * inputData.detailsNumber : 0;
 }
 
 function calcCoveringCost (inputData) {
