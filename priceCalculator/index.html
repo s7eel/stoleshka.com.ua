@@ -120,9 +120,9 @@
                         <div class="form-group">
                             <label class="ontrol-label">Габаритные размеры</label>
                             <div class="input-group">
-                                <input name="size" type="text" placeholder="длина"
+                                <input name="length" type="number" placeholder="длина"
                                        class="form-control input-md" required>
-                                <input id="textinput" name="size" type="text" placeholder="ширина"
+                                <input name="width" type="number" placeholder="ширина"
                                        class="form-control input-md" required>
                             </div>
                         </div>
@@ -276,6 +276,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="refresh" class="btn btn-default">Очистить</button>
+                <button type="button" id="submit" class="btn btn btn-success" data-dismiss="modal">Оформить</button>
             </div>
         </div>
     </div>

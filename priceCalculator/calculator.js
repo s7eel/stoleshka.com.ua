@@ -31,6 +31,8 @@ const RATIOS = {
 };
 
 function calcSums (inputData) {
+  inputData.size = inputData.width * inputData.length / 1000000;
+
   var sums = {
     productionCost: calcProductionCost(inputData),
     chamferRemovingCost: calcChamferRemovingCost(inputData),
@@ -38,6 +40,7 @@ function calcSums (inputData) {
     coveringPreparationCost: calcCoveringPreparationCost(inputData),
     coveringCost: calcCoveringCost(inputData)
   };
+
   sums.total = sums.productionCost + sums.chamferRemovingCost + sums.complexRadiusCost + sums.coveringPreparationCost + sums.coveringCost;
   sums.discount = inputData.discount ? sums.total * RATIOS.discount : 0;
   sums.totalWithDiscount = sums.total + sums.discount;
