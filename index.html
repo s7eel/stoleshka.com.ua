@@ -762,12 +762,12 @@
 					<form method="post" id="commentform" class="quote_form_list">
 						<div class="col-md-6 col-sm-6">
 							<div class="kode_quote_commet_field">
-								<input placeholder="Your Name*" name="author" type="text" value="" data-default="Name*" size="30" required>
+								<input placeholder="Ваше Имя" name="author" type="text" value="" data-default="Name*" size="30" required>
 							</div>
 						</div>
 						<div class="col-md-6 col-sm-6">
 							<div class="kode_quote_commet_field">
-								<input placeholder="Your Mobile" name="email" type="text" value="" data-default="Email*" size="30" required>
+								<input id="mask_phone" placeholder="Ваш телефон" name="phone" type="text" required>
 							</div>
 						</div>
 						<div class="col-md-6 col-sm-6">
@@ -1091,7 +1091,16 @@
 		</div>
 		<!--kode_wraper end-->
 		<!--js/jquery.js start-->
-		<script src="js/jquery.js"></script>
+		<!-- Подключаем библиотеку 3.1.1 исключительно для маски -->
+		<script src="js/jquery-3.1.1-jquery.min.js"></script>
+		<!-- Маска для телефона -->
+		<script src="js/jquery.inputmask.js"></script>
+		<script>
+            $(document).ready(function () {
+                $("#mask_phone").inputmask("+3(999)9999999");
+            });
+		</script>
+		<!--<script src="js/jquery.js"></script>-->
 		<!--js/bootstrap.js start-->
 		<script  src="js/bootstrap.min.js"></script>
 		<!--js/jquery.downCount.js start-->
