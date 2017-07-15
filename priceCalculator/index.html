@@ -17,8 +17,12 @@
 </button>
 
 <div class="modal fade" tabindex="-1" role="dialog" id="calcModal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
             <div class="modal-body row">
                 <div class="col-md-8">
                     <form id="calculator">
@@ -162,13 +166,13 @@
                             <label class="control-label">Подготовка к покрытию</label>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="сoveringPreparation" value="1">
+                                    <input type="checkbox" name="coveringPreparation" value="1">
                                     Да
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="сoveringPreparation" value="0">
+                                    <input type="checkbox" name="coveringPreparation" value="0">
                                     Нет
                                 </label>
                             </div>
@@ -214,7 +218,7 @@
 
                         <div class="form-group">
                             <label class="control-label">
-                                Заказать весь комплекс услуг и получить скидку - 13 %
+                                Заказать весь комплекс услуг и получить скидку - 7 %
                             </label>
                             <div class="checkbox">
                                 <label>
@@ -243,34 +247,34 @@
                 </div>
                 <div class="col-md-4">
                     <div id="calculatedSums" class="calculated-sums">
-                    <p>Изготовление
-                        <span id="productionCost"></span>
-                        грн
-                    </p>
-                    <p>Снятие фаски
-                        <span id="chamferRemovingCost"></span>
-                        грн
-                    </p>
-                    <p>Криволинейное форматирование
-                        <span id="complexRadiusCost"></span>
-                        грн
-                    </p>
-                    <p>Подготовка к покраске
-                        <span id="coveringPreparationCost"></span>
-                        грн
-                    </p>
-                    <p>Покрытие
-                        <span id="coveringCost"></span>
-                        грн
-                    </p>
-                    <div class="total-sums">
-                        <hr>
-                        <hr>
-                        <p >Итого: <span id="total"></span> грн</p>
-                        <p>Скидка: <span id="discount"></span> грн</p>
-                        <p>Итого со скидкой: <span id="totalWithDiscount"></span> грн</p>
+                        <p>Изготовление
+                            <span id="productionCost">0</span>
+                            грн
+                        </p>
+                        <p>Снятие фаски
+                            <span id="chamferRemovingCost">0</span>
+                            грн
+                        </p>
+                        <p>Криволинейное форматирование
+                            <span id="complexRadiusCost">0</span>
+                            грн
+                        </p>
+                        <p>Подготовка к покраске
+                            <span id="coveringPreparationCost">0</span>
+                            грн
+                        </p>
+                        <p>Покрытие
+                            <span id="coveringCost">0</span>
+                            грн
+                        </p>
+                        <div class="total-sums">
+                            <hr>
+                            <hr>
+                            <p>Итого: <span id="total">0</span> грн</p>
+                            <p>Скидка: <span id="discount">0</span> грн</p>
+                            <p>Итого со скидкой: <span id="totalWithDiscount">0</span> грн</p>
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
         </div>
