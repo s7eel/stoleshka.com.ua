@@ -13,7 +13,7 @@ $(function () {
     // toningColor: undefined,
     // discount: false,
     // packaging: undefined
-};
+  };
 
   changeCheckboxBehavior();
 
@@ -25,7 +25,7 @@ $(function () {
 
     for (var key in sums) {
       if (sums.hasOwnProperty(key)) {
-        $('#'+ key).html(Number(sums[key] || 0 ).toFixed());
+        $('#' + key).html(Number(sums[key] || 0).toFixed());
       }
     }
   });
@@ -35,12 +35,8 @@ $(function () {
 function changeCheckboxBehavior () {
   $("input:checkbox").on('click', function () {
     var $box = $(this);
-    if ($box.is(":checked")) {
-      var group = "input:checkbox[name='" + $box.attr("name") + "']";
-      $(group).prop("checked", false);
-      $box.prop("checked", true);
-    } else {
-      $box.prop("checked", false);
-    }
+    var group = "input:checkbox[name='" + $box.attr("name") + "']";
+    $(group).prop("checked", false);
+    $box.prop("checked", true);
   });
 }
