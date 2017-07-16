@@ -18,7 +18,11 @@ class Action
 
     public function mainpage()
     {
-
+        $title = 'Главная страница';
+        $header = 'pages/header.php';
+        $main = 'pages/main.php';
+        $footer = 'pages/footer.php';
+        include_once $this->template;
     }
     public function mainpage2()
     {
