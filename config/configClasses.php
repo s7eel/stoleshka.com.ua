@@ -6,5 +6,5 @@
  * Time: 12:49
  */
 return array(
-    $action_object = new Action($db),
+    $action_object = new Action($db, $template),
 );

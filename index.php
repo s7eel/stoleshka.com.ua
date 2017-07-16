@@ -14,6 +14,6 @@ if(!$action){
     $action = 'mainpage';
 }
 if(!method_exists($action_object, $action)){
-    $action='mainpage';
+    $action='errorPage';
 }
 $action_object->$action();
