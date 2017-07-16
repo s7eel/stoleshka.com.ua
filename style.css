@@ -2745,6 +2745,11 @@ header{
 .kode_service_wraper .kode_service_des .col-md-3{
 	padding:0px;
 }
+
+.kode_service_wraper .kode_service_des .col-md-6{
+	padding:0px;
+}
+
 .kode_service_des.row{
 	margin:0px;
 }
