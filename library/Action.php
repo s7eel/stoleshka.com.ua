@@ -8,18 +8,24 @@
 class Action
 {
     protected $data;
+    protected $template;
 
-    function __construct($db)
+    function __construct($db, $template)
     {
         $this->data = new MainStorage($db);
+        $this->template = $template;
     }
 
     public function mainpage()
     {
-        echo $this->data->printWord();
+
     }
     public function mainpage2()
     {
         echo $this->data->printWord().'hihihi';
+    }
+    public function errorPage()
+    {
+        echo '404';
     }
 }

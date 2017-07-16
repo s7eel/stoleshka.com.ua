@@ -17,3 +17,4 @@ $db = array(
     'pass' => 'root',
     'name' => 'stoleshka',
 );
+$template = $_SERVER['DOCUMENT_ROOT'].'/'.'templates/maintemplate.php';
