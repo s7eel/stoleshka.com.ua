@@ -343,11 +343,12 @@
     </div>
 </div>
 <!--// KODE SERVICE4 WRAP END //-->
-
+<!-------------------->
 <!--FORM WRAP START -->
+<!-------------------->
 <div class="kode_info_form_wrap">
     <div class="kode_info_logo">
-        <a href="index.html#"><img src="images/logo10.png" alt=""/></a>
+        <a href="index.php"><img src="images/logo10.png" alt=""></a>
     </div>
     <div class="kode_qoute_form">
         <div class="kode_section_hdg heading_2 heading_3 light">
@@ -358,7 +359,7 @@
         <form method="post" id="commentform" class="quote_form_list">
             <div class="col-md-6 col-sm-6">
                 <div class="kode_quote_commet_field">
-                    <input placeholder="Ваше Имя" name="author" type="text" value="" data-default="Name*" size="30" required>
+                    <input placeholder="Ваше Имя" name="name" type="text" data-default="Name*" size="30" required>
                 </div>
             </div>
             <div class="col-md-6 col-sm-6">
@@ -368,24 +369,55 @@
             </div>
             <div class="col-md-6 col-sm-6">
                 <div class="kode_quote_commet_field">
-                    <input id="Mail" placeholder="Mail" name="Mail" type="text" required>
+                    <input id="e-mail" placeholder="Mail" name="email" type="email">
                 </div>
             </div>
             <div class="col-md-6 col-sm-6">
                 <div class="kode_quote_commet_field">
-                    <input id="city" placeholder="Город" name="city" type="text" required>
+<!--                    <input id="city" placeholder="Город" name="city" type="text" required>-->
+                    <select name="city" onmousedown="if(this.options.length>5){this.size=5;}"
+                            onchange="this.blur()" onblur="this.size=0;">
+                        <option value="Днепр">Днепр</option>
+                        <option value="Винница">Винница</option>
+                        <option value="Киев">Киев</option>
+                        <option value="Житомир">Житомир</option>
+                        <option value="Запорожье">Запорожье</option>
+                        <option value="Кропивницкий">Кропивницкий</option>
+                        <option value="Франковск">Ивано-Франковск</option>
+                        <option value="Луганск">Луганск</option>
+                        <option value="Луцк">Луцк</option>
+                        <option value="Львов">Львов</option>
+                        <option value="Николаев">Николаев</option>
+                        <option value="Одесса">Одесса</option>
+                        <option value="Полтава">Полтава</option>
+                        <option value="Ровно">Ровно</option>
+                        <option value="Суммы">Суммы</option>
+                        <option value="Тернополь">Тернополь</option>
+                        <option value="Ужгород">Ужгород</option>
+                        <option value="Харьков">Харьков</option>
+                        <option value="Херсон">Херсон</option>
+                        <option value="Хмельницкий">Хмельницкий</option>
+                        <option value="Черкассы">Черкассы</option>
+                        <option value="Чернигов">Чернигов</option>
+                        <option value="Черновцы">Черновцы</option>
+                        <option value="Донецк">Донецк</option>
+                    </select>
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="kode_quote_textarea">
-                    <textarea placeholder="Сообщение/Вопрос" name="comment"></textarea>
+                    <textarea placeholder="Сообщение/Вопрос" name="message" required></textarea>
                 </div>
-                <p class="form_quote_submit"><input name="submit" type="submit" class="kode-button-style-2 kode-theme-color-bg-color" value="Отправить"></p>
+                <p class="form_quote_submit">
+                    <input name="submit" type="submit" class="kode-button-style-2 kode-theme-color-bg-color" value="Отправить" formaction="/index.php?page=callform">
+                </p>
             </div>
         </form>
     </div>
 </div>
+<!--------------------------------->
 <!--// KODE INFO FORM WRAP END //-->
+<!--------------------------------->
 
 <!--// KODE NEWS2 WRAP START //-->
 <div class="kode_news2_wrap">
