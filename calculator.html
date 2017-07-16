@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="zxx">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>HOME PAGE 01</title>
+<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Главная</title>
 		<!--css/bootstrap.min.css start-->
 		<link href="css/bootstrap.css" rel="stylesheet">
+
 		<!--style.css start-->
 		<link href="style.css" rel="stylesheet">
 		<link href="css/slick.css" rel="stylesheet">
@@ -14,11 +15,16 @@
 		<link href="css/prettyPhoto.css" rel="stylesheet">
 		<!--swiper.min.css start-->
 		<link href="css/portfolio.css" rel="stylesheet">
+		<!--swiper.min.css start-->
+		<link href="css/shortcode.css" rel="stylesheet">
+		<!--swiper.min.css start-->
+		<link href="css/owl.carousel.css" rel="stylesheet">
+		<!--css/jquery.bxslider.css start-->
+		<link href="css/selectric.css" rel="stylesheet">
 		<!--css/component.css start-->
 		<link href="css/component.css" rel="stylesheet">
-		<link href="css/selectric.css" rel="stylesheet">
 		<!--svg-icon.css start-->
-		<link href="svg-icon.css" rel="stylesheet">
+		<!--<link href="svg-icon.css" rel="stylesheet">-->
 		<!--css/font-awesome.css start-->
 		<link href="css/font-awesome.css" rel="stylesheet">
 		<link href="css/component.css" rel="stylesheet">
@@ -28,72 +34,439 @@
 		<link href="css/jquery.bxslider.css" rel="stylesheet">
 		<!--css/color.css start-->
 		<link href="css/color.css" rel="stylesheet">
-		<!--css/color.css start-->
-		<link href="css/shortcode.css" rel="stylesheet">
 		<!--css/widget.css start-->
 		<link href="css/widget.css" rel="stylesheet">
 		<!--css/responsive.css start-->
 		<link href="css/responsive.css" rel="stylesheet">
+		 <script src="priceCalculator/calculator.js"></script>
+    <script src="priceCalculator/main.js"></script>
+    <link rel="stylesheet" href="priceCalculator/styles.css">
+		<link href="bootstrap-social.css" rel="stylesheet" type="text/css"  />
+<style type="text/css">
+	.calculated-sums {
+    display: inline-block;
+    border: 1px solid #666;
+    padding: 5px;
+}
+
+.calculated-sums span{
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+}
+
+.total-sums {
+    display: inline-block;
+    margin-left: 20%;
+}
+
+.total-sums hr {
+    border: none;
+    height: 1px;
+    background-color: #666;
+    color: #666;
+}
+
+.total-sums hr:first-of-type {
+    margin-bottom: 0;
+}
+
+.total-sums hr:last-of-type {
+    margin-top: 4px;
+    margin-bottom: 6px;
+}
+	#calcModal label {
+    color: #4a4a4a;
+    display: block;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+</style>
+
+
+
+
+
 	</head>
 	<body>
 		
-				
-		
-			
-			<!--// KODE SERVICE WPRAPER START //-->
-			<div class="kode_service_wraper">
-			<!-- 	<div class="container-fluid"> -->
-			<div class="container">
-					<div class="kode_history_heading">
-						<h2><span class="border-style"></span>Наша продукция<span class="border-style border-right"></span> </h2>
-						<p><span><b>Выбирите продукцию, стоимость которой Вам необходимо рассчетать </b></span> </p>
+				<div class="content-wraper">
+				<!--// KODE BANNER START//-->
+				<div class="kode_banner">
+					<div class="container">
+						<div class="kode_banner_titile">
+							<h2>Рассчёт стоимости</h2>
+						</div>
 					</div>
-					<ul class="kode_service_des row">
-						<li class="kode_service_fig col-md-6">
-							<figure>
-								<img src="images/service.jpg" alt="">
-								<figcaption>
-									<a href="calc_stoleshnica.html"><i class="fa fa-lightbulb-o"></i></a>
-									<h3>Столешницы</h3>
-									<p>Lorem ipsum dolor asit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt</p>
-								</figcaption>
-							</figure>
-						</li>
-						<li class="kode_service_fig col-md-6">
-							<figure>
-								<img src="images/service1.jpg" alt="">
-								<figcaption>
-									<a href="calc_stupeni.html#"><i class="fa fa-cogs"></i></a>
-									<h3>ступени</h3>
-									<p>Lorem ipsum dolor asit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt</p>
-								</figcaption>
-							</figure>
-						</li>
-						<li class="kode_service_fig col-md-6">
-							<figure>
-								<img src="images/service2.jpg" alt="">
-								<figcaption>
-									<a href="calc_podokonniki.html"><i class="fa fa-map-o"></i></a>
-									<h3>подоконники</h3>
-									<p>Lorem ipsum dolor asit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt</p>
-								</figcaption>
-							</figure>
-						</li>
-						<li class="kode_service_fig col-md-6">
-							<figure>
-								<img src="images/service3.jpg" alt="">
-								<figcaption>
-									<a href="calc_fasadi.html"><i class="fa fa-building-o"></i></a>
-									<h3>прямые фасады</h3>
-									<p>Lorem ipsum dolor asit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt</p>
-								</figcaption>
-							</figure>
-						</li>
-
-					</ul>
 				</div>
-			</div>
-			<!--// KODE SERVICE WPRAPER END //-->
+				<!--// KODE BANNER END//-->
+				
+				<!--// KODE PRATICES AREA START //-->
+				<div class="kode_pratices_area">
+					<div class="container">
+						<div class="kode_section_heading">
+							<h6>Рады предложить Вам изделия из натурального дерева</h6>
+							<h3>Выбирите продукцию</h3>
+							<span><i class="fa fa-cogs"></i></span>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="kode_pratices_content">
+									<figure>
+										<img src="images/area.jpg" alt="">
+										<figcaption>
+											<h4>Столешницы</h4>
+											<p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue penatius </p>
+											<a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color" href="" data-toggle="modal" data-target="#calcModal">Рассчитать</a>
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="kode_pratices_content">
+									<figure>
+										<img src="images/area1.jpg" alt="">
+										<figcaption>
+											<h4>Ступени										
+											</h4>
+											<p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue penatius </p>
+											<a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color" href="" data-toggle="modal" data-target="#calcModal">Рассчитать</a>
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="kode_pratices_content">
+									<figure>
+										<img src="images/area2.jpg" alt="">
+										<figcaption>
+											<h4>
+												Подоконники
+											</h4>
+											<p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue penatius </p>
+											<a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color" href="" data-toggle="modal" data-target="#calcModal">Рассчитать</a>
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="kode_pratices_content">
+									<figure>
+										<img src="images/area3.jpg" alt="">
+										<figcaption>
+											<h4>Прямые фасады</h4>
+											<p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue penatius </p>
+											<a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color" href="" data-toggle="modal" data-target="#calcModal">Рассчитать</a>
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="kode_pratices_content">
+									<figure>
+										<img src="images/area4.jpg" alt="">
+										<figcaption>
+											<h4>Мебельный щит</h4>
+											<p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue penatius </p>
+											<a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color" href="" data-toggle="modal" data-target="#calcModal">Рассчитать</a>
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="kode_pratices_content">
+									<figure>
+										<img src="images/area5.jpg" alt="">
+										<figcaption>
+											<h4>Подробнее о продукции</h4>
+											<p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue penatius </p>
+											<a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color" href="" data-toggle="modal" data-target="#calcModal">Подробнее</a>
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// KODE PRATICES AREA END //-->
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="calcModal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body row">
+                <div class="col-md-6">
+                    <form id="calculator">
+
+                        <!--Basic requirements-->
+
+                        <div class="form-group">
+                            <label class="control-label" for="itemName">Наименование товара</label>
+                            <select id="itemName" name="itemName" class="form-control itemName">
+                                <option value="tabletop">столешница</option>
+                                <option value="steps">ступени</option>
+                                <option value="windowsill">подоконник</option>
+                                <option value="frontFacade">фасад прямой</option>
+                                <option value="furnitureBoard">мебельный щит</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Порода дерева</label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="woodBreed" value="ash">
+                                    Ясень
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="woodBreed" value="oak">
+                                    Дуб
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Тип склейки</label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="bondingType" value="glued">
+                                    Клеенный массив
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="bondingType" value="spliced">
+                                    Срощенный
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Толщина</label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="gauge" value="20">
+                                    20 мм
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="gauge" value="30">
+                                    30 мм
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="gauge" value="40">
+                                    40 мм
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Вид клея</label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="glueType" value="waterproof">
+                                    Влагостойкий
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="glueType" value="notWaterproof">
+                                    Не влагостойкий
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="detailsNumber">Количество деталей</label>
+                            <input name="detailsNumber" id="detailsNumber" type="number" min="0" step="1"
+                                   class="form-control input-md" required>
+                            <span>шт.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Габаритные размеры</label>
+                            <div class="input-group">
+                                <input name="length" type="number" placeholder="длина"
+                                       class="form-control" required>
+                                <input name="width" type="number" placeholder="ширина"
+                                       class="form-control" required>
+                            </div>
+                        </div>
+
+                        <!--Additional requirements-->
+
+                        <div class="form-group">
+                            <label class="control-label">Снятие фаски по периметру</label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chamferRemoving" value="1">
+                                    Да
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chamferRemoving" value="0">
+                                    Нет
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Криволинейное форматирование / сложный
+                                радиус</label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="complexRadius" value="1">
+                                    Да
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="complexRadius" value="0">
+                                    Нет
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Подготовка к покрытию</label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="coveringPreparation" value="1">
+                                    Да
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="coveringPreparation" value="0">
+                                    Нет
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Покрытие</label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="covering" value="polish">
+                                    лак
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="covering" value="polishWithColor">
+                                    лак + тон
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="covering" value="noCovering">
+                                    без покрытия
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Выбор цвета тонирования</label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="toningColor" value="wenge">
+                                    венге
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="toningColor" value="bleached">
+                                    выбеленный
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">
+                                Заказать весь комплекс услуг и получить скидку - 7 %
+                            </label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="discount">
+                                    Да
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Упаковка изделия / деталей</label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="packaging" value="1">
+                                    Да
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="packaging" value="0">
+                                    Нет
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3">
+                    <img src="">
+                    <img src="">
+                </div>
+                <div class="col-md-3">
+                    <div id="calculatedSums" class="calculated-sums">
+                        <p>Изготовление
+                            <span id="productionCost">0</span>
+                            грн
+                        </p>
+                        <p>Снятие фаски
+                            <span id="chamferRemovingCost">0</span>
+                            грн
+                        </p>
+                        <p>Криволинейное форматирование
+                            <span id="complexRadiusCost">0</span>
+                            грн
+                        </p>
+                        <p>Подготовка к покраске
+                            <span id="coveringPreparationCost">0</span>
+                            грн
+                        </p>
+                        <p>Покрытие
+                            <span id="coveringCost">0</span>
+                            грн
+                        </p>
+                        <div class="total-sums">
+                            <hr>
+                            <hr>
+                            <p>Итого: <span id="total">0</span> грн</p>
+                            <p>Скидка: <span id="discount">0</span> грн</p>
+                            <p>Итого со скидкой: <span id="totalWithDiscount">0</span> грн</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="refresh" class="btn btn-default">Очистить</button>
+                <button type="button" id="submit" class="btn btn btn-success" data-dismiss="modal">Оформить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 			
 			
 		</div>
