@@ -374,7 +374,6 @@
             </div>
             <div class="col-md-6 col-sm-6">
                 <div class="kode_quote_commet_field">
-<!--                    <input id="city" placeholder="Город" name="city" type="text" required>-->
                     <select name="city" onmousedown="if(this.options.length>5){this.size=5;}"
                             onchange="this.blur()" onblur="this.size=0;">
                         <option value="Днепр">Днепр</option>
@@ -415,11 +414,13 @@
         </form>
     </div>
 </div>
-<!--------------------------------->
-<!--// KODE INFO FORM WRAP END //-->
-<!--------------------------------->
+<!----------------------->
+<!--// FORM WRAP END //-->
+<!----------------------->
 
-<!--// KODE NEWS2 WRAP START //-->
+<!-------------------->
+<!--// BLOG START //-->
+<!-------------------->
 <div class="kode_news2_wrap">
     <div class="container">
         <div class="kode_section_hdg heading_2 heading_3">
@@ -428,67 +429,33 @@
             <p><span>Новости Нашей компании  </span>а так же множество интересных советов по уходу за деревянными изделиями</p>
         </div>
         <div class="row">
+            <!-- ВЫВОД ОДНОГО ЭЛЕМЕНТА БЛОГА -->
+            <?php foreach($blog->getItems() as $key => $item){ ?>
+            <?php $title = mb_substr($item['title'], 0, 40, 'UTF-8').'...';
+                  $shortDescr =mb_substr($item['short_descr'], 0, 245, 'UTF-8').'...';
+                  $datablog = $blog->getDataFromDB($item['created_at'])?>
             <div class="col-md-4 col-sm-6">
                 <div class="kode_news2_list">
                     <figure>
-                        <img src="images/news.jpg" alt="">
+                        <img src="images/blog/<?= $item['img_link']?>" alt="">
                         <figcaption>
-                            <span><strong>27</strong>Apr</span>
+                            <span><strong><?=$datablog[0]?></strong><?=$datablog[1]?></span>
                         </figcaption>
                     </figure>
                     <div class="kode_news2_text">
-                        <h5><a href="index.html#">Blog post with image</a></h5>
-                        <ul class="kode_news2_admin">
-                            <li><span>post By : </span><a href="index.html#">admin</a></li>
-                            <li><a href="index.html#">5 Commment</a></li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum...</p>
-                        <a class="kode-button-style-2 kode-white-color-text kode-theme-color-bg-color" href="index.html#">View All</a>
+                        <h5><a href="index.html#"><?= $title ?></a></h5>
+                        <p><?= $shortDescr?></p>
+                        <a class="kode-button-style-2 kode-white-color-text kode-theme-color-bg-color" href="index.html#">Подробнее</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="kode_news2_list">
-                    <figure>
-                        <img src="images/news1.jpg" alt="">
-                        <figcaption>
-                            <span><strong>27</strong>Apr</span>
-                        </figcaption>
-                    </figure>
-                    <div class="kode_news2_text">
-                        <h5><a href="index.html#">Easy Way Of Improving Ski</a></h5>
-                        <ul class="kode_news2_admin">
-                            <li><span>post By : </span><a href="index.html#">admin</a></li>
-                            <li><a href="index.html#">5 Commment</a></li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum...</p>
-                        <a class="kode-button-style-2 kode-white-color-text kode-theme-color-bg-color" href="index.html#">View All</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="kode_news2_list">
-                    <figure>
-                        <img src="images/news2.jpg" alt="">
-                        <figcaption>
-                            <span><strong>27</strong>Apr</span>
-                        </figcaption>
-                    </figure>
-                    <div class="kode_news2_text">
-                        <h5><a href="index.html#">The Perfect Architecture</a></h5>
-                        <ul class="kode_news2_admin">
-                            <li><span>post By : </span><a href="index.html#">admin</a></li>
-                            <li><a href="index.html#">5 Commment</a></li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum...</p>
-                        <a class="kode-button-style-2 kode-white-color-text kode-theme-color-bg-color" href="index.html#">View All</a>
-                    </div>
-                </div>
-            </div>
+            <?php }?>
         </div>
     </div>
 </div>
-<!--// KODE NEWS2 WRAP END //-->
+<!--------------------->
+<!--// BLOG FINISH //-->
+<!--------------------->
 
 <!--// KODE VIDEO WRAP START //-->
 <div class="kode_video_wrap video_1">

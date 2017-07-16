@@ -9,13 +9,13 @@ class Action
 {
     protected $data;
     protected $template;
-    protected $mail;
+    protected $blog;
 
     function __construct($db, $template)
     {
         $this->data = new MainStorage($db);
         $this->template = $template;
-        $this->mail = new Mail();
+        $this->blog = new Blog($db);
     }
     public function redirect($id=NULL)
     {
@@ -31,6 +31,7 @@ class Action
         $header = 'pages/header.php';
         $main = 'pages/main.php';
         $footer = 'pages/footer.php';
+        $blog = $this->blog;
         include_once $this->template;
     }
     public function mainpage2()
