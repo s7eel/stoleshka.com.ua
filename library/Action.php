@@ -34,9 +34,14 @@ class Action
         $blog = $this->blog;
         include_once $this->template;
     }
-    public function mainpage2()
+    public function article()
     {
-        echo $this->data->printWord().'hihihi';
+        $title = 'Блог';
+        $header = 'pages/header.php';
+        $main = 'pages/article.php';
+        $footer = 'pages/footer.php';
+        $blog = $this->blog;
+        include_once $this->template;
     }
     public function errorPage()
     {

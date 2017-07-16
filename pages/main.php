@@ -445,7 +445,7 @@
                     <div class="kode_news2_text">
                         <h5><a href="index.html#"><?= $title ?></a></h5>
                         <p><?= $shortDescr?></p>
-                        <a class="kode-button-style-2 kode-white-color-text kode-theme-color-bg-color" href="index.html#">Подробнее</a>
+                        <a class="kode-button-style-2 kode-white-color-text kode-theme-color-bg-color" href="<?= $_SERVER['PHP_SELF']?>?page=article&id=<?= $item['id']?>">Подробнее</a>
                     </div>
                 </div>
             </div>
