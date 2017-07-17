@@ -1,12 +1,18 @@
 $(function () {
   var inputData = {};
-
   var $form = $('#calculator');
 
   changeCheckboxBehavior();
 
   $form.on('submit', function (e) {
     e.preventDefault();
+  });
+
+  $('#calcModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget);
+    var itemName = button.data('itemName');
+
+    itemName && $('#itemName').val(itemName);
   });
 
   $('#refresh, #submit, .close').on('click', function () {
@@ -24,7 +30,8 @@ $(function () {
       success: function (data) {
         resetForm();
       },
-      error: function (e) {}
+      error: function (e) {
+      }
     });
   });
 

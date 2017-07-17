@@ -1,32 +1,46 @@
-.calculated-sums {
+#calcModal .calculated-sums {
     display: inline-block;
     border: 1px solid #666;
     padding: 5px;
 }
 
-.calculated-sums span{
+#calcModal .calculated-sums span{
     display: inline-block;
     min-width: 40px;
     text-align: center;
 }
 
-.total-sums {
+#calcModal .total-sums {
     display: inline-block;
     margin-left: 20%;
 }
 
-.total-sums hr {
+#calcModal .total-sums hr {
     border: none;
     height: 1px;
     background-color: #666;
     color: #666;
 }
 
-.total-sums hr:first-of-type {
+#calcModal .total-sums hr:first-of-type {
     margin-bottom: 0;
 }
 
-.total-sums hr:last-of-type {
+#calcModal .total-sums hr:last-of-type {
     margin-top: 4px;
     margin-bottom: 6px;
+}
+
+@media only screen and (min-width : 480px) {
+    #calcModal {
+        overflow: hidden;
+    }
+    #calcModal .modal-body {
+        overflow: auto;
+        height: 80vh;
+    }
+    #calcModal .modal-fixed {
+        position: fixed;
+        right: 30px;
+    }
 }
