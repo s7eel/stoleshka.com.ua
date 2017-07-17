@@ -48,24 +48,31 @@ class Action
     }
     public function errorPage()
     {
+//        if($_SERVER['REQUEST_METHOD'] == 'POST') {
+//            var_dump($_POST);
+//        }die();
         header('Content-type:application/json');
-        $arr = array(
-            'q'=>$_POST['itemName'],
-            'w'=>$_POST['woodBreed'],
-            'e'=>$_POST['bondingType'],
-            'r'=>$_POST['gauge'],
-            't'=>$_POST['glueType'],
-            'y'=>$_POST['detailsNumber'],
-            'u'=>$_POST['length'],
-            'i'=>$_POST['width'],
-            'o'=>$_POST['chamferRemoving'],
-            'p'=>$_POST['complexRadius'],
-            'a'=>$_POST['coveringPreparation'],
-            's'=>$_POST['covering'],
-            'd'=>$_POST['toningColor'],
-            'f'=>$_POST['discount'],
-            'g'=>$_POST['packaging'],
-        );
+        $arr = file_get_contents('php://input');
+        $arr = json_decode($arr);
+//        $arr = array(
+//            'q'=>$_POST['itemName'],
+//            'w'=>$_POST['woodBreed'],
+//            'e'=>$_POST['bondingType'],
+//            'r'=>$_POST['gauge'],
+//            't'=>$_POST['glueType'],
+//            'y'=>$_POST['detailsNumber'],
+//            'u'=>$_POST['length'],
+//            'i'=>$_POST['width'],
+//            'o'=>$_POST['chamferRemoving'],
+//            'p'=>$_POST['complexRadius'],
+//            'a'=>$_POST['coveringPreparation'],
+//            's'=>$_POST['covering'],
+//            'd'=>$_POST['toningColor'],
+//            'f'=>$_POST['discount'],
+//            'g'=>$_POST['packaging'],
+//            'h'=>$_POST['totalWithDiscount'],
+//        );
+//        $arr = json_decode($_REQUEST);
         echo json_encode($arr);
     }
 
