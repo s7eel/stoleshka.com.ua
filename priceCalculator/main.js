@@ -11,7 +11,7 @@ $(function () {
 
   $('#refresh, #submit, .close').on('click', function () {
     $.ajax({
-      url: 'calc.php',
+      url: '../index.php?page=errorPage',
       type: 'post',
       dataType: 'application/json',
       data: $form.serialize(),
@@ -19,7 +19,6 @@ $(function () {
         resetForm();
       },
       error: function () {
-        alert($form.serialize());
       }
     });
   });

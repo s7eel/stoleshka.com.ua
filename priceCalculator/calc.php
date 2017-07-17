@@ -23,22 +23,4 @@ $arr = array(
     'f'=>$_POST['discount'],
     'g'=>$_POST['packaging'],
 );
-
-//$arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
 echo json_encode($arr);
-
-//itemName:windowsill
-//woodBreed:ash
-//bondingType:glued
-//gauge:20
-//glueType:waterproof
-//detailsNumber:111
-//length:111
-//width:111
-//chamferRemoving:1
-//complexRadius:1
-//coveringPreparation:1
-//covering:polish
-//toningColor:wenge
-//discount:on
-//packaging:1
