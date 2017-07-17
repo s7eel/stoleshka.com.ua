@@ -123,7 +123,7 @@
                                             <li><a href="about-us-01.html">about us 01</a></li>
                                         </ul> -->
                         </li>
-                        <li><a href="production.html">Продукция</a>
+                        <li><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Продукция</a>
                             <!-- <ul>
                                 <li><a href="practice-area.html">Столешницы</a></li>
                                 <li><a href="practice-area-01.html">Ступени</a></li>

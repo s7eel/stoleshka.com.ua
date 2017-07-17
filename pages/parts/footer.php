@@ -109,8 +109,7 @@
                         </ul>
                     </div>
                 </div>
-            </footer>   
-        </div>
+            </footer>
 </div>
 <!--kode_wraper end-->
 <script src="js/jquery-3.1.1-jquery.min.js"></script>

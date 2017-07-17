@@ -86,6 +86,18 @@ class Action
     }
 
     /**
+     * Output page with products
+     */
+    public function productions()
+    {
+        $title = 'Продукция';
+        $header = 'pages/parts/header.php';
+        $main = 'pages/production.php';
+        $footer = 'pages/parts/footer.php';
+        include_once $this->template;
+
+    }
+    /**
      * Error page via FALSE get request
      */
     public function errorPage()
