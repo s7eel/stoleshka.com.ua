@@ -10,17 +10,21 @@ $(function () {
   });
 
   $('#refresh, #submit, .close').on('click', function () {
+    var data = {};
+    $form.serializeArray().map(function (item) {
+      return data[item.name] = item.value;
+    });
+    data.totalWithDiscount = $('#totalWithDiscount').html();
+
     $.ajax({
-      url: 'calc.php',
+      url: '/priceCalculator/calc.php',
       type: 'post',
-      dataType: 'application/json',
-      data: $form.serialize(),
+      dataType: 'json',
+      data: JSON.stringify(data),
       success: function (data) {
         resetForm();
       },
-      error: function () {
-        alert($form.serialize());
-      }
+      error: function (e) {}
     });
   });
 
