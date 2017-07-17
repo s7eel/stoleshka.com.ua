@@ -19,7 +19,7 @@ $(function () {
         resetForm();
       },
       error: function () {
-        resetForm();
+        alert($form.serialize());
       }
     });
   });
