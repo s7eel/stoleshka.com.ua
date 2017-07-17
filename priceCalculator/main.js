@@ -10,16 +10,21 @@ $(function () {
   });
 
   $('#refresh, #submit, .close').on('click', function () {
+    var data = {};
+    $form.serializeArray().map(function (item) {
+      return data[item.name] = item.value;
+    });
+    data.totalWithDiscount = $('#totalWithDiscount').html();
+
     $.ajax({
       url: '../index.php?page=errorPage',
       type: 'post',
-      dataType: 'application/json',
-      data: $form.serialize(),
+      dataType: 'json',
+      data: JSON.stringify(data),
       success: function (data) {
         resetForm();
       },
-      error: function () {
-      }
+      error: function (e) {}
     });
   });
 
