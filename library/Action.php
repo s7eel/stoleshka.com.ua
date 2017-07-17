@@ -46,7 +46,25 @@ class Action
     }
     public function errorPage()
     {
-        echo '404';
+        header('Content-type:application/json');
+        $arr = array(
+            'q'=>$_POST['itemName'],
+            'w'=>$_POST['woodBreed'],
+            'e'=>$_POST['bondingType'],
+            'r'=>$_POST['gauge'],
+            't'=>$_POST['glueType'],
+            'y'=>$_POST['detailsNumber'],
+            'u'=>$_POST['length'],
+            'i'=>$_POST['width'],
+            'o'=>$_POST['chamferRemoving'],
+            'p'=>$_POST['complexRadius'],
+            'a'=>$_POST['coveringPreparation'],
+            's'=>$_POST['covering'],
+            'd'=>$_POST['toningColor'],
+            'f'=>$_POST['discount'],
+            'g'=>$_POST['packaging'],
+        );
+        echo json_encode($arr);
     }
 
     /**

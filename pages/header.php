@@ -108,7 +108,7 @@
             <div class="navigation">
                 <div class="container">
                     <ul>
-                        <li><a class="active" href="index.html#">Главная</a>
+                        <li><a class="active" href="<?=$_SERVER['PHP_SELF']?>?page=mainpage">Главная</a>
                             <!-- 				<ul>
                                                 <li><a href="index.html">homr page</a></li>
                                                 <li><a href="index1.html">HOME PAGE 01</a></li>

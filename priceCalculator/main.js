@@ -17,7 +17,7 @@ $(function () {
     data.totalWithDiscount = $('#totalWithDiscount').html();
 
     $.ajax({
-      url: '/priceCalculator/calc.php',
+      url: '../index.php?page=errorPage',
       type: 'post',
       dataType: 'json',
       data: JSON.stringify(data),
