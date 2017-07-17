@@ -142,7 +142,7 @@
                             <!--<li><a href="advice.html">Доставка по г.Днепр</a></li>-->
                             <!--</ul>-->
                         </li>
-                        <li><a href="blog.html#">Блог</a>
+                        <li><a href="<?=$_SERVER['PHP_SELF']?>?page=blogarticles">Блог</a>
                             <!-- <ul>
                                 <li><a href="agent.html">Блог</a></li>
                                 <li><a href="enginer.html">Советы по уходу</a></li>

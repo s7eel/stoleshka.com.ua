@@ -9,13 +9,13 @@ class Action
 {
     protected $data;
     protected $template;
-    protected $mail;
+    protected $blog;
 
     function __construct($db, $template)
     {
         $this->data = new MainStorage($db);
         $this->template = $template;
-        $this->mail = new Mail();
+        $this->blog = new Blog($db);
     }
     public function redirect($id=NULL)
     {
@@ -31,15 +31,40 @@ class Action
         $header = 'pages/header.php';
         $main = 'pages/main.php';
         $footer = 'pages/footer.php';
+        $blog = $this->blog;
         include_once $this->template;
     }
-    public function mainpage2()
+    public function article()
     {
-        echo $this->data->printWord().'hihihi';
+        $id = filter_input(INPUT_GET,'id');
+        $title = 'Новости';
+        $header = 'pages/header.php';
+        $main = 'pages/article.php';
+        $footer = 'pages/footer.php';
+        $blogItem = $this->blog->getItemByID($id);
+        include_once $this->template;
     }
     public function errorPage()
     {
-        echo '404';
+        header('Content-type:application/json');
+        $arr = array(
+            'q'=>$_POST['itemName'],
+            'w'=>$_POST['woodBreed'],
+            'e'=>$_POST['bondingType'],
+            'r'=>$_POST['gauge'],
+            't'=>$_POST['glueType'],
+            'y'=>$_POST['detailsNumber'],
+            'u'=>$_POST['length'],
+            'i'=>$_POST['width'],
+            'o'=>$_POST['chamferRemoving'],
+            'p'=>$_POST['complexRadius'],
+            'a'=>$_POST['coveringPreparation'],
+            's'=>$_POST['covering'],
+            'd'=>$_POST['toningColor'],
+            'f'=>$_POST['discount'],
+            'g'=>$_POST['packaging'],
+        );
+        echo json_encode($arr);
     }
 
     /**
@@ -58,6 +83,11 @@ class Action
         }
 
     }
+
+    /**
+     * @return array
+     * getting data from the form from 1st page
+     */
     public function getDataFromForm()
     {
         return array(
@@ -69,4 +99,43 @@ class Action
             'date' => date('j-m-y'),
         );
     }
+
+    /**
+     * return array with data to JS
+     */
+    public function getDataFromSession()
+    {
+        $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
+        echo json_encode($arr);
+    }
+
+    /**
+     * Output all the blog items
+     */
+    public function blogarticles()
+    {
+        $title = 'Блог';
+        $header = 'pages/header.php';
+        $main = 'pages/blog.php';
+        $footer = 'pages/footer.php';
+        $blog = $this->blog->getItems();
+        include_once $this->template;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -25,9 +25,17 @@ class MainStorage
         }
         return FALSE;
     }
-    public function printWord()
+    public function arrayRes($query)
     {
-        return 'hiho';
+        $result = $this->db->query($query);
+        if($result){
+            $catalog = array();
+            while($new_item = $result->fetch_assoc()){
+                $catalog[] = $new_item;
+            }
+            return $catalog;
+        }
+        return FALSE;
     }
 
 }
