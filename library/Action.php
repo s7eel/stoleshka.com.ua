@@ -37,7 +37,7 @@ class Action
     public function article()
     {
         $id = filter_input(INPUT_GET,'id');
-        $title = 'Блог';
+        $title = 'Новости';
         $header = 'pages/header.php';
         $main = 'pages/article.php';
         $footer = 'pages/footer.php';
@@ -65,6 +65,11 @@ class Action
         }
 
     }
+
+    /**
+     * @return array
+     * getting data from the form from 1st page
+     */
     public function getDataFromForm()
     {
         return array(
@@ -76,9 +81,43 @@ class Action
             'date' => date('j-m-y'),
         );
     }
+
+    /**
+     * return array with data to JS
+     */
     public function getDataFromSession()
     {
         $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
         echo json_encode($arr);
     }
+
+    /**
+     * Output all the blog items
+     */
+    public function blogarticles()
+    {
+        $title = 'Блог';
+        $header = 'pages/header.php';
+        $main = 'pages/blog.php';
+        $footer = 'pages/footer.php';
+        $blog = $this->blog->getItems();
+        include_once $this->template;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
