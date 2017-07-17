@@ -36,11 +36,12 @@ class Action
     }
     public function article()
     {
+        $id = filter_input(INPUT_GET,'id');
         $title = 'Блог';
         $header = 'pages/header.php';
         $main = 'pages/article.php';
         $footer = 'pages/footer.php';
-        $blog = $this->blog;
+        $blogItem = $this->blog->getItemByID($id);
         include_once $this->template;
     }
     public function errorPage()
@@ -74,5 +75,10 @@ class Action
             'city' => filter_input(INPUT_POST, 'city'),
             'date' => date('j-m-y'),
         );
+    }
+    public function getDataFromSession()
+    {
+        $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
+        echo json_encode($arr);
     }
 }

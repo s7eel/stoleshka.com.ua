@@ -5,21 +5,21 @@
                 <div class="col-md-6">
                     <div class="kode_team_detail_fig">
                         <figure>
-                            <img src="images/team.jpg" alt="">
+                            <img src="images/blog/<?= $blogItem[0]['img_link']?>" alt="">
                         </figure>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="kode_team_detail_email">
-                        <h2>Michel jorden</h2>
-                        <span>Manager</span>
+                        <h2><?= $blogItem[0]['title']?></h2>
+                        <span><?= $blogItem[0]['created_at']?></span>
                         <ul class="kode_addres_list">
-                            <li><span>Age</span><a href="our-team-detail.html">30</a></li>
-                            <li><span>Address</span><a href="our-team-detail.html">9th Avenue parklane South wales London, Uk</a></li>
-                            <li><span>Phone</span><a href="our-team-detail.html">(+088) 11744548</a></li>
-                            <li><span>Email</span><a href="our-team-detail.html">micheljorden@noreply.com</a></li>
-                            <li><span>D.O.B</span><a href="our-team-detail.html">25 December 1990</a></li>
-                            <li><span>Gender</span><a href="our-team-detail.html">Male</a></li>
+                            <li><?= $blogItem[0]['short_descr']?></li>
+<!--                            <li><span>Address</span><a href="our-team-detail.html">9th Avenue parklane South wales London, Uk</a></li>-->
+<!--                            <li><span>Phone</span><a href="our-team-detail.html">(+088) 11744548</a></li>-->
+<!--                            <li><span>Email</span><a href="our-team-detail.html">micheljorden@noreply.com</a></li>-->
+<!--                            <li><span>D.O.B</span><a href="our-team-detail.html">25 December 1990</a></li>-->
+<!--                            <li><span>Gender</span><a href="our-team-detail.html">Male</a></li>-->
                         </ul>
                         <ul class="kode_addres_icon">
                             <li><a href="our-team-detail.html#"  data-toggle="tooltip" data-placement="bottom" title="twitter"><i class="fa fa-twitter"></i></a></li>
@@ -41,8 +41,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="kode_biography_content">
-                    <h4>Biography</h4>
-                    <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.Sed non  mauris vitae erat consequat auctor eu in elit.  Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.Sed non  mauris vitae erat consequat auctor eu in elit.  Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.Sed non  mauris vitae erat consequat auctor eu in elit.  Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.Sed non  mauris vitae erat consequat auctor eu in elit.  Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.Sed non  mauris vitae erat consequat auctor eu in elit. </p>
+                    <h4>Основная новость</h4>
+                    <p><?= $blogItem[0]['full_descr']?></p>
                 </div>
             </div>
         </div>

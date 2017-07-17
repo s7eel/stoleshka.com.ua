@@ -8,6 +8,13 @@
  */
 class Blog extends MainStorage
 {
+    /**
+     * @param $data
+     * @return array
+     * getting value 'data' from blog and
+     * decoding it to the string with russian
+     * translation
+     */
     public function getDataFromDB($data)
     {
         $data_blog1 = explode("-", $data);
@@ -54,6 +61,11 @@ class Blog extends MainStorage
         //return $data_blog1[2] . " " . $data_blog1[1] . " " . $data_blog1[0];
         return array($data_blog1[2], $data_blog1[1]);
     }
+
+    /**
+     * @return array|bool
+     * Get all the items from database
+     */
     public function getItems()
     {
         $query =
@@ -64,4 +76,39 @@ class Blog extends MainStorage
             return false;
         }
     }
+
+    /**
+     * @param $id
+     * @return array|bool
+     * Get the item from database by ID
+     */
+    public function getItemByID($id)
+    {
+        $query =
+            "SELECT b.title, b.short_descr, b.img_link, b.full_descr, b.created_at FROM blog as b WHERE b.id='$id'";
+        if ($result = parent::arrayRes($query)) {
+            return $result;
+        } else {
+            return false;
+        }
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
