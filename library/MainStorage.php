@@ -37,5 +37,13 @@ class MainStorage
         }
         return FALSE;
     }
+    public function saveDB($query)
+    {
+        $result = $this->db->query($query);
+        if($result){
+            return true;
+        }
+        return false;
+    }
 
 }

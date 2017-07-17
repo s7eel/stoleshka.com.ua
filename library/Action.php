@@ -10,12 +10,14 @@ class Action
     protected $data;
     protected $template;
     protected $blog;
+    protected $user;
 
     function __construct($db, $template)
     {
         $this->data = new MainStorage($db);
         $this->template = $template;
         $this->blog = new Blog($db);
+        $this->user = new Users($db);
     }
     public function redirect($id=NULL)
     {
@@ -74,7 +76,11 @@ class Action
     {
         if($data = $this->getDataFromForm()){
             if(Mail::sendMail($data)){
-                $this->redirect();
+                if($this->user->addUserToDB( $data['name'], $data['city'], $data['phone'], $data['email'], $data['message'])){
+                    $this->redirect();
+                }else{
+                    die('Не удалось добавить пользователя в базу данных');
+                }
             }else{
                 die('Не удалось отправить сообщение');
             }
