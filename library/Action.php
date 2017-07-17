@@ -19,6 +19,12 @@ class Action
         $this->blog = new Blog($db);
         $this->user = new Users($db);
     }
+
+    /**
+     * @param null $id
+     * inner function redirect to page
+     * according to $id;
+     */
     public function redirect($id=NULL)
     {
         if (!$id) {
@@ -27,30 +33,107 @@ class Action
         header('Location:' . $_SERVER['PHP_SELF'] . $id);
     }
 
+    /**
+     * Output mainpage according to request;
+     */
     public function mainpage()
     {
         $title = 'Главная страница';
-        $header = 'pages/header.php';
+        $header = 'pages/parts/header.php';
         $main = 'pages/main.php';
-        $footer = 'pages/footer.php';
+        $footer = 'pages/parts/footer.php';
         $blog = $this->blog;
         include_once $this->template;
     }
+
+    /**
+     * Output one article from blog
+     */
     public function article()
     {
         $id = filter_input(INPUT_GET,'id');
         $title = 'Новости';
-        $header = 'pages/header.php';
+        $header = 'pages/parts/header.php';
         $main = 'pages/article.php';
-        $footer = 'pages/footer.php';
+        $footer = 'pages/parts/footer.php';
         $blogItem = $this->blog->getItemByID($id);
         include_once $this->template;
     }
+    /**
+     * Output all the blog items
+     */
+    public function blogarticles()
+    {
+        $title = 'Блог';
+        $header = 'pages/parts/header.php';
+        $main = 'pages/blog.php';
+        $footer = 'pages/parts/footer.php';
+        $blog = $this->blog->getItems();
+        include_once $this->template;
+    }
+
+    /**
+     * The page shows different types of products
+     * which they figure out;
+     */
+    public function costproducts()
+    {
+        $title = 'Подсчет стоимости';
+        $header = 'pages/parts/headercalc.php';
+        $main = 'pages/calculator.php';
+        $footer = 'pages/parts/footercalc.php';
+        include_once $this->template;
+    }
+
+    /**
+     * Error page via FALSE get request
+     */
     public function errorPage()
     {
-//        if($_SERVER['REQUEST_METHOD'] == 'POST') {
-//            var_dump($_POST);
-//        }die();
+
+    }
+
+    /**
+     * Определяем данные из формы со стартовой страницы
+     */
+    public function callform()
+    {
+        if($data = $this->getDataFromForm()){
+            if(Mail::sendMail($data)){
+                if($this->user->addUserToDB( $data['name'], $data['city'], $data['phone'], $data['email'], $data['message'])){
+                    $this->redirect();
+                }else{
+                    die('Не удалось добавить пользователя в базу данных');
+                }
+            }else{
+                die('Не удалось отправить сообщение');
+            }
+        }else{
+            $this->redirect('errorPage');
+        }
+
+    }
+    /**
+     * @return array
+     * getting data from the form from 1st page
+     */
+    public function getDataFromForm()
+    {
+        return array(
+            'name' => filter_input(INPUT_POST, 'name'),
+            'phone' => filter_input(INPUT_POST, 'phone'),
+            'email' => filter_input(INPUT_POST, 'email'),
+            'message' => filter_input(INPUT_POST, 'message'),
+            'city' => filter_input(INPUT_POST, 'city'),
+            'date' => date('j-m-y'),
+        );
+    }
+
+    /**
+     * Getting data from ajax request;
+     */
+    public function getDataCalc()
+    {
         header('Content-type:application/json');
         $arr = file_get_contents('php://input');
         $arr = json_decode($arr);
@@ -74,65 +157,6 @@ class Action
 //        );
 //        $arr = json_decode($_REQUEST);
         echo json_encode($arr);
-    }
-
-    /**
-     * Определяем данные из формы со стартовой страницы
-     */
-    public function callform()
-    {
-        if($data = $this->getDataFromForm()){
-            if(Mail::sendMail($data)){
-                if($this->user->addUserToDB( $data['name'], $data['city'], $data['phone'], $data['email'], $data['message'])){
-                    $this->redirect();
-                }else{
-                    die('Не удалось добавить пользователя в базу данных');
-                }
-            }else{
-                die('Не удалось отправить сообщение');
-            }
-        }else{
-            $this->redirect('errorPage');
-        }
-
-    }
-
-    /**
-     * @return array
-     * getting data from the form from 1st page
-     */
-    public function getDataFromForm()
-    {
-        return array(
-            'name' => filter_input(INPUT_POST, 'name'),
-            'phone' => filter_input(INPUT_POST, 'phone'),
-            'email' => filter_input(INPUT_POST, 'email'),
-            'message' => filter_input(INPUT_POST, 'message'),
-            'city' => filter_input(INPUT_POST, 'city'),
-            'date' => date('j-m-y'),
-        );
-    }
-
-    /**
-     * return array with data to JS
-     */
-    public function getDataFromSession()
-    {
-        $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
-        echo json_encode($arr);
-    }
-
-    /**
-     * Output all the blog items
-     */
-    public function blogarticles()
-    {
-        $title = 'Блог';
-        $header = 'pages/header.php';
-        $main = 'pages/blog.php';
-        $footer = 'pages/footer.php';
-        $blog = $this->blog->getItems();
-        include_once $this->template;
     }
 }
 

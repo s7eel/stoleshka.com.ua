@@ -38,7 +38,8 @@
     <link href="css/widget.css" rel="stylesheet">
     <!--css/responsive.css start-->
     <link href="css/responsive.css" rel="stylesheet">
-    <link href="bootstrap-social.css" rel="stylesheet" type="text/css"  />
+    <link href="bootstrap-social.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="priceCalculator/styles.css">
 </head>
 <body class="light">
 <!--// KODE WRAPER START //-->
@@ -130,9 +131,9 @@
                                 <li><a href="practice-area-03.html">Прямые фасады</a></li>
                             </ul> -->
                         </li>
-                        <li><a href="calculator.html">Цена</a>
+                        <li><a href="../calculator.php">Цена</a>
                             <ul>
-                                <li><a href="calculator.html">Продсчитать стоимость</a></li>
+                                <li><a href="<?=$_SERVER['PHP_SELF']?>?page=costproducts">Продсчитать стоимость</a></li>
                                 <li><a href="sale.html">Как получить скидку</a></li>
                             </ul>
                         </li>

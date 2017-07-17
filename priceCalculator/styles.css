@@ -30,3 +30,9 @@
     margin-top: 4px;
     margin-bottom: 6px;
 }
+#calcModal label {
+    color: #4a4a4a;
+    display: block;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
