@@ -382,7 +382,7 @@
                         <option value="Житомир">Житомир</option>
                         <option value="Запорожье">Запорожье</option>
                         <option value="Кропивницкий">Кропивницкий</option>
-                        <option value="Франковск">Ивано-Франковск</option>
+                        <option value="Ивано-Франковск">Ивано-Франковск</option>
                         <option value="Луганск">Луганск</option>
                         <option value="Луцк">Луцк</option>
                         <option value="Львов">Львов</option>
