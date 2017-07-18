@@ -1,7 +1,9 @@
 $(function () {
   var inputData = {itemName: 'tabletop'},
     $form = $('#calculator'),
-    $requirementBtn = $('#showAdditionalRequirements');
+    $requirementBtn = $('#showAdditionalRequirements'),
+    $covering = $('.covering'),
+    $toningColor = $('.toningColor');
 
   changeCheckboxBehavior();
 
@@ -53,6 +55,7 @@ $(function () {
       }
     }
     checkSubmitBtn(sums.productionCost);
+    checkRelatedItems();
   });
 
   function showAdditionalBlock () {
@@ -75,6 +78,25 @@ $(function () {
   }
 
   function checkSubmitBtn (productionCost) {
-    $('#submit').prop( "disabled", !Boolean(productionCost));
+    $('#submit').prop("disabled", !Boolean(productionCost));
+  }
+
+  function checkRelatedItems () {
+    var noCoveringPreparation = !Number(inputData.coveringPreparation),
+      noPolishWithColor = Boolean(inputData.covering !== 'polishWithColor');
+
+    $covering.prop('disabled', noCoveringPreparation);
+    $covering.toggleClass('grey', noCoveringPreparation);
+    $toningColor.prop('disabled', noPolishWithColor);
+    $toningColor.toggleClass('grey', noPolishWithColor);
+
+    if (noCoveringPreparation) {
+      $('[name="covering"]').prop('checked', false);
+      delete inputData.covering;
+    }
+    if (noPolishWithColor) {
+      $('[name="toningColor"]').prop('checked', false);
+      delete inputData.toningColor;
+    }
   }
 });
