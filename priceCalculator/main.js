@@ -29,18 +29,19 @@ $(function () {
     });
     data.totalWithDiscount = $('#totalWithDiscount').html();
 
-        $.ajax({
-            url: '../index.php?page=getDataCalc',
-            type: 'post',
-            dataType: 'json',
-            data: JSON.stringify(data),
-            success: function (data) {
-                resetForm();
-            },
-            error: function (e) {
-            }
-        });
+    $.ajax({
+      url: '../index.php?page=getDataCalc',
+      type: 'post',
+      dataType: 'json',
+      data: JSON.stringify(data),
+      success: function (data) {
+        resetForm();
+      },
+      error: function (e) {
+        resetForm();
+      }
     });
+  });
 
   $form.find('input').on('change', function (event) {
     var sums;
@@ -82,12 +83,12 @@ $(function () {
 
   function checkRelatedItems () {
     var noCoveringPreparation = !Number(inputData.coveringPreparation),
-      noPolishWithColor = Boolean(inputData.covering !== 'polishWithColor');
+      noPolishWithColor = inputData.covering !== 'polishWithColor';
 
-    $covering.prop('disabled', noCoveringPreparation);
-    $covering.toggleClass('grey', noCoveringPreparation);
-    $toningColor.prop('disabled', noPolishWithColor);
-    $toningColor.toggleClass('grey', noPolishWithColor);
+    $covering.prop('disabled', noCoveringPreparation)
+      .toggleClass('grey', noCoveringPreparation);
+    $toningColor.prop('disabled', noPolishWithColor)
+      .toggleClass('grey', noPolishWithColor);
 
     if (noCoveringPreparation) {
       $('[name="covering"]').prop('checked', false);
