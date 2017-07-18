@@ -44,7 +44,7 @@ function calcSums (inputData) {
 
   sums.total = sums.productionCost + sums.chamferRemovingCost + sums.complexRadiusCost + sums.coveringPreparationCost + sums.coveringCost + sums.packagingCost;
   sums.discount = inputData.discount ? sums.total * RATIOS.discount : 0;
-  sums.totalWithDiscount = sums.total + sums.discount;
+  sums.totalWithDiscount = sums.total - sums.discount;
 
   return sums;
 }

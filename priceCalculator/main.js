@@ -22,18 +22,28 @@ $(function () {
     itemName && $('#itemName').val(itemName);
   });
 
-  $('#refresh, #submit, .close').on('click', function () {
-    var data = {};
-    $form.serializeArray().map(function (item) {
-      return data[item.name] = item.value;
-    });
-    data.totalWithDiscount = $('#totalWithDiscount').html();
+  $('#submit').on('click', function () {
+    sendFormData('../index.php?page=getDataCalc');
+  });
+  $('#refresh, .close').on('click', function () {
+    sendFormData('../index.php?page=getDataCalcEmpty');
+  });
 
+  $('#continue').on('click', function () {
+    var products = JSON.parse(localStorage.getItem('products') || '[]');
+    products.push(getDataFromForm());
+    localStorage.setItem('products', JSON.stringify(products));
+  });
+
+  $form.find('input[type="number"]').on('input', handleInput.bind(this));
+  $form.find('input[type="checkbox"]').on('change', handleInput.bind(this));
+
+  function sendFormData (url) {
     $.ajax({
-      url: '../index.php?page=getDataCalc',
+      url: url,
       type: 'post',
       dataType: 'json',
-      data: JSON.stringify(data),
+      data: JSON.stringify(getDataFromForm()),
       success: function (data) {
         resetForm();
       },
@@ -41,9 +51,9 @@ $(function () {
         resetForm();
       }
     });
-  });
+  }
 
-  $form.find('input').on('change', function (event) {
+  function handleInput (event) {
     var sums;
 
     inputData[event.currentTarget.name] = event.currentTarget.value;
@@ -56,7 +66,7 @@ $(function () {
     }
     checkSubmitBtn(sums.productionCost);
     checkRelatedItems();
-  });
+  }
 
   function showAdditionalBlock () {
     $requirementBtn.hide();
@@ -98,5 +108,14 @@ $(function () {
       $('[name="toningColor"]').prop('checked', false);
       delete inputData.toningColor;
     }
+  }
+
+  function getDataFromForm () {
+    var data = {};
+    $form.serializeArray().map(function (item) {
+      return data[item.name] = item.value;
+    });
+    data.totalWithDiscount = $('#totalWithDiscount').html();
+    return data;
   }
 });
