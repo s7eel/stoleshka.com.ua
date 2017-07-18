@@ -1,11 +1,16 @@
 $(function () {
-  var inputData = {};
-  var $form = $('#calculator');
+  var inputData = {itemName: 'tabletop'},
+    $form = $('#calculator'),
+    $requirementBtn = $('#showAdditionalRequirements');
 
   changeCheckboxBehavior();
 
   $form.on('submit', function (e) {
     e.preventDefault();
+  });
+
+  $requirementBtn.on('click', function () {
+    Number($('#totalWithDiscount').html()) && showAdditionalBlock();
   });
 
   $('#calcModal').on('show.bs.modal', function (event) {
@@ -31,6 +36,7 @@ $(function () {
         resetForm();
       },
       error: function (e) {
+        resetForm();
       }
     });
   });
@@ -46,8 +52,13 @@ $(function () {
         $('#' + key).html(Number(sums[key] || 0).toFixed());
       }
     }
+    checkSubmitBtn(sums.productionCost);
   });
 
+  function showAdditionalBlock () {
+    $requirementBtn.hide();
+    $('#additionalRequirements').show();
+  }
 
   function resetForm () {
     $form[0].reset();
@@ -61,5 +72,9 @@ $(function () {
       $(group).prop("checked", false);
       $box.prop("checked", true);
     });
+  }
+
+  function checkSubmitBtn (productionCost) {
+    $('#submit').prop( "disabled", !Boolean(productionCost));
   }
 });

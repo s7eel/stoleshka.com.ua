@@ -4,7 +4,7 @@
     padding: 5px;
 }
 
-#calcModal .calculated-sums span{
+#calcModal .calculated-sums span {
     display: inline-block;
     min-width: 40px;
     text-align: center;
@@ -13,6 +13,10 @@
 #calcModal .total-sums {
     display: inline-block;
     margin-left: 20%;
+}
+
+#calcModal .modal-body {
+    padding-left: 30px;
 }
 
 #calcModal .total-sums hr {
@@ -31,14 +35,34 @@
     margin-bottom: 6px;
 }
 
-@media only screen and (min-width : 480px) {
+#calcModal .form-control {
+    max-width: 50%;
+}
+
+#calcModal .size {
+    max-width: 45%;
+    min-width: 200px;
+}
+
+#calcModal .discount {
+    padding-left: 15px;
+    text-align: left;
+}
+
+#calcModal .size:last-of-type {
+    margin-left: 10px;
+}
+
+@media only screen and (min-width: 768px) {
     #calcModal {
         overflow: hidden;
     }
+
     #calcModal .modal-body {
         overflow: auto;
         height: 80vh;
     }
+
     #calcModal .modal-fixed {
         position: fixed;
         right: 30px;

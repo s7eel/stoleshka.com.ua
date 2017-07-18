@@ -13,7 +13,7 @@ const RATIOS = {
     polishWithColor: 400,
     noCovering: 0
   },
-  packagingPrice: 35,
+  packagingPrice: 25.2,
   woodBreedPrice: {
     ash: 2200,
     oak: 2500
@@ -38,10 +38,11 @@ function calcSums (inputData) {
     chamferRemovingCost: calcChamferRemovingCost(inputData),
     complexRadiusCost: calcComplexRadiusCost(inputData),
     coveringPreparationCost: calcCoveringPreparationCost(inputData),
-    coveringCost: calcCoveringCost(inputData)
+    coveringCost: calcCoveringCost(inputData),
+    packagingCost: calcPackagingCost(inputData)
   };
 
-  sums.total = sums.productionCost + sums.chamferRemovingCost + sums.complexRadiusCost + sums.coveringPreparationCost + sums.coveringCost;
+  sums.total = sums.productionCost + sums.chamferRemovingCost + sums.complexRadiusCost + sums.coveringPreparationCost + sums.coveringCost + sums.packagingCost;
   sums.discount = inputData.discount ? sums.total * RATIOS.discount : 0;
   sums.totalWithDiscount = sums.total + sums.discount;
 
@@ -65,5 +66,9 @@ function calcCoveringPreparationCost (inputData) {
 }
 
 function calcCoveringCost (inputData) {
-  return RATIOS.coveringPrice[inputData.covering] * inputData.size * inputData.detailsNumber;
+  return inputData.covering ? RATIOS.coveringPrice[inputData.covering] * inputData.size * inputData.detailsNumber : 0;
+}
+
+function calcPackagingCost (inputData) {
+  return (parseInt(inputData.packaging)||0) && RATIOS.packagingPrice;
 }
