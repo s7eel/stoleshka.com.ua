@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Июл 17 2017 г., 20:21
+-- Время создания: Июл 18 2017 г., 18:26
 -- Версия сервера: 5.7.18-0ubuntu0.16.04.1
 -- Версия PHP: 7.0.18-0ubuntu0.16.04.1
 
@@ -44,6 +44,29 @@ INSERT INTO `blog` (`id`, `title`, `short_descr`, `img_link`, `full_descr`, `cre
 (2, 'Easy Way Of Improving Ski', 'Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum ', 'news1.jpg', 'Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum ', '2017-07-15'),
 (3, 'The Perfect Architecture', 'Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum ', 'news2.jpg', 'Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum Lorem ipsum dolor sit amet, ne eoser lorem quodsi option et albucius delio voluptaria cum ', '2017-07-16');
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `message` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `city`, `phone`, `email`, `message`) VALUES
+(2, 'sadfsdaf', '+3(324)2342342', 'Ивано-Франковск', 's7eell@gmail.com', 'asdfasdfasdfasdfsdfasfasdfasfdasdf'),
+(3, 'Roman', '+3(234)2343242', 'Запорожье', 's7eell@gmail.com', ' $full = $this->db->real_escape_string($full); $full = $this->db->real_escape_string($full); $full = $this->db->real_escape_string($full); $full = $this->db->real_escape_string($full); $full = $this->db->real_escape_string($full); $full = $this->db->real_escape_string($full); $full = $this->db->real_escape_string($full); $full = $this->db->real_escape_string($full); $full = $this->db->real_escape_string($full); $full = $this->db->real_escape_string($full); $full = $this->db->real_escape_string($full); $full = $this->db->real_escape_string($full); $full = $this->db->real_escape_string($full); $full = $this->db->real_escape_string($full);');
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -55,6 +78,12 @@ ALTER TABLE `blog`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -63,6 +92,11 @@ ALTER TABLE `blog`
 --
 ALTER TABLE `blog`
   MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT для таблицы `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
