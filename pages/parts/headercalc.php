@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?=$title?></title>
+    <title>Главная</title>
     <!--css/bootstrap.min.css start-->
     <link href="css/bootstrap.css" rel="stylesheet">
 
@@ -38,7 +38,48 @@
     <link href="css/widget.css" rel="stylesheet">
     <!--css/responsive.css start-->
     <link href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="priceCalculator/styles.css">
     <link href="bootstrap-social.css" rel="stylesheet" type="text/css"  />
+    <style type="text/css">
+        .calculated-sums {
+            display: inline-block;
+            border: 1px solid #666;
+            padding: 5px;
+        }
+
+        .calculated-sums span{
+            display: inline-block;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .total-sums {
+            display: inline-block;
+            margin-left: 20%;
+        }
+
+        .total-sums hr {
+            border: none;
+            height: 1px;
+            background-color: #666;
+            color: #666;
+        }
+
+        .total-sums hr:first-of-type {
+            margin-bottom: 0;
+        }
+
+        .total-sums hr:last-of-type {
+            margin-top: 4px;
+            margin-bottom: 6px;
+        }
+        #calcModal label {
+            color: #4a4a4a;
+            display: block;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body class="light">
 <!--// KODE WRAPER START //-->
@@ -130,9 +171,9 @@
                                 <li><a href="practice-area-03.html">Прямые фасады</a></li>
                             </ul> -->
                         </li>
-                        <li><a href="calculator.html">Цена</a>
+                        <li><a href="../calculator.php">Цена</a>
                             <ul>
-                                <li><a href="calculator.html">Продсчитать стоимость</a></li>
+                                <li><a href="<?=$_SERVER['PHP_SELF']?>?page=costproducts">Продсчитать стоимость</a></li>
                                 <li><a href="sale.html">Как получить скидку</a></li>
                             </ul>
                         </li>

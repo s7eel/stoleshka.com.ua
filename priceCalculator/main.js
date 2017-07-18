@@ -29,19 +29,18 @@ $(function () {
     });
     data.totalWithDiscount = $('#totalWithDiscount').html();
 
-    $.ajax({
-      url: '../index.php?page=errorPage',
-      type: 'post',
-      dataType: 'json',
-      data: JSON.stringify(data),
-      success: function (data) {
-        resetForm();
-      },
-      error: function (e) {
-        resetForm();
-      }
+        $.ajax({
+            url: '../index.php?page=getDataCalc',
+            type: 'post',
+            dataType: 'json',
+            data: JSON.stringify(data),
+            success: function (data) {
+                resetForm();
+            },
+            error: function (e) {
+            }
+        });
     });
-  });
 
   $form.find('input').on('change', function (event) {
     var sums;
