@@ -74,7 +74,7 @@
 }
 
 #calcModal .grey {
-    color: #7c7a7a;
+    color: lightgrey;
 }
 
 @media only screen and (min-width: 768px) {
