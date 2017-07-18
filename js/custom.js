@@ -5,7 +5,7 @@ $(document).on('ready',function(){
 		select script 
 	=================================================*/
 	if($('select').length){
-		$('select').selectric();
+		$('select:not(#calcModal select)').selectric();
 	}
 		
 		
