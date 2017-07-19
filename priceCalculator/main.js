@@ -31,8 +31,11 @@ $(function () {
 
   $('#continue').on('click', function () {
     var products = JSON.parse(localStorage.getItem('products') || '[]');
+
     products.push(getDataFromForm());
     localStorage.setItem('products', JSON.stringify(products));
+
+    resetForm();
   });
 
   $form.find('input[type="number"]').on('input', handleInput.bind(this));
@@ -75,7 +78,8 @@ $(function () {
 
   function resetForm () {
     $form[0].reset();
-    $form.find('input').trigger('change');
+    $form.find('input[type="checkbox"]').trigger('change');
+    $form.find('input[type="number"]').trigger('input');
   }
 
   function changeCheckboxBehavior () {
@@ -89,6 +93,7 @@ $(function () {
 
   function checkSubmitBtn (productionCost) {
     $('#submit').prop("disabled", !Boolean(productionCost));
+    $('#continue').prop("disabled", !Boolean(productionCost));
   }
 
   function checkRelatedItems () {
