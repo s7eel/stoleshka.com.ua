@@ -14,7 +14,7 @@ function __autoload($class){
 $db = array(
     'host' => 'localhost',
     'user' => 'root',
-    'pass' => 'root',
+    'pass' => '',
     'name' => 'stoleshka',
 );
 $template = $_SERVER['DOCUMENT_ROOT'].'/'.'templates/maintemplate.php';

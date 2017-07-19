@@ -110,7 +110,105 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <a class="kode-button-style-1 kode-theme-color-bg-color" href="index.html#">как получить скидку -13%</a>
+                        <a class="kode-button-style-1 kode-theme-color-bg-color" href="" data-toggle="modal" data-target="#basket">корзина</a>
+
+                         <!-- Modal -->
+  <div class="modal fade" id="basket" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Ваш Заказ</h4>
+        </div>
+        <div class="modal-body" id="basket_list">
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>Название товара</th>
+        <th>кол-во, шт</th>
+        <th>Подробнее</th>
+        <th>Стоимость</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ступени</td>
+        <td>50шт</td>
+        <td><a href="index.php?page=calculatorView">подробнее</a></td>
+        <td>2400грн</td>
+      </tr>
+      <tr>
+        <td>столешница</td>
+        <td>1шт</td>
+        <td><a href="index.php?page=calculatorView">подробнее</a></td>
+        <td>1200грн</td>
+      </tr>
+      <tr>
+        <td>мебельный щит</td>
+        <td>5шт</td>
+        <td><a href="index.php?page=costproducts">подробнее</a></td>
+        <td>3200грн</td>
+      </tr>
+            <tr>
+        <td><b>ИТОГО</b> </td>
+        <td></td>
+        <td></td>
+        <td><b>15000грн</b></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+<!-- 
+        basket collapse
+    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#basket_item">столешница</button>
+  <div id="basket_item" class="collapse">
+  <p></p>            
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>Материал </td>
+        <td>дуб</td>
+      </tr>
+      <tr>
+        <td>Тип склейки</td>
+        <td>Клеенный массив</td>
+      </tr>
+        <tr>
+        <td>Толщина</td>
+        <td>20мм</td>
+      </tr>
+            <tr>
+        <td>Вид клея</td>
+        <td>Влагостойкий</td>
+      </tr>
+            <tr>
+        <td>Количество деталей</td>
+        <td>50 шт</td>
+      </tr>
+    </tbody>
+  </table>
+  </div> -->
+
+
+</div>
+
+                 <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Очистить корзину</button>
+           <a href="index.php?page=costproducts"><button type="text" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button></a>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Оформить заказ</button>
+        </div> 
+</div>
+
+      </div>
+      
+    </div>
+  </div>
+  
                     </div>
                 </div>
             </div>

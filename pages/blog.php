@@ -31,7 +31,7 @@
                     </figure>
                     <div class="kode_blog_grid_content content_2">
                         <h6><?= $item['created_at']?></h6>
-                        <h4 class="blog-title"><?= $title?></h4>
+                        <h4 id="ppp" class="blog-title"><?= $title?></h4>
                         <p><?= $shortDescr?></p>
                         <a class="kode_readmore" href="<?= $_SERVER['PHP_SELF']?>?page=article&id=<?=$item['id']?>">Read More</a>
                     </div>
