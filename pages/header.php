@@ -98,7 +98,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <a class="kode-button-style-1 kode-theme-color-bg-color" href="index.html#">как получить скидку -13%</a>
+                        <a class="kode-button-style-1 kode-theme-color-bg-color" href="index.html#">как получить скидку -7%</a>
                     </div>
                 </div>
             </div>
