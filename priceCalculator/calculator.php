@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Калькулятор</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="priceCalculator/styles.css">
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="./calculator.js"></script>
-    <script src="./main.js"></script>
+    <script src="priceCalculator/calculator.js"></script>
+    <script src="priceCalculator/main.js"></script>
     <?php if($arr){?>
         <script>const RATIOS = {
                 chamferRemovingPrice: <?=$arr[0]['chamferRemovingPrice']?>,
@@ -309,7 +309,7 @@
                 <div class="discount">* При заказе всего комплекса услуг скидка - 7 %</div>
                 <button type="button" id="refresh" class="btn btn-default">Очистить</button>
                 <button type="button" id="submit" class="btn btn btn-success" data-dismiss="modal" disabled>Оформить</button>
-                <button type="button" id="continue" class="btn btn-success">Заказать еще</button>
+                <button type="button" id="continue" class="btn btn-success" disabled>Заказать еще</button>
             </div>
         </div>
     </div>
