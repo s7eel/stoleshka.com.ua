@@ -170,6 +170,37 @@ class Action
 //        $arr = json_decode($_REQUEST);
         echo json_encode($arr);
     }
+
+    /**
+     * Функция по обработке неотправленных данных из калькулятора
+     */
+    public function getDataCalcEmpty()
+    {
+        header('Content-type:application/json');
+        $arr = file_get_contents('php://input');
+        $arr = json_decode($arr);
+//        $arr = array(
+//            'q'=>$_POST['itemName'],
+//            'w'=>$_POST['woodBreed'],
+//            'e'=>$_POST['bondingType'],
+//            'r'=>$_POST['gauge'],
+//            't'=>$_POST['glueType'],
+//            'y'=>$_POST['detailsNumber'],
+//            'u'=>$_POST['length'],
+//            'i'=>$_POST['width'],
+//            'o'=>$_POST['chamferRemoving'],
+//            'p'=>$_POST['complexRadius'],
+//            'a'=>$_POST['coveringPreparation'],
+//            's'=>$_POST['covering'],
+//            'd'=>$_POST['toningColor'],
+//            'f'=>$_POST['discount'],
+//            'g'=>$_POST['packaging'],
+//            'h'=>$_POST['totalWithDiscount'],
+//        );
+//        $arr = json_decode($_REQUEST);
+        echo json_encode($arr);
+    }
+//{"itemName":"frontFacade","woodBreed":"ash","bondingType":"glued","gauge":"30","glueType":"waterproof","detailsNumber":"1","length":"1000","width":"1000","chamferRemoving":"1","complexRadius":"1","coveringPreparation":"1","covering":"polishWithColor","toningColor":"wenge","discount":"on","packaging":"1","totalWithDiscount":"3639"}
 }
 
 
