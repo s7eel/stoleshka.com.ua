@@ -23,14 +23,15 @@ $(function () {
   });
 
   $('#submit').on('click', function () {
-    sendFormData('../calculator.php?page=getDataCalc');
+    sendFormData('index.php?page=getDataCalc');
   });
   $('#refresh, .close').on('click', function () {
-    sendFormData('../calculator.php?page=getDataCalcEmpty');
+    sendFormData('index.php?page=getDataCalcEmpty');
   });
 
   $('#continue').on('click', function () {
-    var products = JSON.parse(localStorage.getItem('products') || '[]');
+    var products = JSON.parse(localStorage.getItem('products') || '[]'),
+    totalSum = JSON.parse(localStorage.getItem('totalSum'));
 
     products.push(getDataFromForm());
     localStorage.setItem('products', JSON.stringify(products));

@@ -226,7 +226,7 @@
                         </li>
                         <li><a href="../nomenclature%20.php">Цена</a>
                             <ul>
-                                <li><a href="<?=$_SERVER['PHP_SELF']?>?page=costproducts">Продсчитать стоимость</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#calcModal">Продсчитать стоимость</a></li>
                                 <li><a href="sale.html">Как получить скидку</a></li>
                             </ul>
                         </li>
@@ -529,7 +529,7 @@
                     <div class="discount">* При заказе всего комплекса услуг скидка - 7 %</div>
                     <button type="button" id="refresh" class="btn btn-default">Очистить</button>
                     <button type="button" id="submit" class="btn btn btn-success" data-dismiss="modal" disabled>Оформить</button>
-                    <button type="button" id="continue" class="btn btn-success">Заказать еще</button>
+                    <button type="button" id="continue" class="btn btn-success" disabled>Заказать еще</button>
                 </div>
             </div>
         </div>
