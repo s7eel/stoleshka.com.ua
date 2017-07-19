@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Июл 18 2017 г., 18:26
+-- Время создания: Июл 19 2017 г., 19:39
 -- Версия сервера: 5.7.18-0ubuntu0.16.04.1
 -- Версия PHP: 7.0.18-0ubuntu0.16.04.1
 
@@ -47,6 +47,40 @@ INSERT INTO `blog` (`id`, `title`, `short_descr`, `img_link`, `full_descr`, `cre
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `data`
+--
+
+CREATE TABLE `data` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `chamferRemovingPrice` decimal(10,3) NOT NULL,
+  `complexRadiusPrice` decimal(10,3) NOT NULL,
+  `coveringPreparationPrice` decimal(10,3) NOT NULL,
+  `packagingPrice` decimal(10,3) NOT NULL,
+  `discount` decimal(10,3) NOT NULL,
+  `waterproof` decimal(10,3) NOT NULL,
+  `notWaterproof` decimal(10,3) NOT NULL,
+  `polish` decimal(10,3) NOT NULL,
+  `polishWithColor` decimal(10,3) NOT NULL,
+  `noCovering` decimal(10,3) NOT NULL,
+  `ash` decimal(10,3) NOT NULL,
+  `oak` decimal(10,3) NOT NULL,
+  `glued` decimal(10,3) NOT NULL,
+  `spliced` decimal(10,3) NOT NULL,
+  `gauge20` decimal(10,3) NOT NULL,
+  `gauge30` decimal(10,3) NOT NULL,
+  `gauge40` decimal(10,3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `data`
+--
+
+INSERT INTO `data` (`id`, `chamferRemovingPrice`, `complexRadiusPrice`, `coveringPreparationPrice`, `packagingPrice`, `discount`, `waterproof`, `notWaterproof`, `polish`, `polishWithColor`, `noCovering`, `ash`, `oak`, `glued`, `spliced`, `gauge20`, `gauge30`, `gauge40`) VALUES
+(1, '4.000', '150.000', '150.000', '35.000', '0.070', '1.005', '1.000', '300.000', '350.000', '0.000', '2200.000', '3300.000', '1.000', '0.800', '0.700', '0.900', '1.000');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `users`
 --
 
@@ -78,6 +112,12 @@ ALTER TABLE `blog`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `data`
+--
+ALTER TABLE `data`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
@@ -92,6 +132,11 @@ ALTER TABLE `users`
 --
 ALTER TABLE `blog`
   MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT для таблицы `data`
+--
+ALTER TABLE `data`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT для таблицы `users`
 --

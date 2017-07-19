@@ -11,6 +11,7 @@ class Action
     protected $template;
     protected $blog;
     protected $user;
+    protected $dataCoefficient;
 
     function __construct($db, $template)
     {
@@ -18,6 +19,7 @@ class Action
         $this->template = $template;
         $this->blog = new Blog($db);
         $this->user = new Users($db);
+        $this->dataCoefficient = new Data($db);
     }
 
     /**
@@ -41,6 +43,7 @@ class Action
         $title = 'Главная страница';
         $header = 'pages/parts/header.php';
         $main = 'pages/main.php';
+        $arr = $this->dataCoefficient->getDataCoefficients();
         $footer = 'pages/parts/footer.php';
         $blog = $this->blog;
         include_once $this->template;
