@@ -35,16 +35,16 @@ function calcSums (inputData) {
   inputData.discount = inputData.chamferRemoving && (inputData.covering === 'polish' || inputData.covering === 'polishWithColor');
 
   var sums = {
-    productionCost: calcProductionCost(inputData),
-    chamferRemovingCost: calcChamferRemovingCost(inputData),
-    complexRadiusCost: calcComplexRadiusCost(inputData),
-    coveringPreparationCost: calcCoveringPreparationCost(inputData),
-    coveringCost: calcCoveringCost(inputData),
-    packagingCost: calcPackagingCost(inputData)
+    productionCost: parseFloat(calcProductionCost(inputData).toFixed(2)),
+    chamferRemovingCost: parseFloat(calcChamferRemovingCost(inputData).toFixed(2)),
+    complexRadiusCost: parseFloat(calcComplexRadiusCost(inputData).toFixed(2)),
+    coveringPreparationCost: parseFloat(calcCoveringPreparationCost(inputData).toFixed(2)),
+    coveringCost: parseFloat(calcCoveringCost(inputData).toFixed(2)),
+    packagingCost: parseFloat(calcPackagingCost(inputData).toFixed(2))
   };
 
   sums.total = sums.productionCost + sums.chamferRemovingCost + sums.complexRadiusCost + sums.coveringPreparationCost + sums.coveringCost + sums.packagingCost;
-  sums.discount = inputData.discount? sums.total * RATIOS.discount: 0;
+  sums.discount = inputData.discount? parseFloat((sums.total * RATIOS.discount).toFixed(2)): 0;
   sums.totalWithDiscount = sums.total - sums.discount;
 
   return sums;
@@ -63,11 +63,11 @@ function calcComplexRadiusCost (inputData) {
 }
 
 function calcCoveringPreparationCost (inputData) {
-  return parseInt(inputData.coveringPreparation)? RATIOS.chamferRemovingPrice * inputData.size * inputData.detailsNumber: 0;
+  return parseInt(inputData.coveringPreparation)? RATIOS.coveringPreparationPrice * 2 * inputData.size * inputData.detailsNumber : 0;
 }
 
 function calcCoveringCost (inputData) {
-  return inputData.covering? RATIOS.coveringPrice[inputData.covering] * inputData.size * inputData.detailsNumber: 0;
+  return inputData.covering? 2 * RATIOS.coveringPrice[inputData.covering] * inputData.size * inputData.detailsNumber: 0;
 }
 
 function calcPackagingCost (inputData) {

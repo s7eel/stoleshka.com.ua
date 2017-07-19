@@ -64,7 +64,7 @@ $(function () {
 
     for (var key in sums) {
       if (sums.hasOwnProperty(key)) {
-        $('#' + key).html(Number(sums[key] || 0).toFixed());
+        $('#' + key).html(parseFloat(sums[key].toFixed(2)) || 0);
       }
     }
     checkSubmitBtn(sums.productionCost);
