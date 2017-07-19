@@ -57,6 +57,7 @@ class Action
         $id = filter_input(INPUT_GET,'id');
         $title = 'Новости';
         $header = 'pages/parts/header.php';
+        $arr = $this->dataCoefficient->getDataCoefficients();
         $main = 'pages/article.php';
         $footer = 'pages/parts/footer.php';
         $blogItem = $this->blog->getItemByID($id);
@@ -69,6 +70,7 @@ class Action
     {
         $title = 'Блог';
         $header = 'pages/parts/header.php';
+        $arr = $this->dataCoefficient->getDataCoefficients();
         $main = 'pages/blog.php';
         $footer = 'pages/parts/footer.php';
         $blog = $this->blog->getItems();
@@ -83,6 +85,7 @@ class Action
     {
         $title = 'Подсчет стоимости';
         $header = 'pages/parts/headercalc.php';
+        $arr = $this->dataCoefficient->getDataCoefficients();
         $main = 'pages/calculator.php';
         $footer = 'pages/parts/footercalc.php';
         include_once $this->template;
@@ -95,6 +98,7 @@ class Action
     {
         $title = 'Продукция';
         $header = 'pages/parts/header.php';
+        $arr = $this->dataCoefficient->getDataCoefficients();
         $main = 'pages/production.php';
         $footer = 'pages/parts/footer.php';
         include_once $this->template;
