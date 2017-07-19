@@ -76,26 +76,6 @@
 <!--// KODE WRAPER START //-->
 <div class="kode-wraper">
     <div class="header">
-        <!--KODE TOP WRAPER START-->
-        <!-- <div class="kode_top_wrap2">
-            <div class="container">
-                <div class="kode_top_row">
-                    <ul class="kode_top_faq">
-                        <li><a href="index.html#">Faq</a></li>
-                        <li><a href="index.html#">Help Desk</a></li>
-                        <li><a href="index.html#">Track Shipment</a></li>
-                    </ul>
-                    <span class="kode_time_detail"><i class="fa fa-clock-o"></i>Sat-Thus : 9am:6pm</span>
-                    <ul class="kode_top_social_icon">
-                        <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="index.html#"><i class="fa fa-pinterest-p"></i></a></li>
-                        <li><a href="index.html#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="index.html#"><i class="fa fa-dribbble"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div> -->
-        <!--KODE TOP WRAPER END-->
         <div class="kode_top_content_area">
             <div class="container">
                 <div class="row">
@@ -141,26 +121,10 @@
                 <div class="container">
                     <ul>
                         <li><a class="active" href="<?=$_SERVER['PHP_SELF']?>?page=mainpage">Главная</a>
-                            <!-- 				<ul>
-                                                <li><a href="index.html">homr page</a></li>
-                                                <li><a href="index1.html">HOME PAGE 01</a></li>
-                                                <li><a href="index2.html">HOME PAGE 02</a></li>
-                                                <li><a href="index3.html">HOME PAGE 03</a></li>
-                                            </ul> -->
                         </li>
                         <li><a href="index.html#about">О нас</a>
-                            <!-- 			<ul>
-                                            <li><a href="about-us.html">about us</a></li>
-                                            <li><a href="about-us-01.html">about us 01</a></li>
-                                        </ul> -->
                         </li>
                         <li><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Продукция</a>
-                            <!-- <ul>
-                                <li><a href="practice-area.html">Столешницы</a></li>
-                                <li><a href="practice-area-01.html">Ступени</a></li>
-                                <li><a href="practice-area-02.html">Подоконники</a></li>
-                                <li><a href="practice-area-03.html">Прямые фасады</a></li>
-                            </ul> -->
                         </li>
                         <li><a href="../nomenclature%20.php">Цена</a>
                             <ul>
@@ -169,18 +133,8 @@
                             </ul>
                         </li>
                         <li><a href="delivery.html">Доставка и оплата</a>
-                            <!--<ul>-->
-                            <!--<li><a href="advice.html">Доставка по Украине</a></li>-->
-                            <!--<li><a href="advice.html">Доставка по г.Днепр</a></li>-->
-                            <!--</ul>-->
                         </li>
                         <li><a href="<?=$_SERVER['PHP_SELF']?>?page=blogarticles">Блог</a>
-                            <!-- <ul>
-                                <li><a href="agent.html">Блог</a></li>
-                                <li><a href="enginer.html">Советы по уходу</a></li>
-                                <li><a href="404.html">Контроль качества</a></li>
-                                <li><a href="time-line-farm.html">Красиво и экологично</a></li>
-                            </ul> -->
                         </li>
                         <li><a href="index.html#map-canvas">Контакты</a></li>
                     </ul>
@@ -189,26 +143,10 @@
                         <button class="dl-trigger">Меню</button>
                         <ul class="dl-menu">
                             <li><a class="active" href="index.html#">Главная</a>
-                                <!-- <ul class="dl-submenu">
-                                    <li><a href="index.html">homr page</a></li>
-                                    <li><a href="index1.html">HOME PAGE 01</a></li>
-                                    <li><a href="index2.html">HOME PAGE 02</a></li>
-                                    <li><a href="index3.html">HOME PAGE 03</a></li>
-                                </ul> -->
                             </li>
                             <li class="menu-item kode-parent-menu"><a href="index.html#about">О нас</a>
-                                <!-- <ul class="dl-submenu">
-                                    <li><a href="about-us.html">about us</a></li>
-                                    <li><a href="about-us-01.html">about us 01</a></li>
-                                </ul> -->
                             </li>
                             <li class="menu-item kode-parent-menu"><a href="index.html#">Проду</a>
-                                <!-- <ul class="dl-submenu">
-                                    <li><a href="practice-area.html">Столешницы</a></li>
-                                <li><a href="practice-area-01.html">Ступени</a></li>
-                                <li><a href="practice-area-02.html">Подоконники</a></li>
-                                <li><a href="practice-area-03.html">Прямые фасады</a></li>
-                                </ul> -->
                             </li>
                             <li class="menu-item kode-parent-menu"><a href="index.html#">Цена</a>
                                 <ul class="dl-submenu">
@@ -217,18 +155,10 @@
                                 </ul>
                             </li>
                             <li class="menu-item kode-parent-menu"><a href="advice.html">Доставка и оплата</a>
-                                <!-- <ul class="dl-submenu">
-                                    <li><a href="gallery.html">Доставка по Украине</a></li>
-                                <li><a href="gallery-detail.html">Доставка по г.Днепр</a></li>
-                                </ul> -->
+
                             </li>
                             <li class="menu-item kode-parent-menu"><a href="index.html#">Контакты</a>
-                                <!-- <ul class="dl-submenu">
-                                    <li><a href="agent.html">agent</a></li>
-                                    <li><a href="enginer.html">enginer</a></li>
-                                    <li><a href="404.html">404 page</a></li>
-                                    <li><a href="time-line-farm.html">time farm</a></li>
-                                </ul> -->
+
                             </li>
                             <li><a href="">Связаться с нами</a></li>
                         </ul>
@@ -238,4 +168,271 @@
             </div>
         </div>
         <!--KODE TOP NAVI WRAPER END-->
+    </div>
+    <!-- TRYING TO DO CALCULATOR-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="calcModal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <form id="calculator">
+                                <div id="basicRequirements">
+                                    <div class="form-group">
+                                        <label class="control-label" for="itemName">Наименование товара</label>
+                                        <select id="itemName" name="itemName" class="form-control itemName">
+                                            <option value="tabletop">столешница</option>
+                                            <option value="steps">ступени</option>
+                                            <option value="windowsill">подоконник</option>
+                                            <option value="frontFacade">фасад прямой</option>
+                                            <option value="furnitureBoard">мебельный щит</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Порода дерева</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="woodBreed" value="ash">
+                                                Ясень
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="woodBreed" value="oak">
+                                                Дуб
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Тип склейки</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="bondingType" value="glued">
+                                                Клеенный массив
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="bondingType" value="spliced">
+                                                Срощенный
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Толщина</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="gauge" value="20">
+                                                20 мм
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="gauge" value="30">
+                                                30 мм
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="gauge" value="40">
+                                                40 мм
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Вид клея</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="glueType" value="waterproof">
+                                                Влагостойкий
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="glueType" value="notWaterproof">
+                                                Не влагостойкий
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label" for="detailsNumber">Количество деталей</label>
+                                        <input name="detailsNumber" id="detailsNumber" type="number" min="0" step="1"
+                                               class="form-control detailsNumber" required>
+                                        <span>шт.</span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Габаритные размеры</label>
+                                        <input name="length" type="number" placeholder="длина"
+                                               class="form-control size" required>
+                                        <input name="width" type="number" placeholder="ширина"
+                                               class="form-control size" required> <div>мм</div>
+                                    </div>
+                                    <button id="showAdditionalRequirements" class="btn btn-info">
+                                        Показать дополнительные услуги
+                                    </button>
+                                </div>
+
+                                <div id="additionalRequirements" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Снятие фаски по периметру</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="chamferRemoving" value="1">
+                                                Да
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="chamferRemoving" value="0">
+                                                Нет
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Криволинейное форматирование / сложный
+                                            радиус</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="complexRadius" value="1">
+                                                Да
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="complexRadius" value="0">
+                                                Нет
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Подготовка к покрытию</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="coveringPreparation" value="1">
+                                                Да
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="coveringPreparation" value="0">
+                                                Нет
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <fieldset class="form-group covering">
+                                        <label class="control-label">Покрытие</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="covering" value="polish">
+                                                лак
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="covering" value="polishWithColor">
+                                                лак + тон
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="covering" value="noCovering">
+                                                без покрытия
+                                            </label>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset class="form-group toningColor">
+                                        <label class="control-label">Выбор цвета тонирования</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="toningColor" value="wenge">
+                                                венге
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="toningColor" value="bleached">
+                                                выбеленный
+                                            </label>
+                                        </div>
+                                    </fieldset>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Упаковка изделия / деталей</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="packaging" value="1">
+                                                Да
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="packaging" value="0">
+                                                Нет
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-5 col-sm-offset-2">
+                            <div id="images">
+                                <img src="http://thecatapi.com/api/images/get?size=small&format=src&type=jpg&results_per_page=2"
+                                     alt="">
+                                <img src="http://thecatapi.com/api/images/get?size=small&format=src&type=gif&results_per_page=2"
+                                     alt="">
+                            </div>
+                            <div id="calculatedSums" class="calculated-sums modal-fixed">
+                                <p>Изготовление
+                                    <span id="productionCost">0</span>
+                                    грн
+                                </p>
+                                <p>Снятие фаски
+                                    <span id="chamferRemovingCost">0</span>
+                                    грн
+                                </p>
+                                <p>Криволинейное форматирование
+                                    <span id="complexRadiusCost">0</span>
+                                    грн
+                                </p>
+                                <p>Подготовка к покраске
+                                    <span id="coveringPreparationCost">0</span>
+                                    грн
+                                </p>
+                                <p>Покрытие
+                                    <span id="coveringCost">0</span>
+                                    грн
+                                </p>
+                                <div class="total-sums">
+                                    <hr>
+                                    <hr>
+                                    <p>Итого: <span id="total">0</span> грн</p>
+                                    <p>Скидка: <span id="discount">0</span> грн</p>
+                                    <p>Итого со скидкой: <span id="totalWithDiscount">0</span> грн</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="discount">* При заказе всего комплекса услуг скидка - 7 %</div>
+                    <button type="button" id="refresh" class="btn btn-default">Очистить</button>
+                    <button type="button" id="submit" class="btn btn btn-success" data-dismiss="modal" disabled>Оформить</button>
+                    <button type="button" id="continue" class="btn btn-success">Заказать еще</button>
+                </div>
+            </div>
+        </div>
     </div>
