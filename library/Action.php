@@ -86,7 +86,7 @@ class Action
         $title = 'Подсчет стоимости';
         $header = 'pages/parts/headercalc.php';
         $arr = $this->dataCoefficient->getDataCoefficients();
-        $main = 'pages/calculator.php';
+        $main = 'pages/nomenclature.php';
         $footer = 'pages/parts/footercalc.php';
         include_once $this->template;
     }
@@ -103,6 +103,12 @@ class Action
         $footer = 'pages/parts/footer.php';
         include_once $this->template;
 
+    }
+    public function calculatorView()
+    {
+        $arr = $this->dataCoefficient->getDataCoefficients();
+        $this->template='priceCalculator/calculator.php';
+        include_once $this->template;
     }
     /**
      * Error page via FALSE get request
