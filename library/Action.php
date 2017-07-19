@@ -11,6 +11,7 @@ class Action
     protected $template;
     protected $blog;
     protected $user;
+    protected $dataCoefficient;
 
     function __construct($db, $template)
     {
@@ -18,7 +19,14 @@ class Action
         $this->template = $template;
         $this->blog = new Blog($db);
         $this->user = new Users($db);
+        $this->dataCoefficient = new Data($db);
     }
+
+    /**
+     * @param null $id
+     * inner function redirect to page
+     * according to $id;
+     */
     public function redirect($id=NULL)
     {
         if (!$id) {
@@ -27,46 +35,81 @@ class Action
         header('Location:' . $_SERVER['PHP_SELF'] . $id);
     }
 
+    /**
+     * Output mainpage according to request;
+     */
     public function mainpage()
     {
         $title = 'Главная страница';
-        $header = 'pages/header.php';
+        $header = 'pages/parts/header.php';
         $main = 'pages/main.php';
-        $footer = 'pages/footer.php';
+        $arr = $this->dataCoefficient->getDataCoefficients();
+        $footer = 'pages/parts/footer.php';
         $blog = $this->blog;
         include_once $this->template;
     }
+
+    /**
+     * Output one article from blog
+     */
     public function article()
     {
         $id = filter_input(INPUT_GET,'id');
         $title = 'Новости';
-        $header = 'pages/header.php';
+        $header = 'pages/parts/header.php';
+        $arr = $this->dataCoefficient->getDataCoefficients();
         $main = 'pages/article.php';
-        $footer = 'pages/footer.php';
+        $footer = 'pages/parts/footer.php';
         $blogItem = $this->blog->getItemByID($id);
         include_once $this->template;
     }
+    /**
+     * Output all the blog items
+     */
+    public function blogarticles()
+    {
+        $title = 'Блог';
+        $header = 'pages/parts/header.php';
+        $arr = $this->dataCoefficient->getDataCoefficients();
+        $main = 'pages/blog.php';
+        $footer = 'pages/parts/footer.php';
+        $blog = $this->blog->getItems();
+        include_once $this->template;
+    }
+
+    /**
+     * The page shows different types of products
+     * which they figure out;
+     */
+    public function costproducts()
+    {
+        $title = 'Подсчет стоимости';
+        $header = 'pages/parts/headercalc.php';
+        $arr = $this->dataCoefficient->getDataCoefficients();
+        $main = 'pages/calculator.php';
+        $footer = 'pages/parts/footercalc.php';
+        include_once $this->template;
+    }
+
+    /**
+     * Output page with products
+     */
+    public function productions()
+    {
+        $title = 'Продукция';
+        $header = 'pages/parts/header.php';
+        $arr = $this->dataCoefficient->getDataCoefficients();
+        $main = 'pages/production.php';
+        $footer = 'pages/parts/footer.php';
+        include_once $this->template;
+
+    }
+    /**
+     * Error page via FALSE get request
+     */
     public function errorPage()
     {
-        header('Content-type:application/json');
-        $arr = array(
-            'q'=>$_POST['itemName'],
-            'w'=>$_POST['woodBreed'],
-            'e'=>$_POST['bondingType'],
-            'r'=>$_POST['gauge'],
-            't'=>$_POST['glueType'],
-            'y'=>$_POST['detailsNumber'],
-            'u'=>$_POST['length'],
-            'i'=>$_POST['width'],
-            'o'=>$_POST['chamferRemoving'],
-            'p'=>$_POST['complexRadius'],
-            'a'=>$_POST['coveringPreparation'],
-            's'=>$_POST['covering'],
-            'd'=>$_POST['toningColor'],
-            'f'=>$_POST['discount'],
-            'g'=>$_POST['packaging'],
-        );
-        echo json_encode($arr);
+
     }
 
     /**
@@ -89,7 +132,6 @@ class Action
         }
 
     }
-
     /**
      * @return array
      * getting data from the form from 1st page
@@ -107,26 +149,65 @@ class Action
     }
 
     /**
-     * return array with data to JS
+     * Getting data from ajax request;
      */
-    public function getDataFromSession()
+    public function getDataCalc()
     {
-        $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
+        header('Content-type:application/json');
+        $arr = file_get_contents('php://input');
+        $arr = json_decode($arr);
+//        $arr = array(
+//            'q'=>$_POST['itemName'],
+//            'w'=>$_POST['woodBreed'],
+//            'e'=>$_POST['bondingType'],
+//            'r'=>$_POST['gauge'],
+//            't'=>$_POST['glueType'],
+//            'y'=>$_POST['detailsNumber'],
+//            'u'=>$_POST['length'],
+//            'i'=>$_POST['width'],
+//            'o'=>$_POST['chamferRemoving'],
+//            'p'=>$_POST['complexRadius'],
+//            'a'=>$_POST['coveringPreparation'],
+//            's'=>$_POST['covering'],
+//            'd'=>$_POST['toningColor'],
+//            'f'=>$_POST['discount'],
+//            'g'=>$_POST['packaging'],
+//            'h'=>$_POST['totalWithDiscount'],
+//        );
+//        $arr = json_decode($_REQUEST);
         echo json_encode($arr);
     }
 
     /**
-     * Output all the blog items
+     * Функция по обработке неотправленных данных из калькулятора
      */
-    public function blogarticles()
+    public function getDataCalcEmpty()
     {
-        $title = 'Блог';
-        $header = 'pages/header.php';
-        $main = 'pages/blog.php';
-        $footer = 'pages/footer.php';
-        $blog = $this->blog->getItems();
-        include_once $this->template;
+        header('Content-type:application/json');
+        $arr = file_get_contents('php://input');
+        $arr = json_decode($arr);
+//        $arr = array(
+//            'q'=>$_POST['itemName'],
+//            'w'=>$_POST['woodBreed'],
+//            'e'=>$_POST['bondingType'],
+//            'r'=>$_POST['gauge'],
+//            't'=>$_POST['glueType'],
+//            'y'=>$_POST['detailsNumber'],
+//            'u'=>$_POST['length'],
+//            'i'=>$_POST['width'],
+//            'o'=>$_POST['chamferRemoving'],
+//            'p'=>$_POST['complexRadius'],
+//            'a'=>$_POST['coveringPreparation'],
+//            's'=>$_POST['covering'],
+//            'd'=>$_POST['toningColor'],
+//            'f'=>$_POST['discount'],
+//            'g'=>$_POST['packaging'],
+//            'h'=>$_POST['totalWithDiscount'],
+//        );
+//        $arr = json_decode($_REQUEST);
+        echo json_encode($arr);
     }
+//{"itemName":"frontFacade","woodBreed":"ash","bondingType":"glued","gauge":"30","glueType":"waterproof","detailsNumber":"1","length":"1000","width":"1000","chamferRemoving":"1","complexRadius":"1","coveringPreparation":"1","covering":"polishWithColor","toningColor":"wenge","discount":"on","packaging":"1","totalWithDiscount":"3639"}
 }
 
 

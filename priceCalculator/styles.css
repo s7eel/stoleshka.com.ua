@@ -1,32 +1,94 @@
-.calculated-sums {
+#calcModal .calculated-sums {
     display: inline-block;
     border: 1px solid #666;
     padding: 5px;
 }
 
-.calculated-sums span{
+#calcModal .calculated-sums span {
     display: inline-block;
     min-width: 40px;
     text-align: center;
 }
 
-.total-sums {
+#calcModal .total-sums {
     display: inline-block;
     margin-left: 20%;
 }
 
-.total-sums hr {
+#calcModal .modal-body {
+    padding-left: 30px;
+}
+
+#calcModal .total-sums hr {
     border: none;
     height: 1px;
     background-color: #666;
     color: #666;
 }
 
-.total-sums hr:first-of-type {
+#calcModal .total-sums hr:first-of-type {
     margin-bottom: 0;
 }
 
-.total-sums hr:last-of-type {
+#calcModal .total-sums hr:last-of-type {
     margin-top: 4px;
     margin-bottom: 6px;
+}
+#calcModal label {
+    color: #4a4a4a;
+    display: block;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+#calcModal .itemName {
+    width: 70%;
+}
+
+#calcModal .detailsNumber {
+    width: calc(70% - 14px);
+    display: inline-block;
+}
+
+#calcModal .detailsNumber + span {
+    width: 14px;
+}
+
+#calcModal .size {
+    width: 31%;
+    display: inline-block;
+}
+
+#calcModal .size + div {
+    display: inline-block;
+    width: 5%;
+}
+
+#calcModal .size:last-of-type {
+    margin-left: 3%;
+}
+
+#calcModal .discount {
+    padding-left: 15px;
+    text-align: left;
+}
+
+#calcModal .grey {
+    color: lightgrey;
+}
+
+@media only screen and (min-width: 768px) {
+    #calcModal {
+        overflow: hidden;
+    }
+
+    #calcModal .modal-body {
+        overflow: auto;
+        height: 80vh;
+    }
+
+    #calcModal .modal-fixed {
+        position: fixed;
+        right: 30px;
+    }
 }

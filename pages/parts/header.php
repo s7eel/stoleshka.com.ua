@@ -38,7 +38,39 @@
     <link href="css/widget.css" rel="stylesheet">
     <!--css/responsive.css start-->
     <link href="css/responsive.css" rel="stylesheet">
-    <link href="bootstrap-social.css" rel="stylesheet" type="text/css"  />
+    <link href="bootstrap-social.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="priceCalculator/styles.css">
+    <?php if($arr){?>
+        <script>const RATIOS = {
+                chamferRemovingPrice: <?=$arr[0]['chamferRemovingPrice']?>,
+                complexRadiusPrice: <?=$arr[0]['complexRadiusPrice']?>,
+                coveringPreparationPrice: <?=$arr[0]['coveringPreparationPrice']?>,
+                glueType: {
+                    waterproof: <?=$arr[0]['waterproof']?>,
+                    notWaterproof: <?=$arr[0]['notWaterproof']?>
+                },
+                coveringPrice: {
+                    polish: <?=$arr[0]['polish']?>,
+                    polishWithColor: <?=$arr[0]['polishWithColor']?>,
+                    noCovering: <?=$arr[0]['noCovering']?>
+                },
+                packagingPrice: <?=$arr[0]['packagingPrice']?>,
+                woodBreedPrice: {
+                    ash: <?=$arr[0]['ash']?>,
+                    oak: <?=$arr[0]['oak']?>
+                },
+                bondingType: {
+                    glued: <?=$arr[0]['glued']?>,
+                    spliced: <?=$arr[0]['spliced']?>
+                },
+                gauge: {
+                    20: <?=$arr[0]['gauge20']?>,
+                    30: <?=$arr[0]['gauge30']?>,
+                    40: <?=$arr[0]['gauge40']?>
+                },
+                discount: <?=$arr[0]['discount']?>
+            };</script>
+    <?}?>
 </head>
 <body class="light">
 <!--// KODE WRAPER START //-->
@@ -122,7 +154,7 @@
                                             <li><a href="about-us-01.html">about us 01</a></li>
                                         </ul> -->
                         </li>
-                        <li><a href="production.html">Продукция</a>
+                        <li><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Продукция</a>
                             <!-- <ul>
                                 <li><a href="practice-area.html">Столешницы</a></li>
                                 <li><a href="practice-area-01.html">Ступени</a></li>
@@ -130,9 +162,9 @@
                                 <li><a href="practice-area-03.html">Прямые фасады</a></li>
                             </ul> -->
                         </li>
-                        <li><a href="calculator.html">Цена</a>
+                        <li><a href="../calculator.php">Цена</a>
                             <ul>
-                                <li><a href="calculator.html">Продсчитать стоимость</a></li>
+                                <li><a href="<?=$_SERVER['PHP_SELF']?>?page=costproducts">Продсчитать стоимость</a></li>
                                 <li><a href="sale.html">Как получить скидку</a></li>
                             </ul>
                         </li>

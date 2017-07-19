@@ -1,7 +1,7 @@
 //RATIOS need to be updated from the server side
 
 const RATIOS = {
-  chamferRemovingPrice: 150,
+  chamferRemovingPrice: 4,
   complexRadiusPrice: 150,
   coveringPreparationPrice: 150,
   glueType: {
@@ -16,7 +16,7 @@ const RATIOS = {
   packagingPrice: 35,
   woodBreedPrice: {
     ash: 2200,
-    oak: 2500
+    oak: 3300
   },
   bondingType: {
     glued: 1,
@@ -32,18 +32,20 @@ const RATIOS = {
 
 function calcSums (inputData) {
   inputData.size = inputData.width * inputData.length / 1000000;
+  inputData.discount = inputData.chamferRemoving && (inputData.covering === 'polish' || inputData.covering === 'polishWithColor');
 
   var sums = {
-    productionCost: calcProductionCost(inputData),
-    chamferRemovingCost: calcChamferRemovingCost(inputData),
-    complexRadiusCost: calcComplexRadiusCost(inputData),
-    coveringPreparationCost: calcCoveringPreparationCost(inputData),
-    coveringCost: calcCoveringCost(inputData)
+    productionCost: parseFloat(calcProductionCost(inputData).toFixed(2)),
+    chamferRemovingCost: parseFloat(calcChamferRemovingCost(inputData).toFixed(2)),
+    complexRadiusCost: parseFloat(calcComplexRadiusCost(inputData).toFixed(2)),
+    coveringPreparationCost: parseFloat(calcCoveringPreparationCost(inputData).toFixed(2)),
+    coveringCost: parseFloat(calcCoveringCost(inputData).toFixed(2)),
+    packagingCost: parseFloat(calcPackagingCost(inputData).toFixed(2))
   };
 
-  sums.total = sums.productionCost + sums.chamferRemovingCost + sums.complexRadiusCost + sums.coveringPreparationCost + sums.coveringCost;
-  sums.discount = inputData.discount ? sums.total * RATIOS.discount : 0;
-  sums.totalWithDiscount = sums.total + sums.discount;
+  sums.total = sums.productionCost + sums.chamferRemovingCost + sums.complexRadiusCost + sums.coveringPreparationCost + sums.coveringCost + sums.packagingCost;
+  sums.discount = inputData.discount? parseFloat((sums.total * RATIOS.discount).toFixed(2)): 0;
+  sums.totalWithDiscount = sums.total - sums.discount;
 
   return sums;
 }
@@ -53,17 +55,21 @@ function calcProductionCost (inputData) {
 }
 
 function calcChamferRemovingCost (inputData) {
-  return parseInt(inputData.chamferRemoving) ? 2 * inputData.size * RATIOS.chamferRemovingPrice * inputData.detailsNumber : 0;
+  return parseInt(inputData.chamferRemoving)? 2 * (Number(inputData.width) + Number(inputData.length)) * RATIOS.chamferRemovingPrice / 1000 * inputData.detailsNumber: 0;
 }
 
 function calcComplexRadiusCost (inputData) {
-  return parseInt(inputData.complexRadius) ? RATIOS.complexRadiusPrice * inputData.detailsNumber : 0;
+  return parseInt(inputData.complexRadius)? RATIOS.complexRadiusPrice * inputData.detailsNumber: 0;
 }
 
 function calcCoveringPreparationCost (inputData) {
-  return parseInt(inputData.coveringPreparation) ? RATIOS.chamferRemovingPrice * inputData.size * inputData.detailsNumber : 0;
+  return parseInt(inputData.coveringPreparation)? RATIOS.coveringPreparationPrice * 2 * inputData.size * inputData.detailsNumber : 0;
 }
 
 function calcCoveringCost (inputData) {
-  return RATIOS.coveringPrice[inputData.covering] * inputData.size * inputData.detailsNumber;
+  return inputData.covering? 2 * RATIOS.coveringPrice[inputData.covering] * inputData.size * inputData.detailsNumber: 0;
+}
+
+function calcPackagingCost (inputData) {
+  return (parseInt(inputData.packaging) || 0) && RATIOS.packagingPrice * inputData.size;
 }
