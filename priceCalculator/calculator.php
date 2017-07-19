@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Калькулятор</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="priceCalculator/styles.css">
+    <link rel="stylesheet" href="/priceCalculator/styles.css">
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="priceCalculator/calculator.js"></script>
-    <script src="priceCalculator/main.js"></script>
+    <script src="/priceCalculator/calculator.js"></script>
+    <script src="/priceCalculator/main.js"></script>
     <?php if($arr){?>
         <script>const RATIOS = {
                 chamferRemovingPrice: <?=$arr[0]['chamferRemovingPrice']?>,
