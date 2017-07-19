@@ -162,7 +162,7 @@
                                 <li><a href="practice-area-03.html">Прямые фасады</a></li>
                             </ul> -->
                         </li>
-                        <li><a href="../calculator.php">Цена</a>
+                        <li><a href="../nomenclature%20.php">Цена</a>
                             <ul>
                                 <li><a href="<?=$_SERVER['PHP_SELF']?>?page=costproducts">Продсчитать стоимость</a></li>
                                 <li><a href="sale.html">Как получить скидку</a></li>

@@ -23,10 +23,10 @@ $(function () {
   });
 
   $('#submit').on('click', function () {
-    sendFormData('../index.php?page=getDataCalc');
+    sendFormData('../calculator.php?page=getDataCalc');
   });
   $('#refresh, .close').on('click', function () {
-    sendFormData('../index.php?page=getDataCalcEmpty');
+    sendFormData('../calculator.php?page=getDataCalcEmpty');
   });
 
   $('#continue').on('click', function () {
