@@ -100,7 +100,7 @@
                                 <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue
                                     penatius </p>
                                 <a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color"
-                                   href="" data-target="#calcModal" data-toggle="modal">Подробнее</a>
+                                   href="<?=$_SERVER['PHP_SELF']?>?page=productions">Подробнее</a>
                             </figcaption>
                         </figure>
                     </div>
