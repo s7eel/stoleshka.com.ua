@@ -33,8 +33,8 @@
                 <h6><?= $item['created_at']?></h6>
                 <h4 id="ppp" class="blog-title"><?= $title?></h4>
                 <p><?= $shortDescr?></p>
-                <a class="kode_readmore" href="<?= $_SERVER['PHP_SELF']?>?page=article&id=<?=$item['id']?>">Редактировать</a><br>
-                <a class="kode_readmore" href="<?= $_SERVER['PHP_SELF']?>?page=article&id=<?=$item['id']?>">Удалить</a>
+                <a class="kode_readmore" href="<?= $_SERVER['PHP_SELF']?>?page=changearticle&id=<?=$item['id']?>">Редактировать</a><br>
+                <a class="kode_readmore" href="<?= $_SERVER['PHP_SELF']?>?page=deletearticle&id=<?=$item['id']?>">Удалить</a>
             </div>
         </div>
     </div>
