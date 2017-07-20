@@ -14,7 +14,7 @@
                         <li>- подоконники</li>
                         <li>- прямые фасады</li>
                     </ul>
-                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="index.html#">Подсчитать стоимость</a>
+                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="#" data-toggle="modal" data-target="#calcModal">Подсчитать стоимость</a>
                 </div>
             </div>
         </figure>
@@ -28,7 +28,7 @@
                         <li>- ме6ельный щит 3-4 рабочих дня</li>
                         <li>- готовые изделия с покраской 5-6 дней</li>
                     </ul>
-                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="index.html#">Подсчитать стоимость</a>
+                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="#" data-toggle="modal" data-target="#calcModal">Подсчитать стоимость</a>
                 </div>
             </div>
         </figure>
@@ -43,7 +43,7 @@
                         <li>- материалы от лучших производителей</li>
                         <li>- гарантия от изготовителя</li>
                     </ul>
-                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="index.html#">Подсчитать стоимость</a>
+                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="#" data-toggle="modal" data-target="#calcModal">Подсчитать стоимость</a>
                 </div>
             </div>
         </figure>
@@ -57,7 +57,7 @@
                         <li>- оптимизируем затраты транспортной компании</li>
                         <li>- выполняем качественную упаковку на предприятии</li>
                     </ul>
-                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="index.html#">Подсчитать стоимость</a>
+                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="#" data-toggle="modal" data-target="#calcModal">Подсчитать стоимость</a>
                 </div>
             </div>
         </figure>
@@ -74,7 +74,7 @@
                     <span><i class="glyphicon glyphicon-saved"></i></span>
                     <h3>столешницы</h3>
                     <p>Из цельных и склеенных массивов ясеня и дуба любой формы и толщины </p>
-                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="index.html#">Заказать</a>
+                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="#" data-toggle="modal" data-target="#calcModal">Заказать</a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
@@ -82,7 +82,7 @@
                     <span><i class="glyphicon glyphicon-signal"></i></span>
                     <h3>ступени</h3>
                     <p>Изготавливаем продукцию в кратчайшие сроки. От 3 до 7  дней </p>
-                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="index.html#">Заказать</a>
+                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="#" data-toggle="modal" data-target="#calcModal" data-item-name="steps">Заказать</a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
@@ -90,7 +90,7 @@
                     <span><i class="glyphicon glyphicon-hdd"></i></span>
                     <h3>подоконники</h3>
                     <p>Вся наша продукция из натуральной высококачественной древесины</p>
-                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="index.html#">Заказать</a>
+                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="#" data-toggle="modal" data-target="#calcModal" data-item-name="windowsill">Заказать</a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
@@ -98,7 +98,7 @@
                     <span><i class="glyphicon glyphicon-book"></i></span>
                     <h3>прямые фасады</h3>
                     <p>Стандартные изделия, а так же изделия по индивидуальному проекту</p>
-                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="index.html#">Заказать</a>
+                    <a class="kode-button-style-1 kode-theme-color-bg-color" href="#" data-toggle="modal" data-target="#calcModal" data-item-name="frontFacade">Заказать</a>
                 </div>
             </div>
         </div>

@@ -150,5 +150,7 @@
 <!-- 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script> -->
 <!--js/waypoints-min.js start-->
 <script src="js/waypoints-min.js"></script>
+<script src="priceCalculator/calculator.js"></script>
+<script src="priceCalculator/main.js"></script>
 </body>
 </html>
