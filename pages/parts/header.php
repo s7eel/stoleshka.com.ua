@@ -126,7 +126,7 @@
 
            <ul id="productsList">Корзина пуста</ul>
 
-           <form method="post" id="orderForm" class="quote_form_list">
+           <form id="orderForm" class="quote_form_list">
                        <div class="col-md-6 col-sm-6">
                            <div class="kode_quote_commet_field">
                                <input placeholder="Ваше Имя" name="name" type="text" data-default="Name*" size="30" required>
@@ -175,13 +175,13 @@
                        </div>
                        <div class="col-md-12">
                            <div class="kode_quote_textarea">
-                               <textarea placeholder="Сообщение/Вопрос" name="message" required></textarea>
+                               <textarea placeholder="Сообщение/Вопрос" name="message"></textarea>
                            </div>
                        </div>
                    </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning" data-dismiss="modal" id="makeOrder" disabled>Заказать</button>
+          <button type="button" class="btn btn-warning" data-dismiss="modal" id="makeOrder">Заказать</button>
         </div> 
 </div>
 
@@ -249,7 +249,7 @@
         <!--KODE TOP NAVI WRAPER END-->
     </div>
     <!-- TRYING TO DO CALCULATOR-->
-    <div class="modal fade" tabindex="-1" role="dialog" id="calcModal">
+    <div class="modal fade" tabindex="-1" role="dialog" id="calcModal" data-backdrop="static">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">

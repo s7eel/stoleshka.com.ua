@@ -2,7 +2,9 @@ $(function () {
   var products,
     finalSum,
     dictionary,
-    $productsList = $('#productsList');
+    $productsList = $('#productsList'),
+    order,
+    $orderForm = $('#orderForm');
 
   dictionary = {
     tabletop: 'столешница',
@@ -18,9 +20,29 @@ $(function () {
 
   updateData();
 
+  $('#makeOrder').on('click', function () {
+    getDataFromLS();
+    order = {
+      products: products,
+      finalSum: finalSum,
+      client: getDataFromForm()
+    };
+
+    $.ajax({
+      url: '/index.php?page=getDataCalc',
+      type: 'post',
+      dataType: 'json',
+      data: JSON.stringify(order),
+      success: function (data) {
+        resetForm();
+      },
+      error: function (e) {
+      }
+    });
+  });
+
   function updateData () {
-    products = JSON.parse(localStorage.getItem('products'));
-    finalSum = localStorage.getItem('finalSum');
+    getDataFromLS();
     products && products.length? renderProducts(): renderEmptyMsg();
   }
 
@@ -46,7 +68,48 @@ $(function () {
     })
   }
 
+  function getDataFromLS () {
+    products = JSON.parse(localStorage.getItem('products'));
+    finalSum = localStorage.getItem('finalSum');
+  }
+
   function renderEmptyMsg () {
     $('#productsList').html('Корзина пуста');
   }
+
+  function resetForm () {
+    $orderForm[0].reset();
+  }
+
+  function getDataFromForm () {
+    var data = {};
+    $orderForm.serializeArray().map(function (item) {
+      return data[item.name] = item.value;
+    });
+
+    return data;
+  }
 });
+
+
+var a = {
+  "products": [{
+    "itemName": "steps",
+    "woodBreed": "ash",
+    "bondingType": "glued",
+    "gauge": "20",
+    "glueType": "waterproof",
+    "detailsNumber": "1",
+    "length": "12000",
+    "width": "6000",
+    "totalWithDiscount": "111434.4"
+  }],
+  "finalSum": null,
+  "client": {
+    "name": "asdsad",
+    "phone": " 3(242)3423423",
+    "email": "aaa@a",
+    "city": "Днепр",
+    "message": "asdad"
+  }
+};
