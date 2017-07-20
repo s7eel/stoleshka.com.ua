@@ -111,6 +111,10 @@ class Blog extends MainStorage
         }
         die('Невозможно занести в базу данных'.__LINE__);
     }
+    public function deleteBlogItemByID($id)
+    {
+
+    }
 
 }
 

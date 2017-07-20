@@ -36,6 +36,11 @@ class AdminAction extends Action
         $header = 'pages/parts/adminheader.php';
         $main = 'pages/coeffic.php';
         $arr = $this->arr;
+        foreach ($arr as $key => $value){
+            foreach ($value as $item => $item2){
+                $arr[$key][$item] *= 1;
+            }
+        }
         $footer = 'pages/parts/adminfooter.php';
         $blog = $this->blog;
         include_once $this->template;
@@ -73,6 +78,11 @@ class AdminAction extends Action
         }else{
             die('Фото не загружено'.__LINE__);
         }
+    }
+    public function deletearticle()
+    {
+        $id = filter_input(INPUT_GET, 'id');
+
     }
 
 
