@@ -226,7 +226,7 @@
                         </li>
                         <li><a href="../nomenclature%20.php">Цена</a>
                             <ul>
-                                <li><a href="#" data-toggle="modal" data-target="#calcModal">Продсчитать стоимость</a></li>
+                                <li><a data-toggle="modal" href="<?= $_SERVER['PHP_SELF']?>?page=costproducts">Продсчитать стоимость</a></li>
                                 <li><a href="sale.html">Как получить скидку</a></li>
                             </ul>
                         </li>
