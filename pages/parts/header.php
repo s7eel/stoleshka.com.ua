@@ -113,7 +113,7 @@
                         <a class="kode-button-style-1 kode-theme-color-bg-color" href="" data-toggle="modal" data-target="#basketModal" id="basket">корзина</a>
 
                          <!-- Modal -->
-  <div class="modal fade" id="basketModal" role="dialog">
+  <div class="modal fade" id="basketModal" role="dialog" data-backdrop="static">
     <div class="modal-dialog">
     
       <!-- Modal content-->
@@ -126,7 +126,7 @@
 
            <ul id="productsList">Корзина пуста</ul>
 
-           <form id="orderForm" class="quote_form_list">
+           <form id="orderForm" class="quote_form_list" hidden>
                        <div class="col-md-6 col-sm-6">
                            <div class="kode_quote_commet_field">
                                <input placeholder="Ваше Имя" name="name" type="text" data-default="Name*" size="30" required>
@@ -175,7 +175,7 @@
                        </div>
                        <div class="col-md-12">
                            <div class="kode_quote_textarea">
-                               <textarea placeholder="Сообщение/Вопрос" name="message"></textarea>
+                               <textarea placeholder="Примечания/Пожелания" name="message"></textarea>
                            </div>
                        </div>
                    </form>
@@ -469,8 +469,6 @@
                         </div>
                         <div class="col-sm-5 col-sm-offset-2">
                             <div id="images">
-                                <img src="http://thecatapi.com/api/images/get?size=small&format=src&type=jpg&results_per_page=2"
-                                     alt="">
                                 <img src="http://thecatapi.com/api/images/get?size=small&format=src&type=gif&results_per_page=2"
                                      alt="">
                             </div>
