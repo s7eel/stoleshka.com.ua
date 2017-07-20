@@ -1,34 +1,34 @@
 //RATIOS need to be updated from the server side
-
-const RATIOS = {
-  chamferRemovingPrice: 4,
-  complexRadiusPrice: 150,
-  coveringPreparationPrice: 150,
-  glueType: {
-    waterproof: 1.2,
-    notWaterproof: 1
-  },
-  coveringPrice: {
-    polish: 300,
-    polishWithColor: 400,
-    noCovering: 0
-  },
-  packagingPrice: 35,
-  woodBreedPrice: {
-    ash: 2200,
-    oak: 3300
-  },
-  bondingType: {
-    glued: 1,
-    spliced: .8
-  },
-  gauge: {
-    20: .7,
-    30: .9,
-    40: 1
-  },
-  discount: .07
-};
+//
+// const RATIOS = {
+//   chamferRemovingPrice: 4,
+//   complexRadiusPrice: 150,
+//   coveringPreparationPrice: 150,
+//   glueType: {
+//     waterproof: 1.2,
+//     notWaterproof: 1
+//   },
+//   coveringPrice: {
+//     polish: 300,
+//     polishWithColor: 400,
+//     noCovering: 0
+//   },
+//   packagingPrice: 35,
+//   woodBreedPrice: {
+//     ash: 2200,
+//     oak: 3300
+//   },
+//   bondingType: {
+//     glued: 1,
+//     spliced: .8
+//   },
+//   gauge: {
+//     20: .7,
+//     30: .9,
+//     40: 1
+//   },
+//   discount: .07
+// };
 
 function calcSums (inputData) {
   inputData.size = inputData.width * inputData.length / 1000000;
