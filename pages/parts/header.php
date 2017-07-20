@@ -122,7 +122,7 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Ваш Заказ</h4>
         </div>
-        <div class="modal-body" id="basket_list">
+        <div class="modal-body" id="basketList">
 
 <ul id="productsList">Корзина пуста</ul>
 </div>

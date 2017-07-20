@@ -1,7 +1,8 @@
 $(function () {
   var products,
     finalSum,
-    dictionary;
+    dictionary,
+    $productsList = $('#productsList');
 
   dictionary = {
     tabletop: 'столешница',
@@ -24,7 +25,8 @@ $(function () {
   }
 
   function renderProducts () {
-    $('#productsList').empty();
+    $productsList.empty();
+    $('.glyphicon-remove').off();
 
     products.forEach(function (product, key) {
       $('#productsList').append('<li>' +
@@ -33,9 +35,15 @@ $(function () {
         '<span class="options">' + product.length + 'x' + product.width + '</span>' +
         '<span class="productNumber">' + product.detailsNumber + '</span>' +
         '<span class="totalWithDiscount">' + product.totalWithDiscount + '</span>' +
-        '<span class="glyphicon glyphicon-remove"></span>'+
+        '<span class="glyphicon glyphicon-remove" data-key="' + key + '"></span>' +
         '</li>');
     });
+
+    $productsList.on('click', '.glyphicon-remove', function (e) {
+      products.splice(e.target.dataset.key, 1);
+      localStorage.setItem('products', JSON.stringify(products));
+      updateData();
+    })
   }
 
   function renderEmptyMsg () {
