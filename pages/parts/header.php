@@ -40,6 +40,10 @@
     <link href="css/responsive.css" rel="stylesheet">
     <link href="bootstrap-social.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="priceCalculator/styles.css">
+    <!----------------------------------------------------------------------------------------------------->
+    <script src="/priceCalculator/calculator.js"></script>
+    <script src="/priceCalculator/main.js"></script>
+    <!----------------------------------------------------------------------------------------------------->
     <?php if($arr){?>
         <script>const RATIOS = {
                 chamferRemovingPrice: <?=$arr[0]['chamferRemovingPrice']?>,

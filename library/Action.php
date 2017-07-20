@@ -84,10 +84,10 @@ class Action
     public function costproducts()
     {
         $title = 'Подсчет стоимости';
-        $header = 'pages/parts/headercalc.php';
+        $header = 'pages/parts/header.php';
         $arr = $this->dataCoefficient->getDataCoefficients();
         $main = 'pages/nomenclature.php';
-        $footer = 'pages/parts/footercalc.php';
+        $footer = 'pages/parts/footer.php';
         include_once $this->template;
     }
 
