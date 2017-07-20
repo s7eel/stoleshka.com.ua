@@ -33,10 +33,11 @@ $(function () {
 
   $('#continue, #submit').on('click', function () {
     var products = JSON.parse(localStorage.getItem('products') || '[]'),
-      totalSum = JSON.parse(localStorage.getItem('totalSum'));
+      finalSum = parseFloat(JSON.parse(localStorage.getItem('finalSum')) || 0) + parseFloat($('#totalWithDiscount').html());
 
     products.push(getDataFromForm());
     localStorage.setItem('products', JSON.stringify(products));
+    localStorage.setItem('finalSum', JSON.stringify(finalSum));
     $('#basket').trigger('basket:update');
 
     resetForm();
