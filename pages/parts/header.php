@@ -168,29 +168,8 @@
     <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#basket_item">столешница</button>
   <div id="basket_item" class="collapse">
   <p></p>            
-  <table class="table">
-    <tbody>
-      <tr>
-        <td>Материал </td>
-        <td>дуб</td>
-      </tr>
-      <tr>
-        <td>Тип склейки</td>
-        <td>Клеенный массив</td>
-      </tr>
-        <tr>
-        <td>Толщина</td>
-        <td>20мм</td>
-      </tr>
-            <tr>
-        <td>Вид клея</td>
-        <td>Влагостойкий</td>
-      </tr>
-            <tr>
-        <td>Количество деталей</td>
-        <td>50 шт</td>
-      </tr>
-    </tbody>
+  <table class="table" id="#">
+    <tbody></tbody>
   </table>
   </div> -->
 
@@ -199,8 +178,7 @@
 
                  <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Очистить корзину</button>
-           <a href="index.php?page=costproducts"><button type="text" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button></a>
-            <button type="button" class="btn btn-warning" data-dismiss="modal">Оформить заказ</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Заказать</button>
         </div> 
 </div>
 
