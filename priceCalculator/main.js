@@ -12,7 +12,7 @@ $(function () {
   });
 
   $requirementBtn.on('click', function () {
-    Number($('#totalWithDiscount').html()) && showAdditionalBlock();
+    Number($('#totalWithDiscount').html()) && toggleAdditionalBlock();
   });
 
   $('#calcModal').on('show.bs.modal', function (event) {
@@ -73,13 +73,14 @@ $(function () {
     checkRelatedItems();
   }
 
-  function showAdditionalBlock () {
-    $requirementBtn.hide();
-    $('#additionalRequirements').show();
+  function toggleAdditionalBlock () {
+    $requirementBtn.toggle();
+    $('#additionalRequirements').toggle();
   }
 
   function resetForm () {
     $form[0].reset();
+    toggleAdditionalBlock();
     $form.find('input[type="checkbox"]').trigger('change');
     $form.find('input[type="number"]').trigger('input');
   }
