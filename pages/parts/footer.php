@@ -152,5 +152,6 @@
 <script src="/js/waypoints-min.js"></script>
 <script src="/priceCalculator/calculator.js"></script>
 <script src="/priceCalculator/main.js"></script>
+<script src="/basket/main.js"></script>
 </body>
 </html>

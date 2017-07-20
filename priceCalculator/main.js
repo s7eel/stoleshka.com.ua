@@ -35,7 +35,7 @@ $(function () {
 
     products.push(getDataFromForm());
     localStorage.setItem('products', JSON.stringify(products));
-    $('#basket').trigger('updated');
+    $('#basket').trigger('basket:update');
 
     resetForm();
   });

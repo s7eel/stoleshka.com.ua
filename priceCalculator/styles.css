@@ -98,3 +98,30 @@
         right: 30px;
     }
 }
+
+#productsList .glyphicon-remove {
+    color: red;
+    cursor: pointer;
+    width: 20px;
+}
+
+#productsList .glyphicon-remove:hover {
+    font-size: 105%;
+}
+
+#productsList span {
+    display: inline-block;
+    width: 17%;
+}
+
+#productsList .productNumber {
+    width: 10%;
+}
+
+#productsList .productNumber:after {
+    content: ' шт.';
+}
+
+#productsList .totalWithDiscount:after {
+    content: ' грн';
+}
