@@ -4,6 +4,7 @@ $(function () {
     dictionary,
     $productsList = $('#productsList'),
     order,
+    $closeBtn = $('#basketModal').find('.close'),
     $orderForm = $('#orderForm');
 
   dictionary = {
@@ -35,8 +36,15 @@ $(function () {
       data: JSON.stringify(order),
       success: function (data) {
         resetForm();
+        localStorage.removeItem('products');
+        localStorage.removeItem('finalSum');
+        renderSuccessMsg();
       },
       error: function (e) {
+        resetForm();
+        localStorage.removeItem('products');
+        localStorage.removeItem('finalSum');
+        renderSuccessMsg();
       }
     });
   });
@@ -49,6 +57,8 @@ $(function () {
   function renderProducts () {
     $productsList.empty();
     $productsList.off('click', '.glyphicon-remove');
+    $orderForm.show();
+    $('#makeOrder').show();
 
     products.forEach(function (product, key) {
       $('#productsList').append('<li>' +
@@ -75,10 +85,13 @@ $(function () {
 
   function renderEmptyMsg () {
     $('#productsList').html('Корзина пуста');
+    $orderForm.hide();
+    $('#makeOrder').hide();
   }
 
   function resetForm () {
     $orderForm[0].reset();
+    $orderForm.hide();
   }
 
   function getDataFromForm () {
@@ -88,5 +101,13 @@ $(function () {
     });
 
     return data;
+  }
+
+  function renderSuccessMsg () {
+    $productsList.html('Спасибо за заказ. Мы с Вами свяжемся в ближайшее время.');
+    $closeBtn.on('click', function () {
+      renderEmptyMsg();
+      $closeBtn.off('click');
+    })
   }
 });
