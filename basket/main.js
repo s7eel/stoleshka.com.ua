@@ -90,26 +90,3 @@ $(function () {
     return data;
   }
 });
-
-
-var a = {
-  "products": [{
-    "itemName": "steps",
-    "woodBreed": "ash",
-    "bondingType": "glued",
-    "gauge": "20",
-    "glueType": "waterproof",
-    "detailsNumber": "1",
-    "length": "12000",
-    "width": "6000",
-    "totalWithDiscount": "111434.4"
-  }],
-  "finalSum": null,
-  "client": {
-    "name": "asdsad",
-    "phone": " 3(242)3423423",
-    "email": "aaa@a",
-    "city": "Днепр",
-    "message": "asdad"
-  }
-};
