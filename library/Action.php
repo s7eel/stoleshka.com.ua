@@ -12,6 +12,7 @@ class Action
     protected $blog;
     protected $user;
     protected $dataCoefficient;
+    protected $arr;
 
     function __construct($db, $template)
     {
@@ -20,6 +21,7 @@ class Action
         $this->blog = new Blog($db);
         $this->user = new Users($db);
         $this->dataCoefficient = new Data($db);
+        $this->arr = $this->dataCoefficient->getDataCoefficients();
     }
 
     /**
@@ -43,7 +45,7 @@ class Action
         $title = 'Главная страница';
         $header = 'pages/parts/header.php';
         $main = 'pages/main.php';
-        $arr = $this->dataCoefficient->getDataCoefficients();
+        $arr = $this->arr;
         $footer = 'pages/parts/footer.php';
         $blog = $this->blog;
         include_once $this->template;
@@ -57,7 +59,7 @@ class Action
         $id = filter_input(INPUT_GET,'id');
         $title = 'Новости';
         $header = 'pages/parts/header.php';
-        $arr = $this->dataCoefficient->getDataCoefficients();
+        $arr = $this->arr;
         $main = 'pages/article.php';
         $footer = 'pages/parts/footer.php';
         $blogItem = $this->blog->getItemByID($id);
@@ -70,7 +72,7 @@ class Action
     {
         $title = 'Блог';
         $header = 'pages/parts/header.php';
-        $arr = $this->dataCoefficient->getDataCoefficients();
+        $arr = $this->arr;
         $main = 'pages/blog.php';
         $footer = 'pages/parts/footer.php';
         $blog = $this->blog->getItems();
@@ -85,7 +87,7 @@ class Action
     {
         $title = 'Подсчет стоимости';
         $header = 'pages/parts/header.php';
-        $arr = $this->dataCoefficient->getDataCoefficients();
+        $arr = $this->arr;
         $main = 'pages/nomenclature.php';
         $footer = 'pages/parts/footer.php';
         include_once $this->template;
@@ -98,7 +100,7 @@ class Action
     {
         $title = 'Продукция';
         $header = 'pages/parts/header.php';
-        $arr = $this->dataCoefficient->getDataCoefficients();
+        $arr = $this->arr;
         $main = 'pages/production.php';
         $footer = 'pages/parts/footer.php';
         include_once $this->template;
@@ -106,7 +108,7 @@ class Action
     }
     public function calculatorView()
     {
-        $arr = $this->dataCoefficient->getDataCoefficients();
+        $arr = $this->arr;
         $this->template='priceCalculator/calculator.php';
         include_once $this->template;
     }
@@ -115,7 +117,7 @@ class Action
      */
     public function errorPage()
     {
-
+        echo 'ERRORPAGE';
     }
 
     /**
