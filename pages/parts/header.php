@@ -124,8 +124,62 @@
         </div>
         <div class="modal-body" id="basketList">
 
-<ul id="productsList">Корзина пуста</ul>
-</div>
+           <ul id="productsList">Корзина пуста</ul>
+
+           <form method="post" id="orderForm" class="quote_form_list">
+                       <div class="col-md-6 col-sm-6">
+                           <div class="kode_quote_commet_field">
+                               <input placeholder="Ваше Имя" name="name" type="text" data-default="Name*" size="30" required>
+                           </div>
+                       </div>
+                       <div class="col-md-6 col-sm-6">
+                           <div class="kode_quote_commet_field">
+                               <input id="mask_phone" placeholder="Ваш телефон" name="phone" type="text" required>
+                           </div>
+                       </div>
+                       <div class="col-md-6 col-sm-6">
+                           <div class="kode_quote_commet_field">
+                               <input id="e-mail" placeholder="Mail" name="email" type="email">
+                           </div>
+                       </div>
+                       <div class="col-md-6 col-sm-6">
+                           <div class="kode_quote_commet_field">
+                               <select name="city" onmousedown="if(this.options.length>5){this.size=5;}"
+                                       onchange="this.blur()" onblur="this.size=0;">
+                                   <option value="Днепр">Днепр</option>
+                                   <option value="Винница">Винница</option>
+                                   <option value="Киев">Киев</option>
+                                   <option value="Житомир">Житомир</option>
+                                   <option value="Запорожье">Запорожье</option>
+                                   <option value="Кропивницкий">Кропивницкий</option>
+                                   <option value="Ивано-Франковск">Ивано-Франковск</option>
+                                   <option value="Луганск">Луганск</option>
+                                   <option value="Луцк">Луцк</option>
+                                   <option value="Львов">Львов</option>
+                                   <option value="Николаев">Николаев</option>
+                                   <option value="Одесса">Одесса</option>
+                                   <option value="Полтава">Полтава</option>
+                                   <option value="Ровно">Ровно</option>
+                                   <option value="Суммы">Суммы</option>
+                                   <option value="Тернополь">Тернополь</option>
+                                   <option value="Ужгород">Ужгород</option>
+                                   <option value="Харьков">Харьков</option>
+                                   <option value="Херсон">Херсон</option>
+                                   <option value="Хмельницкий">Хмельницкий</option>
+                                   <option value="Черкассы">Черкассы</option>
+                                   <option value="Чернигов">Чернигов</option>
+                                   <option value="Черновцы">Черновцы</option>
+                                   <option value="Донецк">Донецк</option>
+                               </select>
+                           </div>
+                       </div>
+                       <div class="col-md-12">
+                           <div class="kode_quote_textarea">
+                               <textarea placeholder="Сообщение/Вопрос" name="message" required></textarea>
+                           </div>
+                       </div>
+                   </form>
+        </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-warning" data-dismiss="modal" id="makeOrder" disabled>Заказать</button>
         </div> 

@@ -24,14 +24,16 @@ $(function () {
 
   $('#submit').on('click', function () {
     sendFormData('/index.php?page=getDataCalc');
+    $('#calcModal').modal('hide');
+    $('#basketModal').modal('show');
   });
   $('#refresh, .close').on('click', function () {
     sendFormData('/index.php?page=getDataCalcEmpty');
   });
 
-  $('#continue').on('click', function () {
+  $('#continue, #submit').on('click', function () {
     var products = JSON.parse(localStorage.getItem('products') || '[]'),
-    totalSum = JSON.parse(localStorage.getItem('totalSum'));
+      totalSum = JSON.parse(localStorage.getItem('totalSum'));
 
     products.push(getDataFromForm());
     localStorage.setItem('products', JSON.stringify(products));
@@ -52,9 +54,7 @@ $(function () {
       success: function (data) {
         resetForm();
       },
-      error: function (e) {
-        resetForm();
-      }
+      error: function (e) {}
     });
   }
 
