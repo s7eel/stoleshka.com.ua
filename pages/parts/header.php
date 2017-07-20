@@ -469,8 +469,6 @@
                         </div>
                         <div class="col-sm-5 col-sm-offset-2">
                             <div id="images">
-                                <img src="http://thecatapi.com/api/images/get?size=small&format=src&type=jpg&results_per_page=2"
-                                     alt="">
                                 <img src="http://thecatapi.com/api/images/get?size=small&format=src&type=gif&results_per_page=2"
                                      alt="">
                             </div>
