@@ -6,7 +6,7 @@
  * Time: 11:41
  */
 function __autoload($class){
-    $filename="library/{$class}.php";
+    $filename=$_SERVER['DOCUMENT_ROOT'].'/'."library/{$class}.php";
     if(file_exists($filename)){
         include_once $filename;
     }
@@ -18,3 +18,4 @@ $db = array(
     'name' => 'stoleshka',
 );
 $template = $_SERVER['DOCUMENT_ROOT'].'/'.'templates/maintemplate.php';
+$admintemplate = $_SERVER['DOCUMENT_ROOT'].'/'.'admin/templates/admintemplate.php';
