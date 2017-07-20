@@ -1,8 +1,19 @@
 $(function () {
   var products,
-    finalSum;
+    finalSum,
+    dictionary;
 
-  $('#basket').on('updated', updateData);
+  dictionary = {
+    tabletop: 'столешница',
+    steps: 'ступени',
+    windowsill: 'подоконник',
+    frontFacade: 'фасад прямой',
+    furnitureBoard: 'мебельный щит',
+    ash: 'ясень',
+    oak: 'дуб'
+  };
+
+  $('#basket').on('basket:update', updateData);
 
   updateData();
 
@@ -14,12 +25,15 @@ $(function () {
 
   function renderProducts () {
     $('#productsList').empty();
+
     products.forEach(function (product, key) {
-      $('#productsList').append('<li>' + key + '.' +
-        '<span class="itemName">' + product.itemName + '</span>' +
-        '<span class="woodBreed">' + product.woodBreed + '</span>' +
+      $('#productsList').append('<li>' +
+        '<span class="itemName">' + dictionary[product.itemName] + '</span>' +
+        '<span class="woodBreed">' + dictionary[product.woodBreed] + '</span>' +
         '<span class="options">' + product.length + 'x' + product.width + '</span>' +
+        '<span class="productNumber">' + product.detailsNumber + '</span>' +
         '<span class="totalWithDiscount">' + product.totalWithDiscount + '</span>' +
+        '<span class="glyphicon glyphicon-remove"></span>'+
         '</li>');
     });
   }

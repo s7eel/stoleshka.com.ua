@@ -110,10 +110,10 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <a class="kode-button-style-1 kode-theme-color-bg-color" href="" data-toggle="modal" data-target="#basket">корзина</a>
+                        <a class="kode-button-style-1 kode-theme-color-bg-color" href="" data-toggle="modal" data-target="#basketModal" id="basket">корзина</a>
 
                          <!-- Modal -->
-  <div class="modal fade" id="basket" role="dialog">
+  <div class="modal fade" id="basketModal" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
@@ -124,61 +124,10 @@
         </div>
         <div class="modal-body" id="basket_list">
 
-<table class="table">
-    <thead>
-      <tr>
-        <th>Название товара</th>
-        <th>кол-во, шт</th>
-        <th>Подробнее</th>
-        <th>Стоимость</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Ступени</td>
-        <td>50шт</td>
-        <td><a href="index.php?page=calculatorView">подробнее</a></td>
-        <td>2400грн</td>
-      </tr>
-      <tr>
-        <td>столешница</td>
-        <td>1шт</td>
-        <td><a href="index.php?page=calculatorView">подробнее</a></td>
-        <td>1200грн</td>
-      </tr>
-      <tr>
-        <td>мебельный щит</td>
-        <td>5шт</td>
-        <td><a href="index.php?page=costproducts">подробнее</a></td>
-        <td>3200грн</td>
-      </tr>
-            <tr>
-        <td><b>ИТОГО</b> </td>
-        <td></td>
-        <td></td>
-        <td><b>15000грн</b></td>
-      </tr>
-    </tbody>
-  </table>
-
-
-
-<!-- 
-        basket collapse
-    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#basket_item">столешница</button>
-  <div id="basket_item" class="collapse">
-  <p></p>            
-  <table class="table" id="#">
-    <tbody></tbody>
-  </table>
-  </div> -->
-
-
+<ul id="productsList">Корзина пуста</ul>
 </div>
-
-                 <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Очистить корзину</button>
-            <button type="button" class="btn btn-warning" data-dismiss="modal">Заказать</button>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-dismiss="modal" id="makeOrder" disabled>Заказать</button>
         </div> 
 </div>
 
