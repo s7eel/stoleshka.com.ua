@@ -7,7 +7,7 @@
     <title><?= $title ?></title>
     <!--css/bootstrap.min.css start-->
     <link href="/css/bootstrap.css" rel="stylesheet">
-
+    <script src="https://cdn.ckeditor.com/4.6.2/full-all/ckeditor.js"></script>
     <!--style.css start-->
     <link href="/style.css" rel="stylesheet">
     <link href="/css/slick.css" rel="stylesheet">
@@ -67,20 +67,10 @@
                 </li>
                 <li><a href="<?= $_SERVER['PHP_SELF'] ?>?page=coefficients">Коэфициенты</a>
                 </li>
-                <li><a href="index.html#about">О нас</a>
-                </li>
-                <li><a href="../nomenclature%20.php">Цена</a>
-                    <ul>
-                        <li><a data-toggle="modal" href="<?= $_SERVER['PHP_SELF'] ?>?page=costproducts">Продсчитать
-                                стоимость</a></li>
-                        <li><a href="sale.html">Как получить скидку</a></li>
-                    </ul>
-                </li>
-                <li><a href="delivery.html">Доставка и оплата</a>
-                </li>
                 <li><a href="<?= $_SERVER['PHP_SELF'] ?>?page=blogarticles">Блог</a>
                 </li>
-                <li><a href="index.html#map-canvas">Контакты</a></li>
+                <li><a href="index.html#about">О нас</a>
+                </li>
             </ul>
             <!--DL Menu Start-->
             <div id="kode-responsive-navigation" class="dl-menuwrapper">
