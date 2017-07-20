@@ -42,7 +42,7 @@
                                 <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue
                                     penatius </p>
                                 <a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color"
-                                   href="" data-target="#calcModal" data-toggle="modal">Рассчитать</a>
+                                   href="" data-target="#calcModal" data-toggle="modal" data-item-name="steps">Рассчитать</a>
                             </figcaption>
                         </figure>
                     </div>
@@ -58,7 +58,7 @@
                                 <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue
                                     penatius </p>
                                 <a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color"
-                                   href="" data-target="#calcModal" data-toggle="modal">Рассчитать</a>
+                                   href="" data-target="#calcModal" data-toggle="modal" data-item-name="windowsill">Рассчитать</a>
                             </figcaption>
                         </figure>
                     </div>
@@ -72,7 +72,7 @@
                                 <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue
                                     penatius </p>
                                 <a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color"
-                                   href="" data-target="#calcModal" data-toggle="modal">Рассчитать</a>
+                                   href="" data-target="#calcModal" data-toggle="modal" data-item-name="frontFacade">Рассчитать</a>
                             </figcaption>
                         </figure>
                     </div>
@@ -86,7 +86,7 @@
                                 <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue
                                     penatius </p>
                                 <a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color"
-                                   href="" data-target="#calcModal" data-toggle="modal">Рассчитать</a>
+                                   href="" data-target="#calcModal" data-toggle="modal" data-item-name="furnitureBoard">Рассчитать</a>
                             </figcaption>
                         </figure>
                     </div>
