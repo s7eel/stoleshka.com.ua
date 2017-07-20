@@ -92,6 +92,25 @@ class Blog extends MainStorage
             return false;
         }
     }
+    public function getSaveFormData($request)
+    {
+        return $arr = array(
+        'title' => $title = filter_input(INPUT_POST, 'title'),
+        'short_descr' => $short_descr = filter_input(INPUT_POST, 'short_descr'),
+        'full_descr' => $full_descr = filter_input(INPUT_POST, 'full_descr'),
+        'date' => $created_at = filter_input(INPUT_POST,'date'),
+        'foto' => $foto = $_FILES['fotoblog'],
+    );
+    }
+    public function saveBlogItem($title, $short_descr, $file_name, $full_descr, $date)
+    {
+        $full_descr = $this->db->real_escape_string($full_descr);
+        $query = "INSERT INTO blog (title, short_descr, img_link, full_descr, created_at) VALUES('$title', '$short_descr', '$file_name', '$full_descr', '$date')";
+        if($result = parent::saveDB($query)){
+            return TRUE;
+        }
+        die('Невозможно занести в базу данных'.__LINE__);
+    }
 
 }
 

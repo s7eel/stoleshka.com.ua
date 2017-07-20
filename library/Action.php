@@ -13,6 +13,7 @@ class Action
     protected $user;
     protected $dataCoefficient;
     protected $arr;
+    protected $fotoclass;
 
     function __construct($db, $template)
     {
@@ -22,6 +23,7 @@ class Action
         $this->user = new Users($db);
         $this->dataCoefficient = new Data($db);
         $this->arr = $this->dataCoefficient->getDataCoefficients();
+        $this->fotoclass = new Foto();
     }
 
     /**
