@@ -26,7 +26,7 @@ $(function () {
 
   function renderProducts () {
     $productsList.empty();
-    $('.glyphicon-remove').off();
+    $productsList.off('click', '.glyphicon-remove');
 
     products.forEach(function (product, key) {
       $('#productsList').append('<li>' +
