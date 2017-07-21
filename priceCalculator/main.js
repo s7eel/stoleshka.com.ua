@@ -99,7 +99,6 @@ $(function () {
   }
 
   function checkSubmitBtn (productionCost) {
-    $('#submit').prop("disabled", !Boolean(productionCost));
     $('#continue').prop("disabled", !Boolean(productionCost));
   }
 
