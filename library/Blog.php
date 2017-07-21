@@ -63,13 +63,20 @@ class Blog extends MainStorage
     }
 
     /**
+     * @param null $id
      * @return array|bool
      * Get all the items from database
      */
-    public function getItems()
+    public function getItems($id=NULL)
     {
-        $query =
-            "SELECT b.id, b.title, b.short_descr, b.img_link, b.full_descr, b.created_at FROM blog as b ORDER BY created_at DESC";
+        if(!$id){
+            $query =
+                "SELECT b.id, b.title, b.short_descr, b.img_link, b.full_descr, b.created_at FROM blog as b ORDER BY created_at DESC";
+        }else{
+            $query =
+                "SELECT b.id, b.title, b.short_descr, b.img_link, b.full_descr, b.created_at FROM blog as b ORDER BY created_at DESC LIMIT $id";
+        }
+
         if ($result = parent::arrayRes($query)) {
             return $result;
         } else {
@@ -105,6 +112,7 @@ class Blog extends MainStorage
     public function saveBlogItem($title, $short_descr, $file_name, $full_descr, $date)
     {
         $full_descr = $this->db->real_escape_string($full_descr);
+        $short_descr = $this->db->real_escape_string($short_descr);
         $query = "INSERT INTO blog (title, short_descr, img_link, full_descr, created_at) VALUES('$title', '$short_descr', '$file_name', '$full_descr', '$date')";
         if($result = parent::saveDB($query)){
             return TRUE;
@@ -113,7 +121,11 @@ class Blog extends MainStorage
     }
     public function deleteBlogItemByID($id)
     {
-
+        $query = "DELETE FROM blog WHERE id='$id'";
+        if($result = parent::saveDB($query)){
+            return TRUE;
+        }
+        die('Невозможно удалить статью из блога'.__LINE__);
     }
 
 }

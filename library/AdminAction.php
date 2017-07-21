@@ -71,17 +71,17 @@ class AdminAction extends Action
         $request = $_REQUEST;
         $path = '/images/blog/';
         $res_arr = $this->blog->getSaveFormData($request);
-        if($this->fotoclass->validate($res_arr['foto'])){
-            $file_name = $this->fotoclass->addFotoToDir($res_arr['foto'], $path);
-            $this->blog->saveBlogItem($res_arr['title'], $res_arr['short_descr'], $file_name, $res_arr['full_descr'], $res_arr['date']);
-            $this->redirect('?page=blogarticles');
-        }else{
-            die('Фото не загружено'.__LINE__);
-        }
+        $this->fotoclass->validate($res_arr['foto']);
+        $file_name = $this->fotoclass->addFotoToDir($res_arr['foto'], $path);
+        $this->blog->saveBlogItem($res_arr['title'], $res_arr['short_descr'], $file_name, $res_arr['full_descr'], $res_arr['date']);
+        $this->redirect('?page=blogarticles');
+
     }
     public function deletearticle()
     {
         $id = filter_input(INPUT_GET, 'id');
+        $this->blog->deleteBlogItemByID($id);
+        $this->redirect('?page=blogarticles');
 
     }
 
