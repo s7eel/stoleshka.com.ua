@@ -126,15 +126,15 @@
 
            <ul id="productsList">Корзина пуста</ul>
 
-           <form id="orderForm" class="quote_form_list" hidden>
+           <form id="orderForm" class="quote_form_list" action="" hidden>
                        <div class="col-md-6 col-sm-6">
                            <div class="kode_quote_commet_field">
-                               <input placeholder="Ваше Имя" name="name" type="text" data-default="Name*" size="30" required>
+                               <input placeholder="Ваше Имя" name="name" id="name" type="text" data-default="Name*" size="30">
                            </div>
                        </div>
                        <div class="col-md-6 col-sm-6">
                            <div class="kode_quote_commet_field">
-                               <input id="mask_phone" placeholder="Ваш телефон" name="phone" type="text" required>
+                               <input id="mask_phone" placeholder="Ваш телефон" name="phone" id="phone" type="text">
                            </div>
                        </div>
                        <div class="col-md-6 col-sm-6">
@@ -178,11 +178,9 @@
                                <textarea placeholder="Примечания/Пожелания" name="message"></textarea>
                            </div>
                        </div>
+                       <div class="col-md-12"><button type="submit" class="btn btn-warning" id="makeOrder">Заказать</button></div>
                    </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-warning" data-dismiss="modal" id="makeOrder">Заказать</button>
-        </div> 
 </div>
 
       </div>
@@ -499,6 +497,7 @@
                                     <p>Итого: <span id="total">0</span> грн</p>
                                     <p>Скидка: <span id="discount">0</span> грн</p>
                                     <p>Итого со скидкой: <span id="totalWithDiscount">0</span> грн</p>
+                                    <p>Сумма заказа: <span id="finalSum"></span> грн</p>
                                 </div>
                             </div>
                         </div>

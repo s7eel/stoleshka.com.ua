@@ -35,17 +35,18 @@ function calcSums (inputData) {
   inputData.discount = inputData.chamferRemoving && (inputData.covering === 'polish' || inputData.covering === 'polishWithColor');
 
   var sums = {
-    productionCost: parseFloat(calcProductionCost(inputData).toFixed(2)),
-    chamferRemovingCost: parseFloat(calcChamferRemovingCost(inputData).toFixed(2)),
-    complexRadiusCost: parseFloat(calcComplexRadiusCost(inputData).toFixed(2)),
-    coveringPreparationCost: parseFloat(calcCoveringPreparationCost(inputData).toFixed(2)),
-    coveringCost: parseFloat(calcCoveringCost(inputData).toFixed(2)),
-    packagingCost: parseFloat(calcPackagingCost(inputData).toFixed(2))
+    productionCost: parseFloat(calcProductionCost(inputData).toFixed()),
+    chamferRemovingCost: parseFloat(calcChamferRemovingCost(inputData).toFixed()),
+    complexRadiusCost: parseFloat(calcComplexRadiusCost(inputData).toFixed()),
+    coveringPreparationCost: parseFloat(calcCoveringPreparationCost(inputData).toFixed()),
+    coveringCost: parseFloat(calcCoveringCost(inputData).toFixed()),
+    packagingCost: parseFloat(calcPackagingCost(inputData).toFixed())
   };
 
   sums.total = sums.productionCost + sums.chamferRemovingCost + sums.complexRadiusCost + sums.coveringPreparationCost + sums.coveringCost + sums.packagingCost;
-  sums.discount = inputData.discount? parseFloat((sums.total * RATIOS.discount).toFixed(2)): 0;
+  sums.discount = inputData.discount? parseFloat((sums.total * RATIOS.discount).toFixed()): 0;
   sums.totalWithDiscount = sums.total - sums.discount;
+  sums.finalSum = sums.totalWithDiscount + JSON.parse(localStorage.getItem('finalSum'));
 
   return sums;
 }

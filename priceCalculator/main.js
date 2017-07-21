@@ -5,6 +5,7 @@ $(function () {
     $covering = $('.covering'),
     $toningColor = $('.toningColor');
 
+  setFinalSum();
   changeCheckboxBehavior();
 
   $form.on('submit', function (e) {
@@ -33,10 +34,11 @@ $(function () {
 
   $('#continue, #submit').on('click', function () {
     var products = JSON.parse(localStorage.getItem('products') || '[]'),
-      totalSum = JSON.parse(localStorage.getItem('totalSum'));
+      finalSum = parseFloat(JSON.parse(localStorage.getItem('finalSum')) || 0) + parseFloat($('#totalWithDiscount').html());
 
     products.push(getDataFromForm());
     localStorage.setItem('products', JSON.stringify(products));
+    localStorage.setItem('finalSum', JSON.stringify(finalSum));
     $('#basket').trigger('basket:update');
 
     resetForm();
@@ -54,7 +56,8 @@ $(function () {
       success: function (data) {
         resetForm();
       },
-      error: function (e) {}
+      error: function (e) {
+      }
     });
   }
 
@@ -66,7 +69,7 @@ $(function () {
 
     for (var key in sums) {
       if (sums.hasOwnProperty(key)) {
-        $('#' + key).html(parseFloat(sums[key].toFixed(2)) || 0);
+        $('#' + key).html(parseFloat(sums[key].toFixed()) || 0);
       }
     }
     checkSubmitBtn(sums.productionCost);
@@ -80,7 +83,8 @@ $(function () {
 
   function resetForm () {
     $form[0].reset();
-    toggleAdditionalBlock();
+    $requirementBtn.show();
+    $('#additionalRequirements').hide();
     $form.find('input[type="checkbox"]').trigger('change');
     $form.find('input[type="number"]').trigger('input');
   }
@@ -125,5 +129,10 @@ $(function () {
     });
     data.totalWithDiscount = $('#totalWithDiscount').html();
     return data;
+  }
+
+  function setFinalSum () {
+    var finalSum = JSON.parse(localStorage.getItem('finalSum'));
+    $('#finalSum').html(parseFloat(finalSum.toFixed()) || 0);
   }
 });

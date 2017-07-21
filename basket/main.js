@@ -21,32 +21,8 @@ $(function () {
 
   updateData();
 
-  $('#makeOrder').on('click', function () {
-    getDataFromLS();
-    order = {
-      products: products,
-      finalSum: finalSum,
-      client: getDataFromForm()
-    };
-
-    $.ajax({
-      url: '/index.php?page=getDataCalc',
-      type: 'post',
-      dataType: 'json',
-      data: JSON.stringify(order),
-      success: function (data) {
-        resetForm();
-        localStorage.removeItem('products');
-        localStorage.removeItem('finalSum');
-        renderSuccessMsg();
-      },
-      error: function (e) {
-        resetForm();
-        localStorage.removeItem('products');
-        localStorage.removeItem('finalSum');
-        renderSuccessMsg();
-      }
-    });
+  $('#makeOrder').on('click', function (e) {
+    validateForm();
   });
 
   function updateData () {
@@ -71,9 +47,13 @@ $(function () {
         '</li>');
     });
 
+    $('#productsList').append('<li><span>Итого: </span><span class="finalSum">'+ finalSum + ' грн</span></li>');
+
     $productsList.on('click', '.glyphicon-remove', function (e) {
+      localStorage.setItem('finalSum', JSON.stringify(finalSum - products[e.target.dataset.key].totalWithDiscount));
       products.splice(e.target.dataset.key, 1);
       localStorage.setItem('products', JSON.stringify(products));
+      finalSum = localStorage.getItem('finalSum');
       updateData();
     })
   }
@@ -105,9 +85,63 @@ $(function () {
 
   function renderSuccessMsg () {
     $productsList.html('Спасибо за заказ. Мы с Вами свяжемся в ближайшее время.');
+    $('#makeOrder').hide();
     $closeBtn.on('click', function () {
       renderEmptyMsg();
       $closeBtn.off('click');
     })
   }
+
+  function validateForm () {
+    $("#orderForm").on('submit', function (e) {
+      e.preventDefault();
+    })
+      .validate({
+        rules: {
+          name: 'required',
+          phone: {
+            required: true,
+            regex: /^\+3[(]0\d{2}[)]\d{7}$/
+          }
+        },
+        messages: {
+          name: {required: 'Укажите имя'},
+          phone: {
+            required: 'Укажите телефон для подтверждения',
+            regex: 'Проверьте правильность указанного номера'
+          }
+        },
+        submitHandler: function () {
+          getDataFromLS();
+          order = {
+            products: products,
+            finalSum: finalSum,
+            client: getDataFromForm()
+          };
+
+          $.ajax({
+            url: '/index.php?page=getDataCalc',
+            type: 'post',
+            dataType: 'json',
+            data: JSON.stringify(order),
+            success: function (data) {
+              resetForm();
+              localStorage.removeItem('products');
+              localStorage.removeItem('finalSum');
+              renderSuccessMsg();
+            },
+            error: function (e) {
+              resetForm();
+              localStorage.removeItem('products');
+              localStorage.removeItem('finalSum');
+              renderSuccessMsg();
+            }
+          });
+        }
+      });
+  }
+
+  $.validator.addMethod('regex', function(value, element, regexpr) {
+    return regexpr.test(value);
+  });
 });
