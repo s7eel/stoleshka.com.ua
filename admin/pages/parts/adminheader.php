@@ -50,7 +50,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="kode_top_logo">
-                            <a href="index.html#"><img src="/images/logo11.png" alt=""></a>
+                            <a href=""><img src="/images/logo11.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -63,13 +63,11 @@
     <div class="navigation">
         <div class="container">
             <ul>
-                <li><a class="active" href="<?= $_SERVER['PHP_SELF'] ?>?page=mainpage">Главная</a>
+                <li><a class="<?=$class[0]?>" href="<?= $_SERVER['PHP_SELF'] ?>?page=mainpage">Главная</a>
                 </li>
-                <li><a href="<?= $_SERVER['PHP_SELF'] ?>?page=coefficients">Коэфициенты</a>
+                <li><a class="<?=$class[1]?>" href="<?= $_SERVER['PHP_SELF'] ?>?page=coefficients">Коэфициенты</a>
                 </li>
-                <li><a href="<?= $_SERVER['PHP_SELF'] ?>?page=blogarticles">Блог</a>
-                </li>
-                <li><a href="index.html#about">О нас</a>
+                <li><a class="<?=$class[2]?>" href="<?= $_SERVER['PHP_SELF'] ?>?page=blogarticles">Блог</a>
                 </li>
                 <li><a href="<?= $_SERVER['PHP_SELF'] ?>?page=destroy">Выйти из Админпанели</a></li>
             </ul>

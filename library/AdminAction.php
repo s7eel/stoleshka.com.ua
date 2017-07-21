@@ -25,6 +25,7 @@ class AdminAction extends Action
         $header = 'pages/parts/adminheader.php';
         $main = 'pages/adminmain.php';
         $arr = $this->arr;
+        $class=array('active','','');
         $footer = 'pages/parts/adminfooter.php';
         $blog = $this->blog;
         include_once $this->template;
@@ -35,6 +36,7 @@ class AdminAction extends Action
         $title = 'Изменение коэфициентов';
         $header = 'pages/parts/adminheader.php';
         $main = 'pages/coeffic.php';
+        $class = array('','active','');
         $arr = $this->arr;
         foreach ($arr as $key => $value){
             foreach ($value as $item => $item2){
@@ -64,6 +66,7 @@ class AdminAction extends Action
         $main = 'pages/adminblog.php';
         $footer = 'pages/parts/adminfooter.php';
         $blog = $this->blog->getItems();
+        $class = array('','','active');
         include_once $this->template;
     }
     public function newblogitem()
