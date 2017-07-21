@@ -18,7 +18,7 @@
             <!-------------------------------->
             <?php foreach ($blog as $key=>$item){?>
                 <?php $title = mb_substr($item['title'], 0, 60, 'UTF-8').'...';
-                $shortDescr =mb_substr($item['short_descr'], 0, 245, 'UTF-8').'...';
+                $shortDescr =mb_substr($item['short_descr'], 0, 225, 'UTF-8').'...';
                 ?>
             <div class="col-md-4 col-sm-6">
                 <div class="kode_blog_medium medium_2">

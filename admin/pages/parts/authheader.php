@@ -7,7 +7,6 @@
     <title><?= $title ?></title>
     <!--css/bootstrap.min.css start-->
     <link href="/css/bootstrap.css" rel="stylesheet">
-    <script src="https://cdn.ckeditor.com/4.6.2/full-all/ckeditor.js"></script>
     <!--style.css start-->
     <link href="/style.css" rel="stylesheet">
     <link href="/css/slick.css" rel="stylesheet">
@@ -42,39 +41,3 @@
     <link rel="stylesheet" href="/priceCalculator/styles.css">
 </head>
 <body class="light">
-<!--// KODE WRAPER START //-->
-<div class="kode-wraper">
-    <div class="header">
-        <div class="kode_top_content_area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="kode_top_logo">
-                            <a href=""><img src="/images/logo11.png" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--KODE TOP NAVI WRAPER START-->
-<div class="kode_top_navi_wraper">
-    <div class="navigation">
-        <div class="container">
-            <ul>
-                <li><a class="<?=$class[0]?>" href="<?= $_SERVER['PHP_SELF'] ?>?page=mainpage">Главная</a>
-                </li>
-                <li><a class="<?=$class[1]?>" href="<?= $_SERVER['PHP_SELF'] ?>?page=coefficients">Коэфициенты</a>
-                </li>
-                <li><a class="<?=$class[2]?>" href="<?= $_SERVER['PHP_SELF'] ?>?page=blogarticles">Блог</a>
-                </li>
-                <li><a href="<?= $_SERVER['PHP_SELF'] ?>?page=destroy">Выйти из Админпанели</a></li>
-            </ul>
-            <!--DL Menu Start-->
-
-            <!--DL Menu END-->
-        </div>
-    </div>
-</div>
-<!--KODE TOP NAVI WRAPER END-->

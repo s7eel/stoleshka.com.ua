@@ -25,6 +25,7 @@ class AdminAction extends Action
         $header = 'pages/parts/adminheader.php';
         $main = 'pages/adminmain.php';
         $arr = $this->arr;
+        $class=array('active','','');
         $footer = 'pages/parts/adminfooter.php';
         $blog = $this->blog;
         include_once $this->template;
@@ -35,7 +36,13 @@ class AdminAction extends Action
         $title = 'Изменение коэфициентов';
         $header = 'pages/parts/adminheader.php';
         $main = 'pages/coeffic.php';
+        $class = array('','active','');
         $arr = $this->arr;
+        foreach ($arr as $key => $value){
+            foreach ($value as $item => $item2){
+                $arr[$key][$item] *= 1;
+            }
+        }
         $footer = 'pages/parts/adminfooter.php';
         $blog = $this->blog;
         include_once $this->template;
@@ -59,6 +66,7 @@ class AdminAction extends Action
         $main = 'pages/adminblog.php';
         $footer = 'pages/parts/adminfooter.php';
         $blog = $this->blog->getItems();
+        $class = array('','','active');
         include_once $this->template;
     }
     public function newblogitem()
@@ -66,13 +74,72 @@ class AdminAction extends Action
         $request = $_REQUEST;
         $path = '/images/blog/';
         $res_arr = $this->blog->getSaveFormData($request);
-        if($this->fotoclass->validate($res_arr['foto'])){
+            $this->fotoclass->validate($res_arr['foto']);
             $file_name = $this->fotoclass->addFotoToDir($res_arr['foto'], $path);
             $this->blog->saveBlogItem($res_arr['title'], $res_arr['short_descr'], $file_name, $res_arr['full_descr'], $res_arr['date']);
             $this->redirect('?page=blogarticles');
-        }else{
-            die('Фото не загружено'.__LINE__);
+
+
+
+    }
+    public function deletearticle()
+    {
+        $id = filter_input(INPUT_GET, 'id');
+        $this->blog->deleteBlogItemByID($id);
+        $this->redirect('?page=blogarticles');
+
+    }
+    public function saveBlogItemByID()
+    {
+        $request = $_REQUEST;
+        $path = '/images/blog/';
+        $res_arr = $this->blog->getSaveFormData($request);
+        if ($res_arr['date'] == '') {
+            $res_arr['date'] = $res_arr['date_main'];
         }
+//        var_dump($res_arr);PHP_EOL; die();
+        if ($res_arr['foto'] === NULL) {
+            $file_name = $res_arr['fotomain'];
+        } else {
+            $this->fotoclass->validate($res_arr['foto']);
+            $file_name = $this->fotoclass->addFotoToDir($res_arr['foto'], $path);
+//            var_dump($res_arr);PHP_EOL;echo $file_name; die();
+        }
+            $this->blog->updateBlogItemByID($res_arr['title'], $res_arr['short_descr'], $file_name, $res_arr['full_descr'], $res_arr['date'], $res_arr['id_article']);
+            $this->redirect('?page=blogarticles');
+    }
+
+    /**
+     * Система аутентификации
+     */
+    public function authuser(){
+        $title = 'Authentificate';
+        $header = 'pages/parts/authheader.php';
+        $main = 'pages/authentification.php';
+        $footer = 'pages/parts/authfooter.php';
+        $login = User::$login;
+        $password = User::$password;
+        include_once $this->template;
+    }
+
+    public function destroy(){
+        $_SESSION['user']=NULL;
+        session_unset();
+        $this->redirect();
+
+    }
+
+    public function authUserByNameAndLogin()
+    {
+        $authlogin = filter_input(INPUT_POST, 'login');
+        $authpassword = filter_input(INPUT_POST, 'password');
+        if ($authlogin === User::$login && $authpassword === User::$password) {
+            $_SESSION['user'] = 'admin';
+        }
+        else{
+            session_unset();
+        }
+        return $this->redirect();
     }
 
 

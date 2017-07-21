@@ -374,8 +374,7 @@
             </div>
             <div class="col-md-6 col-sm-6">
                 <div class="kode_quote_commet_field">
-                    <select name="city" onmousedown="if(this.options.length>5){this.size=5;}"
-                            onchange="this.blur()" onblur="this.size=0;">
+                    <select name="city">
                         <option value="Днепр">Днепр</option>
                         <option value="Винница">Винница</option>
                         <option value="Киев">Киев</option>
@@ -430,7 +429,7 @@
         </div>
         <div class="row">
             <!-- ВЫВОД ОДНОГО ЭЛЕМЕНТА БЛОГА -->
-            <?php foreach($blog->getItems() as $key => $item){ ?>
+            <?php foreach($blog->getItems(3) as $key => $item){ ?>
             <?php $title = mb_substr($item['title'], 0, 40, 'UTF-8').'...';
                   $shortDescr =mb_substr($item['short_descr'], 0, 245, 'UTF-8').'...';
                   $datablog = $blog->getDataFromDB($item['created_at'])?>

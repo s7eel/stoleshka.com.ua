@@ -165,27 +165,28 @@ class Action
     {
         header('Content-type:application/json');
         $arr = file_get_contents('php://input');
-        $arr = json_decode($arr);
-//        $arr = array(
-//            'q'=>$_POST['itemName'],
-//            'w'=>$_POST['woodBreed'],
-//            'e'=>$_POST['bondingType'],
-//            'r'=>$_POST['gauge'],
-//            't'=>$_POST['glueType'],
-//            'y'=>$_POST['detailsNumber'],
-//            'u'=>$_POST['length'],
-//            'i'=>$_POST['width'],
-//            'o'=>$_POST['chamferRemoving'],
-//            'p'=>$_POST['complexRadius'],
-//            'a'=>$_POST['coveringPreparation'],
-//            's'=>$_POST['covering'],
-//            'd'=>$_POST['toningColor'],
-//            'f'=>$_POST['discount'],
-//            'g'=>$_POST['packaging'],
-//            'h'=>$_POST['totalWithDiscount'],
-//        );
-//        $arr = json_decode($_REQUEST);
-        echo json_encode($arr);
+        $arr = json_decode($arr, true);
+
+        $products = $arr['products'];
+        $finalSum = $arr['finalSum'];
+        $client = array();
+
+        $client[] = $arr['client']['name'];
+        $client[] = $arr['client']['phone'];
+        $client[] = $arr['client']['email'];
+        $client[] = $arr['client']['city'];
+        $client[] = $arr['client']['message'];
+        $res_arr = array(
+          'x'=>$client[0],
+          'y'=>$client[1],
+          'z'=>$client[2],
+          'q'=>$client[3],
+          'w'=>$client[4],
+        );
+
+
+
+        echo json_encode($res_arr, JSON_UNESCAPED_UNICODE);
     }
 
     /**
@@ -195,7 +196,7 @@ class Action
     {
         header('Content-type:application/json');
         $arr = file_get_contents('php://input');
-        $arr = json_decode($arr);
+        $arr = json_decode($arr, true);
 //        $arr = array(
 //            'q'=>$_POST['itemName'],
 //            'w'=>$_POST['woodBreed'],

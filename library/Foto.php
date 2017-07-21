@@ -11,7 +11,7 @@ class Foto
     public function validate($foto)
     {
         if ($foto['error'] === 4) {
-            return FALSE;
+            die('Фото не загружено'.__LINE__);
         }
         return TRUE;
     }
