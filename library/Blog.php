@@ -102,12 +102,15 @@ class Blog extends MainStorage
     public function getSaveFormData($request)
     {
         return $arr = array(
-        'title' => $title = filter_input(INPUT_POST, 'title'),
-        'short_descr' => $short_descr = filter_input(INPUT_POST, 'short_descr'),
-        'full_descr' => $full_descr = filter_input(INPUT_POST, 'full_descr'),
-        'date' => $created_at = filter_input(INPUT_POST,'date'),
-        'foto' => $foto = $_FILES['fotoblog'],
-    );
+            'title' => $title = filter_input(INPUT_POST, 'title'),
+            'short_descr' => $short_descr = filter_input(INPUT_POST, 'short_descr'),
+            'full_descr' => $full_descr = filter_input(INPUT_POST, 'full_descr'),
+            'date' => $created_at = filter_input(INPUT_POST, 'date'),
+            'foto' => $foto = $_FILES['foto'],
+            'fotomain' => $fotomain = filter_input(INPUT_POST, 'fotomain'),
+            'id_article' => $id_article = filter_input(INPUT_POST, 'id'),
+            'date_main' => $date_main = filter_input(INPUT_POST, 'date_main'),
+        );
     }
     public function saveBlogItem($title, $short_descr, $file_name, $full_descr, $date)
     {
@@ -126,6 +129,17 @@ class Blog extends MainStorage
             return TRUE;
         }
         die('Невозможно удалить статью из блога'.__LINE__);
+    }
+    public function updateBlogItemByID($title, $short_descr, $file_name, $full_descr, $date, $id)
+    {
+        $title = $this->db->real_escape_string($title);
+        $full_descr = $this->db->real_escape_string($full_descr);
+        $short_descr = $this->db->real_escape_string($short_descr);
+        $query = "UPDATE blog SET title='$title', short_descr='$short_descr', full_descr='$full_descr', img_link = '$file_name', created_at = '$date' WHERE id='$id'";
+        if($result = parent::saveDB($query)){
+            return TRUE;
+        }
+        die('Невозможно обновить статью в блоге'.__LINE__);
     }
 
 }
