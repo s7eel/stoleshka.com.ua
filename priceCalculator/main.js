@@ -136,17 +136,3 @@ $(function () {
     $('#finalSum').html(parseFloat(finalSum.toFixed()));
   }
 });
-
-
-// itemName:{
-//   tabletop:столешница,
-//   steps:ступени,
-//   windowsill:подоконник,
-//   frontFacade:фасад прямой,
-//   furnitureBoard:мебельный щит
-// },
-// woodBreed: {
-//   ash: ясень,
-//   oak: дуб
-// },
-

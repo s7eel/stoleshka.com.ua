@@ -32,7 +32,7 @@
 
 function calcSums (inputData) {
   inputData.size = inputData.width * inputData.length / 1000000;
-  inputData.discount = inputData.chamferRemoving && (inputData.covering === 'polish' || inputData.covering === 'polishWithColor');
+  inputData.discount = Number(inputData.chamferRemoving) && (inputData.covering === 'polish' || inputData.covering === 'polishWithColor');
 
   var sums = {
     productionCost: parseFloat(calcProductionCost(inputData).toFixed()),
