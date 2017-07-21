@@ -132,7 +132,21 @@ $(function () {
   }
 
   function setFinalSum () {
-    var finalSum = JSON.parse(localStorage.getItem('finalSum'));
-    $('#finalSum').html(parseFloat(finalSum.toFixed()) || 0);
+    var finalSum = JSON.parse(localStorage.getItem('finalSum')) || 0;
+    $('#finalSum').html(parseFloat(finalSum.toFixed()));
   }
 });
+
+
+// itemName:{
+//   tabletop:столешница,
+//   steps:ступени,
+//   windowsill:подоконник,
+//   frontFacade:фасад прямой,
+//   furnitureBoard:мебельный щит
+// },
+// woodBreed: {
+//   ash: ясень,
+//   oak: дуб
+// },
+
