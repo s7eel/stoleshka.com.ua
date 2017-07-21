@@ -46,6 +46,7 @@ function calcSums (inputData) {
   sums.total = sums.productionCost + sums.chamferRemovingCost + sums.complexRadiusCost + sums.coveringPreparationCost + sums.coveringCost + sums.packagingCost;
   sums.discount = inputData.discount? parseFloat((sums.total * RATIOS.discount).toFixed(2)): 0;
   sums.totalWithDiscount = sums.total - sums.discount;
+  sums.finalSum = sums.totalWithDiscount + JSON.parse(localStorage.getItem('finalSum'));
 
   return sums;
 }
