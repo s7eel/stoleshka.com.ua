@@ -31,6 +31,9 @@ class AdminAction extends Action
         include_once $this->template;
     }
 
+    /**
+     * Output coefficients change page
+     */
     public function coefficients()
     {
         $title = 'Изменение коэфициентов';
@@ -38,6 +41,7 @@ class AdminAction extends Action
         $main = 'pages/coeffic.php';
         $class = array('','active','');
         $arr = $this->arr;
+        //Переводим в простые числа
         foreach ($arr as $key => $value){
             foreach ($value as $item => $item2){
                 $arr[$key][$item] *= 1;
@@ -47,7 +51,22 @@ class AdminAction extends Action
         $blog = $this->blog;
         include_once $this->template;
     }
-
+    /**
+     * Output blog change page
+     */
+    public function blogarticles()
+    {
+        $title = 'Изменение коэфициентов';
+        $header = 'pages/parts/adminheader.php';
+        $main = 'pages/adminblog.php';
+        $footer = 'pages/parts/adminfooter.php';
+        $blog = $this->blog->getItems();
+        $class = array('','','active');
+        include_once $this->template;
+    }
+    /**
+     * function to save new coefficients for site
+     */
     public function savedata()
     {
         $request = $_REQUEST;
@@ -59,16 +78,9 @@ class AdminAction extends Action
             die(__LINE__);
         }
     }
-    public function blogarticles()
-    {
-        $title = 'Изменение коэфициентов';
-        $header = 'pages/parts/adminheader.php';
-        $main = 'pages/adminblog.php';
-        $footer = 'pages/parts/adminfooter.php';
-        $blog = $this->blog->getItems();
-        $class = array('','','active');
-        include_once $this->template;
-    }
+    /**
+     *function for saving new blog item
+     */
     public function newblogitem()
     {
         $request = $_REQUEST;
@@ -78,10 +90,11 @@ class AdminAction extends Action
             $file_name = $this->fotoclass->addFotoToDir($res_arr['foto'], $path);
             $this->blog->saveBlogItem($res_arr['title'], $res_arr['short_descr'], $file_name, $res_arr['full_descr'], $res_arr['date']);
             $this->redirect('?page=blogarticles');
-
-
-
     }
+
+    /**
+     * function to delete article from blog
+     */
     public function deletearticle()
     {
         $id = filter_input(INPUT_GET, 'id');
@@ -89,6 +102,10 @@ class AdminAction extends Action
         $this->redirect('?page=blogarticles');
 
     }
+
+    /**
+     * function to save changed article from blog
+     */
     public function saveBlogItemByID()
     {
         $request = $_REQUEST;
@@ -108,7 +125,6 @@ class AdminAction extends Action
             $this->blog->updateBlogItemByID($res_arr['title'], $res_arr['short_descr'], $file_name, $res_arr['full_descr'], $res_arr['date'], $res_arr['id_article']);
             $this->redirect('?page=blogarticles');
     }
-
     /**
      * Система аутентификации
      */
@@ -122,13 +138,18 @@ class AdminAction extends Action
         include_once $this->template;
     }
 
+    /**
+     * destroy session user
+     */
     public function destroy(){
         $_SESSION['user']=NULL;
         session_unset();
         $this->redirect();
 
     }
-
+    /**
+     * authenticate user by name and password
+     */
     public function authUserByNameAndLogin()
     {
         $authlogin = filter_input(INPUT_POST, 'login');
@@ -141,6 +162,4 @@ class AdminAction extends Action
         }
         return $this->redirect();
     }
-
-
 }
