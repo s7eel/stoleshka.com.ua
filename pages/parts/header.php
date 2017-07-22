@@ -506,7 +506,7 @@
                 <div class="modal-footer">
                     <div class="discount">* При заказе всего комплекса услуг скидка - 7 %</div>
                     <button type="button" id="refresh" class="btn btn-default">Очистить</button>
-                    <button type="button" id="submit" class="btn btn btn-success" data-dismiss="modal" disabled>Оформить</button>
+                    <button type="button" id="submit" class="btn btn btn-success" data-dismiss="modal">Оформить</button>
                     <button type="button" id="continue" class="btn btn-success" disabled>Заказать еще</button>
                 </div>
             </div>

@@ -39,10 +39,10 @@ $(function () {
     products.forEach(function (product, key) {
       $('#productsList').append('<li>' +
         '<span class="itemName">' + dictionary[product.itemName] + '</span>' +
-        '<span class="woodBreed">' + dictionary[product.woodBreed] + '</span>' +
-        '<span class="options">' + product.length + 'x' + product.width + '</span>' +
-        '<span class="productNumber">' + product.detailsNumber + '</span>' +
-        '<span class="totalWithDiscount">' + product.totalWithDiscount + '</span>' +
+        '<span class="woodBreed">' + (dictionary[product.woodBreed] || '') + '</span>' +
+        '<span class="options">' + (product.length || 0) + 'x' + (product.width || 0) + '</span>' +
+        '<span class="productNumber">' + (product.detailsNumber || 0) + '</span>' +
+        '<span class="totalWithDiscount">' + (product.totalWithDiscount || '') + '</span>' +
         '<span class="glyphicon glyphicon-remove" data-key="' + key + '"></span>' +
         '</li>');
     });
