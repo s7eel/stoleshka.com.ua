@@ -186,7 +186,7 @@ class Action
           'q'=>$client[3],
           'w'=>$client[4],
         );
-        echo json_encode($products, JSON_UNESCAPED_UNICODE);
+        echo json_encode($arr, JSON_UNESCAPED_UNICODE);
     }
 
     /**
