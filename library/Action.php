@@ -121,7 +121,6 @@ class Action
     {
         echo 'ERRORPAGE';
     }
-
     /**
      * Определяем данные из формы со стартовой страницы
      */
@@ -140,7 +139,6 @@ class Action
         }else{
             $this->redirect('errorPage');
         }
-
     }
     /**
      * @return array
@@ -167,7 +165,12 @@ class Action
         $arr = file_get_contents('php://input');
         $arr = json_decode($arr, true);
 
-        $products = $arr['products'];
+        $count = count($arr);
+        $array = array(
+          'count' => $count,
+        );
+
+        $products = $arr['products'][0];
         $finalSum = $arr['finalSum'];
         $client = array();
 
@@ -183,10 +186,7 @@ class Action
           'q'=>$client[3],
           'w'=>$client[4],
         );
-
-
-
-        echo json_encode($res_arr, JSON_UNESCAPED_UNICODE);
+        echo json_encode($arr, JSON_UNESCAPED_UNICODE);
     }
 
     /**
@@ -197,6 +197,8 @@ class Action
         header('Content-type:application/json');
         $arr = file_get_contents('php://input');
         $arr = json_decode($arr, true);
+
+
 //        $arr = array(
 //            'q'=>$_POST['itemName'],
 //            'w'=>$_POST['woodBreed'],
@@ -218,11 +220,7 @@ class Action
 //        $arr = json_decode($_REQUEST);
         echo json_encode($arr);
     }
-//{"itemName":"frontFacade","woodBreed":"ash","bondingType":"glued","gauge":"30","glueType":"waterproof","detailsNumber":"1","length":"1000","width":"1000","chamferRemoving":"1","complexRadius":"1","coveringPreparation":"1","covering":"polishWithColor","toningColor":"wenge","discount":"on","packaging":"1","totalWithDiscount":"3639"}
 }
-
-
-
 
 
 
