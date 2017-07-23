@@ -28,7 +28,7 @@ $(function () {
     $('#calcModal').modal('hide');
     $('#basketModal').modal('show');
   });
-  $('#refresh, .close').on('click', function () {
+  $('#refresh, #calcModal .close').on('click', function () {
     sendFormData('/index.php?page=getDataCalcEmpty');
   });
 
