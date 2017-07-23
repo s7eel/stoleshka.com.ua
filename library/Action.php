@@ -174,11 +174,11 @@ class Action
         $finalSum = $arr['finalSum'];
         $client = array();
 
-        $client[] = $arr['client']['name'];
-        $client[] = $arr['client']['phone'];
-        $client[] = $arr['client']['email'];
-        $client[] = $arr['client']['city'];
-        $client[] = $arr['client']['message'];
+        $client['name'] = $arr['client']['name'];
+        $client['phone'] = $arr['client']['phone'];
+        $client['email'] = $arr['client']['email'];
+        $client['city'] = $arr['client']['city'];
+        $client['message'] = $arr['client']['message'];
         $res_arr = array(
           'x'=>$client[0],
           'y'=>$client[1],
@@ -186,7 +186,11 @@ class Action
           'q'=>$client[3],
           'w'=>$client[4],
         );
-        echo json_encode($arr, JSON_UNESCAPED_UNICODE);
+        $length = $arr['products'][0]['length'];
+        $width = $arr['products'][0]['width'];
+        $arr_res = array('l'=>$length,'w'=>$width);
+        Mail::sendMail($client);
+        echo json_encode($arr_res, JSON_UNESCAPED_UNICODE);
     }
 
     /**
