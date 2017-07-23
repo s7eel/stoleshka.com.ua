@@ -72,5 +72,5 @@ function calcCoveringCost (inputData) {
 }
 
 function calcPackagingCost (inputData) {
-  return (parseInt(inputData.packaging) || 0) && RATIOS.packagingPrice * inputData.size;
+  return (parseInt(inputData.packaging) || 0) && RATIOS.packagingPrice * inputData.size * inputData.detailsNumber;
 }
