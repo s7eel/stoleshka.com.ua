@@ -24,7 +24,7 @@ $(function () {
   });
 
   $('#submit').on('click', function () {
-    sendFormData('/index.php?page=getDataCalc');
+    // sendFormData('/index.php?page=getDataCalc');
     $('#calcModal').modal('hide');
     $('#basketModal').modal('show');
   });
