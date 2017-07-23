@@ -435,14 +435,20 @@
                                         <label class="control-label">Выбор цвета тонирования</label>
                                         <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" name="toningColor" value="wenge">
-                                                венге
+                                                <input type="checkbox" name="toningColor" value="white">
+                                                белый
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" name="toningColor" value="bleached">
-                                                выбеленный
+                                                <input type="checkbox" name="toningColor" value="light">
+                                                светлый
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="toningColor" value="dark">
+                                                темный
                                             </label>
                                         </div>
                                     </fieldset>
