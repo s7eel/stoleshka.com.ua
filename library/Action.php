@@ -184,13 +184,11 @@ class Action
         }
         //-----------Получаем русскую транслитерацию для каждого заказа-----------------//
         $itemProperty_ru = $this->calculator->getRussianTransliteration($arr['products']);
-        //------------------------------------------------------------------------------//
         //---------Получаем необходимые коэффициенты согласно заказа--------//
         $order_coeff = $this->calculator->getCoefficientsForProducts($arr['products'], $res_coeff);
-        //------------------------------------------------------------------//
         //-----------------Подсчет основных математических единиц-------------
         $itemProperty_ru = $this->calculator->getSummFullPrice($order_coeff, $itemProperty_ru);
-        //--------------------------------------------------------------------
+        //---------------------Получаем данные о клиенте-----------------------------------
         $itemProperty_ru = $this->calculator->getClientProperty($arr['client'], $itemProperty_ru);
 
 //        Mail::sendMail($client);
