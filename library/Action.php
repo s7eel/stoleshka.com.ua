@@ -16,6 +16,7 @@ class Action
     protected $arr;
     protected $fotoclass;
     protected $calculator;
+    protected $deletedOrder;
 
     function __construct($db, $template)
     {
@@ -27,6 +28,7 @@ class Action
         $this->arr = $this->dataCoefficient->getDataCoefficients();
         $this->fotoclass = new Foto();
         $this->calculator = new Calculator($db);
+        $this->deletedOrder = new DeletedOrder($db);
     }
 
     /**
@@ -208,6 +210,7 @@ class Action
         $arr = file_get_contents('php://input');
         $arr = json_decode($arr, true);
         $itemProperty_ru = $this->calculator->getRussianTranslitEmpty($arr);
+        $this->deletedOrder->saveValues($itemProperty_ru);
 
         echo json_encode($itemProperty_ru);
     }
