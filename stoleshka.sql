@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Июл 22 2017 г., 11:35
+-- Время создания: Июл 24 2017 г., 16:49
 -- Версия сервера: 5.7.19-0ubuntu0.16.04.1
 -- Версия PHP: 7.0.18-0ubuntu0.16.04.1
 
@@ -81,6 +81,43 @@ INSERT INTO `data` (`id`, `chamferRemovingPrice`, `complexRadiusPrice`, `coverin
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `deletedorder`
+--
+
+CREATE TABLE `deletedorder` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `bondingTypeRU` varchar(255) DEFAULT NULL,
+  `chamferRemoving` varchar(255) DEFAULT NULL,
+  `complexRadius` varchar(255) DEFAULT NULL,
+  `coveringPreparation` varchar(255) DEFAULT NULL,
+  `coveringRu` varchar(255) DEFAULT NULL,
+  `dataOrder` date NOT NULL,
+  `detailsNumber` varchar(255) DEFAULT NULL,
+  `gauge` varchar(255) DEFAULT NULL,
+  `glueTypeRu` varchar(255) DEFAULT NULL,
+  `itemNameRu` varchar(255) DEFAULT NULL,
+  `length` varchar(255) DEFAULT NULL,
+  `width` varchar(255) DEFAULT NULL,
+  `packaging` varchar(255) DEFAULT NULL,
+  `toningColorRu` varchar(255) DEFAULT NULL,
+  `woodBreedRu` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `deletedorder`
+--
+
+INSERT INTO `deletedorder` (`id`, `bondingTypeRU`, `chamferRemoving`, `complexRadius`, `coveringPreparation`, `coveringRu`, `dataOrder`, `detailsNumber`, `gauge`, `glueTypeRu`, `itemNameRu`, `length`, `width`, `packaging`, `toningColorRu`, `woodBreedRu`) VALUES
+(1, 'Срощенный массив', '', '', '', 'Неопознанный вид покрытия', '2017-07-17', '2', '30', 'Влагостойкий', 'Столешница', '120', '1340', '', 'Неопознанный тон', 'Ясень'),
+(5, 'Клеенный массив', '', '', '', 'Неопознанный вид покрытия', '2017-07-24', '1', '20', 'Влагостойкий', 'Столешница', '12', '12', '', 'Неопознанный тон', 'Ясень'),
+(6, 'Неопознанный вид массива', '', '', '', 'Неопознанный вид покрытия', '2017-07-24', '', '', 'Неопознанный вид клея', 'Столешница', '', '', '', 'Неопознанный тон', 'Неопознанное дерево'),
+(7, 'Срощенный массив', '1', '1', '1', 'Лак + Тон', '2017-07-24', '3', '30', 'Влагостойкий', 'Мебельный щит', '1300', '1500', '1', 'Темный', 'Дуб'),
+(8, 'Неопознанный вид массива', '', '', '', 'Неопознанный вид покрытия', '2017-07-24', '', '', 'Неопознанный вид клея', 'Столешница', '', '', '', 'Неопознанный тон', 'Ясень'),
+(9, 'Срощенный массив', '', '1', '1', 'Лак + Тон', '2017-07-24', '32', '30', 'Влагостойкий', 'Столешница', '2332', '3443', '1', 'Белый', 'Ясень');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `users`
 --
 
@@ -118,6 +155,12 @@ ALTER TABLE `data`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `deletedorder`
+--
+ALTER TABLE `deletedorder`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
@@ -137,6 +180,11 @@ ALTER TABLE `blog`
 --
 ALTER TABLE `data`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT для таблицы `deletedorder`
+--
+ALTER TABLE `deletedorder`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
