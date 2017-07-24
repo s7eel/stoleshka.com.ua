@@ -209,7 +209,7 @@
                                 <li><a href="sale.html">Как получить скидку</a></li>
                             </ul>
                         </li>
-                        <li><a href="delivery.html">Доставка и оплата</a>
+                        <li><a href="<?= $_SERVER['PHP_SELF']?>?page=delivery">Доставка и оплата</a>
                         </li>
                         <li><a href="<?=$_SERVER['PHP_SELF']?>?page=blogarticles">Блог</a>
                         </li>
@@ -231,7 +231,7 @@
                                     <li><a href="our-team-detail.html">Получить скидку</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item kode-parent-menu"><a href="advice.html">Доставка и оплата</a>
+                            <li class="menu-item kode-parent-menu"><a href="<?= $_SERVER['PHP_SELF']?>?page=delivery">Доставка и оплата</a>
 
                             </li>
                             <li class="menu-item kode-parent-menu"><a href="index.html#">Контакты</a>

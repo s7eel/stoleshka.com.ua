@@ -114,6 +114,16 @@ class Action
         include_once $this->template;
 
     }
+    public function delivery()
+    {
+        $title = 'Доставка';
+        $header = 'pages/parts/header.php';
+        $arr = $this->arr;
+        $main = 'pages/delivery.php';
+        $footer = 'pages/parts/footer.php';
+        include_once $this->template;
+
+    }
 
     public function calculatorView()
     {
