@@ -189,9 +189,13 @@ class Action
         //-----------------Подсчет основных математических единиц-------------
         $itemProperty_ru = $this->calculator->getSummFullPrice($order_coeff, $itemProperty_ru);
         //---------------------Получаем данные о клиенте-----------------------------------
-        $itemProperty_ru = $this->calculator->getClientProperty($arr['client'], $itemProperty_ru);
+        $clientData = $this->calculator->getClientProperty($arr['client']);
+        $totalPriceForAllProducts = $itemProperty_ru['totalPriceForAllProducts'];
+        $discountForAllProducts = $itemProperty_ru['discountForAllProducts'];
+        unset($itemProperty_ru['totalPriceForAllProducts']);
+        unset($itemProperty_ru['discountForAllProducts']);
 
-//        Mail::sendMail($client);
+        Mail::sendMailProductOrder($itemProperty_ru, $clientData, $discountForAllProducts, $totalPriceForAllProducts);
         echo json_encode($itemProperty_ru, JSON_UNESCAPED_UNICODE);
     }
 
@@ -205,25 +209,6 @@ class Action
         $arr = json_decode($arr, true);
 
 
-//        $arr = array(
-//            'q'=>$_POST['itemName'],
-//            'w'=>$_POST['woodBreed'],
-//            'e'=>$_POST['bondingType'],
-//            'r'=>$_POST['gauge'],
-//            't'=>$_POST['glueType'],
-//            'y'=>$_POST['detailsNumber'],
-//            'u'=>$_POST['length'],
-//            'i'=>$_POST['width'],
-//            'o'=>$_POST['chamferRemoving'],
-//            'p'=>$_POST['complexRadius'],
-//            'a'=>$_POST['coveringPreparation'],
-//            's'=>$_POST['covering'],
-//            'd'=>$_POST['toningColor'],
-//            'f'=>$_POST['discount'],
-//            'g'=>$_POST['packaging'],
-//            'h'=>$_POST['totalWithDiscount'],
-//        );
-//        $arr = json_decode($_REQUEST);
         echo json_encode($arr);
     }
 }
