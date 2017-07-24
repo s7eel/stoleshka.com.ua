@@ -122,6 +122,31 @@ class Calculator extends MainStorage
         }
         return $itemProperty_ru;
     }
+    public function getRussianTranslitEmpty(array $array)
+    {
+        $itemProperty_ru = array();
+        foreach ($array as $key => $value) {
+            $itemProperty_ru['itemNameRu'] = $this->switchItemName($array['itemName']);
+            $itemProperty_ru['woodBreedRu'] = $this->switchWoodBreed($array['woodBreed']);
+            $itemProperty_ru['bondingTypeRU'] = $this->switchBondingType($array['bondingType']);
+            $itemProperty_ru['glueTypeRu'] = $this->switchGlueType($array['glueType']);
+            $itemProperty_ru['coveringRu'] = $this->switchCoveringType($array['covering']);
+            $itemProperty_ru['toningColorRu'] = $this->switchToningColor($array['toningColor']);
+            $itemProperty_ru['packagingRu'] = $this->switchPackaging();
+            $itemProperty_ru['width'] = $array['width'];
+            $itemProperty_ru['length'] = $array['length'];
+            $itemProperty_ru['gauge'] = $array['gauge'];
+            $itemProperty_ru['detailsNumber'] = $array['detailsNumber'];
+
+            $itemProperty_ru['chamferRemoving'] = $array['chamferRemoving'];
+            $itemProperty_ru['complexRadius'] = $array['complexRadius'];
+            $itemProperty_ru['coveringPreparation'] = $array['coveringPreparation'];
+
+            $itemProperty_ru['packaging'] = $array['packaging'];
+            $itemProperty_ru['dataOrder'] = date(date('j-m-y'));
+        }
+        return $itemProperty_ru;
+    }
 
     /**
      * @param $array

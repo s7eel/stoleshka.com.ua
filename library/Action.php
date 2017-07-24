@@ -207,9 +207,9 @@ class Action
         header('Content-type:application/json');
         $arr = file_get_contents('php://input');
         $arr = json_decode($arr, true);
+        $itemProperty_ru = $this->calculator->getRussianTranslitEmpty($arr);
 
-
-        echo json_encode($arr);
+        echo json_encode($itemProperty_ru);
     }
 }
 
