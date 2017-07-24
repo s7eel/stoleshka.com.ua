@@ -118,7 +118,7 @@ class Calculator extends MainStorage
             $itemProperty_ru[$key]['length'] = $array[$key]['length'];
             $itemProperty_ru[$key]['gauge'] = $array[$key]['gauge'];
             $itemProperty_ru[$key]['detailsNumber'] = $array[$key]['detailsNumber'];
-            $itemProperty_ru[$key]['dataOrder'] = date(date('j-m-y'));
+            $itemProperty_ru[$key]['dataOrder'] = date('y-m-j');
         }
         return $itemProperty_ru;
     }
@@ -143,7 +143,7 @@ class Calculator extends MainStorage
             $itemProperty_ru['coveringPreparation'] = $array['coveringPreparation'];
 
             $itemProperty_ru['packaging'] = $array['packaging'];
-            $itemProperty_ru['dataOrder'] = date(date('j-m-y'));
+            $itemProperty_ru['dataOrder'] = date('y-m-j');
         }
         return $itemProperty_ru;
     }

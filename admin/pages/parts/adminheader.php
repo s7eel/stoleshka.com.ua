@@ -69,7 +69,9 @@
                 </li>
                 <li><a class="<?=$class[2]?>" href="<?= $_SERVER['PHP_SELF'] ?>?page=blogarticles">Блог</a>
                 </li>
-                <li><a href="<?= $_SERVER['PHP_SELF'] ?>?page=destroy">Выйти из Админпанели</a></li>
+                <li><a class="<?=$class[3]?>" href="<?= $_SERVER['PHP_SELF'] ?>?page=calcEmpty">Удаленные запросы</a>
+                </li>
+                <li><a href="<?= $_SERVER['PHP_SELF'] ?>?page=destroy">Выйти</a></li>
             </ul>
             <!--DL Menu Start-->
 

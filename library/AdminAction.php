@@ -25,7 +25,7 @@ class AdminAction extends Action
         $header = 'pages/parts/adminheader.php';
         $main = 'pages/adminmain.php';
         $arr = $this->arr;
-        $class=array('active','','');
+        $class=array('active','','','');
         $footer = 'pages/parts/adminfooter.php';
         $blog = $this->blog;
         include_once $this->template;
@@ -39,7 +39,7 @@ class AdminAction extends Action
         $title = 'Изменение коэфициентов';
         $header = 'pages/parts/adminheader.php';
         $main = 'pages/coeffic.php';
-        $class = array('','active','');
+        $class = array('','active','','');
         $arr = $this->arr;
         //Переводим в простые числа
         foreach ($arr as $key => $value){
@@ -61,7 +61,29 @@ class AdminAction extends Action
         $main = 'pages/adminblog.php';
         $footer = 'pages/parts/adminfooter.php';
         $blog = $this->blog->getItems();
-        $class = array('','','active');
+        $class = array('','','active','');
+        include_once $this->template;
+    }
+
+    /**
+     * Вывод страницы с незавершенными запросами
+     */
+    public function calcEmpty()
+    {
+        if (isset($_POST['submit'])) {
+            $f_date = filter_input(INPUT_POST, 'first');
+            $s_date = filter_input(INPUT_POST, 'second');
+            if(!$datas = $this->deletedOrder->getData($f_date, $s_date)){
+                $error = 'За данный период нет выборки';
+            }
+        }
+
+        //---------------------------------
+        $title = 'Незавершенные запросы';
+        $header = 'pages/parts/adminheader.php';
+        $main = 'pages/deletedorders.php';
+        $footer = 'pages/parts/adminfooter.php';
+        $class = array('','','','active');
         include_once $this->template;
     }
     /**

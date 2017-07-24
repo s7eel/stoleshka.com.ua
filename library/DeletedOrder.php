@@ -16,4 +16,13 @@ class DeletedOrder extends MainStorage
         }
         die('Не удалось добавить в базу данных'.__CLASS__.__LINE__);
     }
+    public function getData($x, $y)
+    {
+        $query = "SELECT * FROM deletedorder WHERE dataOrder >= '$x' AND dataOrder <= '$y'";
+        if($result = parent::arrayRes($query)){
+            return $result;
+        }
+//        die('Не удалось сделать выборку из базы данных'.__CLASS__.__LINE__);
+        return FALSE;
+    }
 }
