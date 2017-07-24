@@ -118,6 +118,7 @@ class Calculator extends MainStorage
             $itemProperty_ru[$key]['length'] = $array[$key]['length'];
             $itemProperty_ru[$key]['gauge'] = $array[$key]['gauge'];
             $itemProperty_ru[$key]['detailsNumber'] = $array[$key]['detailsNumber'];
+            $itemProperty_ru[$key]['dataOrder'] = date(date('j-m-y'));
         }
         return $itemProperty_ru;
     }
@@ -279,14 +280,15 @@ class Calculator extends MainStorage
         $itemProperty_ru['discountForAllProducts'] = $discountForAllProducts;
         return $itemProperty_ru;
     }
-    public function getClientProperty(array $array, array $itemProperty_ru)
+    public function getClientProperty(array $array)
     {
-        $itemProperty_ru['clientName'] = $array['name'];
-        $itemProperty_ru['clientPhone'] = $array['phone'];
-        $itemProperty_ru['clientEmail'] = $array['email'];
-        $itemProperty_ru['clientCity'] = $array['city'];
-        $itemProperty_ru['clientMessage'] = $array['message'];
-        return $itemProperty_ru;
+        $clientData = array();
+        $clientData['clientName'] = $array['name'];
+        $clientData['clientPhone'] = $array['phone'];
+        $clientData['clientEmail'] = $array['email'];
+        $clientData['clientCity'] = $array['city'];
+        $clientData['clientMessage'] = $array['message'];
+        return $clientData;
     }
     
 }
