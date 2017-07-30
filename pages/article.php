@@ -22,10 +22,10 @@
 <!--                            <li><span>Gender</span><a href="our-team-detail.html">Male</a></li>-->
                         </ul>
                         <ul class="kode_addres_icon">
-                            <li><a href="our-team-detail.html#"  data-toggle="tooltip" data-placement="bottom" title="twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="our-team-detail.html#"  data-toggle="tooltip" data-placement="bottom" title="linkedin"><i class="fa fa-linkedin"></i></a></li>
                             <li><a href="our-team-detail.html#"  data-toggle="tooltip" data-placement="bottom" title="facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="our-team-detail.html#"  data-toggle="tooltip" data-placement="bottom" title="phone"><i class="fa fa-phone"></i></a></li>
+                            <li><a href="our-team-detail.html#"  data-toggle="tooltip" data-placement="bottom" title="instagram"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="our-team-detail.html#"  data-toggle="tooltip" data-placement="bottom" title="whatsapp"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="our-team-detail.html#"  data-toggle="tooltip" data-placement="bottom" title="skype"><i class="fa fa-skype"></i></a></li>
                         </ul>
                     </div>
                 </div>

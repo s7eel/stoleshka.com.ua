@@ -6,19 +6,21 @@
  * Time: 19:11
  */
 ?>
+<div class="container">
 <h3>Добавить новую статью в блог</h3>
 <form method="POST" enctype="multipart/form-data">
-    Введите название статьи<input type="text" name="title"><br>
-    Введите короткое описание<textarea name="short_descr"></textarea><br>
-    Введите дату создания статьи<input type="date" name="date"><br>
-    Выберите картинку<input type="file" name="fotoblog"><br>
-    Введите полное описание статьи<textarea id="blog" name="full_descr"></textarea>
+    <p style="margin-top: 20px;">Введите название статьи</p><input style="width: 100%" type="text" name="title"><br>
+    <p style="margin-top: 20px;">Введите короткое описание</p><textarea style="width: 100%"  name="short_descr"></textarea><br>
+    <p style="margin-top: 20px;">Введите дату создания статьи</p><input style="" type="date" name="date"><br>
+    <p style="margin-top: 20px;" style="margin-top: 20px;">Выберите картинку</p><input type="file" name="fotoblog"><br>
+    <p>Введите полное описание статьи</p><textarea id="blog" name="full_descr"></textarea>
     <script>
         CKEDITOR.replace('blog');
     </script>
     <input type="submit" value="Сохранить" formaction="<?= $_SERVER['PHP_SELF'] ?>?page=newblogitem">
 </form>
 <h3>Перечень имеющихся статей</h3>
+
 <!-- ------------------------Вывод статей блога-------------------------------------------------------------------- -->
 <?php foreach ($blog as $key => $item) { ?>
     <?php $title = mb_substr($item['title'], 0, 60, 'UTF-8') . '...';
@@ -142,5 +144,7 @@
     <!--модальное окно удаления end -->
     <!-------------------------------->
 <?php } ?>
+
 <!-- ------------------------конец вывода статей блога------------------------------------------------------------- -->
 
+</div>

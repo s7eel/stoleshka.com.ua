@@ -26,7 +26,7 @@
 							<span><i class="fa fa-gift"></i></span>
 						</div>
 									<div class="kode_about_text" style="text-align: justify;">
-										<p>Столешница это габаритное и тяжелое изделие, к тому же имеет легкоповреждаемую поверхность. Поэтому вопрос сохранности изделия при транспортировке нашей продукции достаточно актуален.
+										<p> <b>Упаковка продукции и доставка: </b>cтолешница это габаритное и тяжелое изделие, к тому же имеет легкоповреждаемую поверхность. Поэтому вопрос сохранности изделия при транспортировке нашей продукции достаточно актуален.
 											Особенно при доставке через транспортную компанию в другой город.</p>
 											
 <ul> <p><b>Stoleshka.com.ua имеет богатый опыт работы с транспортными компаниями по нашей группе товаров:</b></p>
@@ -49,7 +49,7 @@
 											<div class="kode_accordian_detail text">
 												<div class="accordion" id="section1"><h4>Доставка по Днепру</h4></div>
 												<div>
-													<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et sed diam nonumy eirmod tempor invidunt ut labore et</p>
+													<p>Доставка продукции Stoleshka.com.ua осуществляется любым удобным для заказчика способом: самовывоз, транспортными компаниями или наемной машиной. Оплата транспортных услуг производится за счет заказчика.</p>
 												</div>
 											</div>
 										</div>
@@ -57,15 +57,18 @@
 											<div class="kode_accordian_detail text">
 												<div class="accordion" id="section3"><h4>Доставка по Украине</h4></div>
 												<div>
-													<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et sed diam nonumy eirmod tempor invidunt ut labore et</p>
-												</div>
+                                                    <p>Доставка продукции Stoleshka.com.ua осуществляется любым удобным для заказчика способом: доставка транспортными компаниями, наемной машиной или самовывоз. Оплата транспортных услуг производится за счет заказчика.
+
+                                                    </p>
+
+                                                </div>
 											</div>
 										</div>
 										<div class="kode_accordian_des">
 											<div class="kode_accordian_detail text">
 												<div class="accordion" id="section4"><h4>Оплата</h4></div>
 												<div>
-													<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et sed diam nonumy eirmod tempor invidunt ut labore et</p>
+                                                    <p>Срок выполнения заявки отсчитывается с момента получения предоплаты, которая составляет 80%  от стоимости заказа. Остальная сумма оплачивается заказчиком после приемки товара. </p>
 												</div>
 											</div>
 										</div>
