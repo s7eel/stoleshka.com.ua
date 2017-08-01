@@ -277,7 +277,7 @@
                                         <div class="checkbox">
                                             <label>
                                                 <input type="checkbox" name="bondingType" value="spliced">
-                                                Срощенный
+                                                Сращённый
                                             </label>
                                         </div>
                                     </div>
@@ -457,11 +457,12 @@
                                      alt="">
                             </div>
                             <div id="calculatedSums" class="calculated-sums modal-fixed">
+                                <p><span id="">столешница</span>&nbsp из &nbsp<span id="">дуба</span>:	&nbsp<span id="">1</span>шт,&nbsp <span id="">1,5</span>&nbsp м<small>2</small></p>
                                 <p>Изготовление
                                     <span id="productionCost">0</span>
                                     грн
                                 </p>
-                                <p>Снятие фаски
+                                <p>Форматировние, снятие фаски по периметру
                                     <span id="chamferRemovingCost">0</span>
                                     грн
                                 </p>
@@ -477,6 +478,10 @@
                                     <span id="coveringCost">0</span>
                                     грн
                                 </p>
+                                <p>Упаковка
+                                    <span id="">0</span>
+                                    грн
+                                </p>
                                 <div class="total-sums">
                                     <hr>
                                     <hr>
@@ -490,7 +495,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <div class="discount">* При заказе всего комплекса услуг скидка - 7 %</div>
+                    <div class="discount">* При заказе полного комплекса услуг предоставляется скидка в размере - 7 %</div>
                     <button type="button" id="refresh" class="btn btn-default">Очистить</button>
                     <button type="button" id="submit" class="btn btn btn-success" data-dismiss="modal">Оформить</button>
                     <button type="button" id="continue" class="btn btn-success" disabled>Заказать еще</button>

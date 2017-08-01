@@ -174,8 +174,8 @@
                     <div class="kode_box_service_detail">
                         <span class="glyphicon glyphicon-record"></span>
                         <div class="kode_box_servixe_text">
-                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Обработка торцов</a></h5>
-                            <p>Делаем обработку торцов изделий с шлифовкой и фасками необходимого радиуса...</p>
+                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Форматирование</a></h5>
+                            <p>Форматируем, шлифуем, выполняем фаски необходимого радиуса</p>
                         </div>
                     </div>
                 </li>
@@ -279,7 +279,7 @@
                 <div class="kode_services_2_des des_3 des_5">
                     <span><i class="glyphicon glyphicon-ok"></i></span>
                     <div class="kode_services_2_content">
-                        <h4><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">сроки</a></h4>
+                        <h4><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Сроки</a></h4>
                         <p>Выполняем работу в самые  сжатые сроки -  от 3 до 7 дней</p>
                     </div>
                 </div>
@@ -288,8 +288,8 @@
                 <div class="kode_services_2_des des_3 des_5">
                     <span><i class="glyphicon glyphicon-ok"></i></span>
                     <div class="kode_services_2_content">
-                        <h4><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Индивидуальность</a></h4>
-                        <p>Работа по индивидуальным размерам и проектам </p>
+                        <h4><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Скидка</a></h4>
+                        <p>До 15% постоянным и крупным клиентам</p>
                     </div>
                 </div>
             </div>
@@ -297,7 +297,7 @@
                 <div class="kode_services_2_des des_3 des_5">
                     <span><i class="glyphicon glyphicon-ok"></i></span>
                     <div class="kode_services_2_content">
-                        <h4><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">ответственность</a></h4>
+                        <h4><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Отзывчивость</a></h4>
                         <p>Отсутствие понятия минимального заказа</p>
                     </div>
                 </div>
@@ -306,39 +306,11 @@
                 <div class="kode_services_2_des des_3 des_5">
                     <span><i class="glyphicon glyphicon-ok"></i></span>
                     <div class="kode_services_2_content">
-                        <h4><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">сервис</a></h4>
-                        <p>Полный спектр услуг по данной группе товаров</p>
+                        <h4><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Ассортимент</a></h4>
+                        <p>Так же работаем с клёном, ольхой, сосной</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="kode_services_2_des des_3 des_5">
-                    <span><i class="glyphicon glyphicon-ok"></i></span>
-                    <div class="kode_services_2_content">
-                        <h4><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">лояльность</a></h4>
-                        <p>Эксклюзивные условия для крупных и постоянных клиентов</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="kode_services_2_des des_3 des_5">
-                    <span><i class="glyphicon glyphicon-ok"></i></span>
-                    <div class="kode_services_2_content">
-                        <h4><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">логистика</a></h4>
-                        <p>Полный спектр услуг по данной группе товаров</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="kode_services_2_des des_3 des_5">
-                    <span><i class="glyphicon glyphicon-ok"></i></span>
-                    <div class="kode_services_2_content">
-                        <h4><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">отзывчивость</a></h4>
-                        <p>Внимание к каждому клиенту, хороший сервис</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
