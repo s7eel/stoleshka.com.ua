@@ -892,6 +892,7 @@ header{
     float: left;
     width: auto;
 	padding:2px 0px;
+	text-align: left;
 }
 .kode_top_info_text a{
 	display:block;
