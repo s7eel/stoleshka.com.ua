@@ -5858,6 +5858,8 @@ header{
 }
 .kode_experience2_text {
     padding: 46px 0;
+        text-align: justify;
+
 }
 .kode_experience2_text p{
 	margin-bottom:26px;

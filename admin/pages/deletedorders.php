@@ -1,10 +1,15 @@
 <?php if (isset($error)){
     echo $error;
 } ?>
+
+<div class="container" style="padding: 30px;     overflow: hidden;">
 <form method="POST">
-    Введите начальную дату<input type="date" name="first"><br>
-    Введите крнечную дату<input type="date" name="second"><br>
-    <input name="submit" type="submit" value="Фильтровать" formaction="<?= $_SERVER['PHP_SELF'] ?>?page=calcEmpty">
+    <p style="margin-top: 20px;">Введите начальную дату</p>
+    <input type="date" name="first"><br>
+
+    <p style="margin-top: 20px;">Введите крнечную дату</p>
+    <input type="date" name="second"><br>
+    <input style="margin-top: 20px;" name="submit" type="submit" value="Фильтровать" formaction="<?= $_SERVER['PHP_SELF'] ?>?page=calcEmpty">
 </form>
 
 <?php if ($datas != NULL) {?>
@@ -49,3 +54,4 @@
     <?php } ?>
     </table>
 <?php } ?>
+</div>

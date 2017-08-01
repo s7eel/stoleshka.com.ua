@@ -1,14 +1,15 @@
-<div class="form" style="margin-top: 10%">
+<div class="container">
+<div class="form" style="margin: auto; margin-top: 10%; width: 50%">
 <form class="form-horizontal" style="width: 500px;" role="form" method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
   <div class="form-group" style=" border: 1px solid #ccc; border-radius: 20px; padding: 55px; background-color: #efefef;">
     <div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">Логин</label>
+    <label for="inputEmail3" class="col-sm-2 control-label" style="color: #c7b810;">Логин</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" placeholder="Логин" name="login">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">Пароль</label>
+    <label for="inputPassword3" class="col-sm-2 control-label" style="color: #c7b810;">Пароль</label>
     <div class="col-sm-10">
       <input type="password" class="form-control" placeholder="Пароль" name="password">
     </div>
@@ -20,5 +21,7 @@
     </div>
   </div>
 </form>
-    <a href="../index.php"><b style="color: #cdc639;">Перейти на сайт</b></a>
+    <a href="../index.php"><b style="color: #cdc639; float: right;">Перейти на сайт</b></a>
+</div>
+
 </div>

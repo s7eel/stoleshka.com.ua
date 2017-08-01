@@ -172,7 +172,7 @@
                 </li>
                 <li>
                     <div class="kode_box_service_detail">
-                        <span class="glyphicon glyphicon-record"></span>
+                        <span class="fa fa-industry" aria-hidden="true"></span>
                         <div class="kode_box_servixe_text">
                             <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Форматирование</a></h5>
                             <p>Форматируем, шлифуем, выполняем фаски необходимого радиуса</p>
