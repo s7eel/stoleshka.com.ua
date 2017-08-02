@@ -457,7 +457,7 @@
                                      alt="">
                             </div>
                             <div id="calculatedSums" class="calculated-sums modal-fixed">
-                                <p><span id="">столешница</span>&nbsp из &nbsp<span id="">дуба</span>:	&nbsp<span id="">1</span>шт,&nbsp <span id="">1,5</span>&nbsp м<small>2</small></p>
+                                <p><span id="">столешница</span>&nbsp из &nbsp<span id="">дуба</span>:	&nbsp<span id="">1</span>шт,&nbsp <span id="">1,5</span>&nbsp м<sup><small>2</small></sup></p>
                                 <p>Изготовление
                                     <span id="productionCost">0</span>
                                     грн

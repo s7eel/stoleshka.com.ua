@@ -132,7 +132,7 @@
 <script src="js/jquery.accordion.js"></script>
 <script src="/js/jquery.downCount.js"></script>
 <!--js/jquery.bxslider.min.js start-->
-<script src="/js/jquery.bxslider.min.js"></script>
+<script src="/js/jquery.bxslider.js"></script>
 <!--js/jquery.bxslider.min.js start-->
 <script src="/js/jquery.prettyPhoto.js"></script>
 <!--js/jquery-filterable.js start-->
