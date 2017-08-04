@@ -10,6 +10,7 @@
     <script src="https://cdn.ckeditor.com/4.6.2/full-all/ckeditor.js"></script>
     <!--style.css start-->
     <link href="/style.css" rel="stylesheet">
+
     <link href="/css/slick.css" rel="stylesheet">
     <!--swiper.min.css start-->
     <link href="/css/prettyPhoto.css" rel="stylesheet">

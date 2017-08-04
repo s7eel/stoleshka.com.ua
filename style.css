@@ -154,7 +154,7 @@ header{
 */
 .content-wraper{
 	position:relative;
-	padding-bottom:246px;
+	padding-bottom:30px;
 }
 .content-wraper.background {
     background-color: #ffffff;
@@ -248,7 +248,7 @@ header{
 }
 /*NAVIGATION STRAT*/
 .kode_top_navi_wraper{
-	background-color:#333333;
+	background-color:#ffd322;
 }
 .navigation ul li{
 	display:inline-block;
@@ -892,6 +892,7 @@ header{
     float: left;
     width: auto;
 	padding:2px 0px;
+	text-align: left;
 }
 .kode_top_info_text a{
 	display:block;
@@ -5857,6 +5858,8 @@ header{
 }
 .kode_experience2_text {
     padding: 46px 0;
+        text-align: justify;
+
 }
 .kode_experience2_text p{
 	margin-bottom:26px;
@@ -6483,6 +6486,9 @@ header{
 .kode_news2_text p{
 	margin-bottom:15px;
 	font-size:16px;
+	    text-align: justify;
+    height: 200px;
+}
 }
 .kode_news2_text .kode-button-style-law-3:hover{
 	background-color:#333;

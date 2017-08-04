@@ -29,6 +29,7 @@ class Action
         $this->fotoclass = new Foto();
         $this->calculator = new Calculator($db);
         $this->deletedOrder = new DeletedOrder($db);
+
     }
 
     /**
@@ -124,13 +125,23 @@ class Action
         include_once $this->template;
 
     }
-
+//    public function calculator_select()
+//    {
+//        $title = 'Калькулятор';
+//        $header = 'pages/parts/header.php';
+//        $arr = $this->arr;
+//        $main = 'page/calculator.php';
+//        $footer = 'pages/parts/footer.php';
+//        include_once $this->template;
+//    }
     public function calculatorView()
     {
         $arr = $this->arr;
         $this->template = 'priceCalculator/calculator.php';
         include_once $this->template;
     }
+
+
 
     /**
      * Error page via FALSE get request

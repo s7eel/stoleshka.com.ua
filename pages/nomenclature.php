@@ -24,8 +24,7 @@
                             <img src="/images/area.jpg" alt="">
                             <figcaption>
                                 <h4>Столешницы</h4>
-                                <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue
-                                    penatius </p>
+                                <p>Могут иметь различную форму, в том числе и неправильную, применяются для оформления различных помещений  </p>
                                 <a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color" href=""
                                    data-target="#calcModal" data-toggle="modal">Рассчитать</a>
                             </figcaption>
@@ -39,8 +38,7 @@
                             <figcaption>
                                 <h4>Ступени
                                 </h4>
-                                <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue
-                                    penatius </p>
+                                <p>Из цельных и склеенных массивов ясеня и дуба любой формы и толщины </p>
                                 <a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color"
                                    href="" data-target="#calcModal" data-toggle="modal" data-item-name="steps">Рассчитать</a>
                             </figcaption>
@@ -55,8 +53,7 @@
                                 <h4>
                                     Подоконники
                                 </h4>
-                                <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue
-                                    penatius </p>
+                                <p>Стандартные изделия, а так же изделия по индивидуальному проекту</p>
                                 <a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color"
                                    href="" data-target="#calcModal" data-toggle="modal" data-item-name="windowsill">Рассчитать</a>
                             </figcaption>
@@ -69,8 +66,7 @@
                             <img src="/images/area3.jpg" alt="">
                             <figcaption>
                                 <h4>Прямые фасады</h4>
-                                <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue
-                                    penatius </p>
+                                <p>Деревянные фасады из массива благородных пород дерева - ясень, дуб</p>
                                 <a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color"
                                    href="" data-target="#calcModal" data-toggle="modal" data-item-name="frontFacade">Рассчитать</a>
                             </figcaption>
@@ -83,8 +79,7 @@
                             <img src="/images/area4.jpg" alt="">
                             <figcaption>
                                 <h4>Мебельный щит</h4>
-                                <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue
-                                    penatius </p>
+                                <p>Это листовой древесный материал квадратной или прямоугольной формы, изготовленный с помощью склеивания между собой  деревянных строганых брусков</p>
                                 <a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color"
                                    href="" data-target="#calcModal" data-toggle="modal" data-item-name="furnitureBoard">Рассчитать</a>
                             </figcaption>
@@ -97,8 +92,7 @@
                             <img src="/images/area5.jpg" alt="">
                             <figcaption>
                                 <h4>Подробнее о продукции</h4>
-                                <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoq ue
-                                    penatius </p>
+                                <p>Полный перечень услуг предоставляемых нашей компанией</p>
                                 <a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color"
                                    href="<?=$_SERVER['PHP_SELF']?>?page=productions">Подробнее</a>
                             </figcaption>

@@ -1,5 +1,5 @@
 <!--// FOOTER START //-->
-            <footer>
+            <footer id="footer">
                 <div class="widget kode_widget3">
                     <div class="container">
                         <div class="col-md-3 col-sm-6">
@@ -9,11 +9,11 @@
                                 <div class="kode_widget3_icon">
                                     <h6>Контакты</h6>
                                     <ul>
-                                        <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="index.html#"><i class="fa fa-facebook"> </i></a></li>
                                         <li><a href="index.html#"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a href="index.html#"><i class="fa fa-whatsapp"></i></a></li>
-                                        <li><a href="index.html#"><i class="fa fa-skype"></i></a></li>
-                                        <li><a href="index.html#"><i class="fa fa-youtube"></i></a></li>
+                                        <li><a href="index.html#"><i class="fa fa-whatsapp"> </i></a></li>
+                                        <li><a href="index.html#"><i class="fa fa-skype">    </i></a></li>
+                                        <li><a href="index.html#"><i class="fa fa-youtube">  </i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -22,11 +22,11 @@
                             <div class="kode_widget3_content">
                                 <h4>Продукция</h4>
                                 <ul class="widget3_services">
-                                    <li><a href="index.html#">Столешницы</a></li>
-                                    <li><a href="index.html#">Ступени</a></li>
-                                    <li><a href="index.html#">Подоконники</a></li>
-                                    <li><a href="index.html#">Прямые фасады</a></li>
-                                    <li><a href="index.html#">Мебельный щит</a></li>
+                                    <li><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Столешницы</a></li>
+                                    <li><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Ступени</a></li>
+                                    <li><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Подоконники</a></li>
+                                    <li><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Прямые фасады</a></li>
+                                    <li><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Мебельный щит</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                             <div class="kode_widget3_content">
                                 <h4>Контакты</h4>
                                 <div class="kode_widget_contact" >
-                                    <ul style="    line-height: 1.5em;">
+                                    <ul style="line-height: 1.5em;">
                                         <li>
                                             <div class="kode_top_info2 widget">
                                                 <span><i class="fa fa-paper-plane-o"></i></span>
@@ -47,7 +47,8 @@
                                             <div class="kode_top_info2 widget">
                                                 <span><i class="fa fa-phone"></i></span>
                                                 <div class="kode_top_info_text">
-                                                    <p>+1234 (4563) 7894</p>
+                                                    <p>+38 (093) 842 42 44<br>
+                                                    +38 (067) 638 41 81</p>
                                                  <!--    <a href="index.html">+1234 (4563) 7894</a> -->
                                                 </div>
                                             </div>
@@ -100,12 +101,12 @@
                             <p></p>
                         </div>
                         <ul class="kode_copyright_navi">
-                            <li><a href="index.html#">Главная</a></li>
-                            <li><a href="index.html#">О нас</a></li>
-                            <li><a href="index.html#">Продукция</a></li>
-                            <li><a href="index.html#">Цены</a></li>
-                            <li><a href="index.html#">Доставка</a></li>
-                            <li><a href="index.html#">Блог</a></li>
+                            <li><a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage">Главная</a></li>
+                            <li><a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#about">О нас</a></li>
+                            <li><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Продукция</a></li>
+                            <li><a href="<?=$_SERVER['PHP_SELF']?>?page=costproducts">Цены</a></li>
+                            <li><a href="<?= $_SERVER['PHP_SELF']?>?page=delivery">Доставка</a></li>
+                            <li><a href="<?=$_SERVER['PHP_SELF']?>?page=blogarticles">Блог</a></li>
                         </ul>
                     </div>
                 </div>
@@ -128,9 +129,10 @@
 <!--js/bootstrap.js start-->
 <script  src="/js/bootstrap.min.js"></script>
 <!--js/jquery.downCount.js start-->
+<script src="js/jquery.accordion.js"></script>
 <script src="/js/jquery.downCount.js"></script>
 <!--js/jquery.bxslider.min.js start-->
-<script src="/js/jquery.bxslider.min.js"></script>
+<script src="/js/jquery.bxslider.js"></script>
 <!--js/jquery.bxslider.min.js start-->
 <script src="/js/jquery.prettyPhoto.js"></script>
 <!--js/jquery-filterable.js start-->
@@ -156,3 +158,5 @@
 <script src="/basket/main.js"></script>
 </body>
 </html>
+
+

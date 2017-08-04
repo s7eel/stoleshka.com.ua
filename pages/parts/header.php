@@ -7,8 +7,10 @@
     <title><?=$title?></title>
     <!--css/bootstrap.min.css start-->
     <link href="/css/bootstrap.css" rel="stylesheet">
-
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
     <!--style.css start-->
+    <link href="/style.css" rel="stylesheet">
     <link href="/style.css" rel="stylesheet">
     <link href="/css/slick.css" rel="stylesheet">
     <!--swiper.min.css start-->
@@ -81,7 +83,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="kode_top_logo">
-                            <a href="index.html#"><img src="images/logo11.png" alt=""></a>
+                            <a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage"><img src="images/logo11.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-md-7">
@@ -89,22 +91,22 @@
                             <div class="kode_top_info2">
                                 <span><i class="glyphicon glyphicon-home"></i></span>
                                 <div class="kode_top_info_text">
-                                    <a href="index.html" >г.  Днепр, АНД район</a>
-                                    <a href="index.html" >ул. Саранская 91д   </a>
+                                    <a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map" >Днепр, АНД район</a>
+                                    <a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map" >ул. Саранская 91Д   </a>
                                 </div>
                             </div>
                             <div class="kode_top_info2">
                                 <span><i class="glyphicon glyphicon-envelope"></i></span>
                                 <div class="kode_top_info_text">
-                                    <a href="index.html#">stoleshka.com.ua@gmail.com</a>
-                                    <a href="index.html#">stoleshka.com.ua@gmail.com</a>
+                                    <a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map">info@stoleshka.com.ua</a>
+                                    <a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map">stoleshka.com.ua@gmail.com</a>
                                 </div>
                             </div>
                             <div class="kode_top_info2">
                                 <span><i class="glyphicon glyphicon-earphone"></i></span>
                                 <div class="kode_top_info_text">
-                                    <a href="index.html">+1234 (4563) 7894</a>
-                                    <a href="index.html">+1234 (4563) 7894</a>
+                                    <a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map">+38 (067)149 34 93</a>
+                                    <a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map">+38 (095)006 90 49</a>
                                 </div>
                             </div>
                         </div>
@@ -197,46 +199,24 @@
             <div class="navigation">
                 <div class="container">
                     <ul>
-                        <li><a class="active" href="<?=$_SERVER['PHP_SELF']?>?page=mainpage">Главная</a>
-                        </li>
-                        <li><a href="index.html#about">О нас</a>
-                        </li>
-                        <li><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Продукция</a>
-                        </li>
-                        <li><a href="../nomenclature%20.php">Цена</a>
-                            <ul>
-                                <li><a data-toggle="modal" href="<?= $_SERVER['PHP_SELF']?>?page=costproducts">Продсчитать стоимость</a></li>
-                                <li><a href="sale.html">Как получить скидку</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="<?= $_SERVER['PHP_SELF']?>?page=delivery">Доставка и оплата</a>
-                        </li>
-                        <li><a href="<?=$_SERVER['PHP_SELF']?>?page=blogarticles">Блог</a>
-                        </li>
-                        <li><a href="index.html#map-canvas">Контакты</a></li>
+                        <li><a class="active" href="<?=$_SERVER['PHP_SELF']?>?page=mainpage">Главная</a> </li>
+                        <li><a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#about">О нас</a>  </li>
+                        <li><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Продукция</a>  </li>
+                        <li><a href="<?=$_SERVER['PHP_SELF']?>?page=costproducts">Цена</a>    </li>
+                        <li><a href="<?= $_SERVER['PHP_SELF']?>?page=delivery">Доставка и оплата</a>  </li>
+                        <li><a href="<?=$_SERVER['PHP_SELF']?>?page=blogarticles">Блог</a>    </li>
+                        <li><a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map">Контакты</a></li>
                     </ul>
                     <!--DL Menu Start-->
                     <div id="kode-responsive-navigation" class="dl-menuwrapper">
                         <button class="dl-trigger">Меню</button>
                         <ul class="dl-menu">
-                            <li><a class="active" href="index.html#">Главная</a>
-                            </li>
-                            <li class="menu-item kode-parent-menu"><a href="index.html#about">О нас</a>
-                            </li>
-                            <li class="menu-item kode-parent-menu"><a href="index.html#">Проду</a>
-                            </li>
-                            <li class="menu-item kode-parent-menu"><a href="index.html#">Цена</a>
-                                <ul class="dl-submenu">
-                                    <li><a href="out-team.html">Продсчитать стоимость</a></li>
-                                    <li><a href="our-team-detail.html">Получить скидку</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item kode-parent-menu"><a href="<?= $_SERVER['PHP_SELF']?>?page=delivery">Доставка и оплата</a>
-
-                            </li>
-                            <li class="menu-item kode-parent-menu"><a href="index.html#">Контакты</a>
-
-                            </li>
+                            <li><a class="active" href="<?=$_SERVER['PHP_SELF']?>?page=mainpage">Главная</a></li>
+                            <li class="menu-item kode-parent-menu"><a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#about">О нас</a>  </li>
+                            <li class="menu-item kode-parent-menu"><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Продукция</a></li>
+                            <li class="menu-item kode-parent-menu"><a href="<?=$_SERVER['PHP_SELF']?>?page=costproducts">Цена</a> </li>
+                            <li class="menu-item kode-parent-menu"><a href="<?= $_SERVER['PHP_SELF']?>?page=delivery">Доставка и оплата</a> </li>
+                            <li class="menu-item kode-parent-menu"><a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map">Контакты</a></li>
                             <li><a href="">Связаться с нами</a></li>
                         </ul>
                     </div>
@@ -297,7 +277,7 @@
                                         <div class="checkbox">
                                             <label>
                                                 <input type="checkbox" name="bondingType" value="spliced">
-                                                Срощенный
+                                                Сращённый
                                             </label>
                                         </div>
                                     </div>
@@ -477,11 +457,12 @@
                                      alt="">
                             </div>
                             <div id="calculatedSums" class="calculated-sums modal-fixed">
+                                <p><span id="">столешница</span>&nbsp из &nbsp<span id="">дуба</span>:	&nbsp<span id="">1</span>шт,&nbsp <span id="">1,5</span>&nbsp м<sup><small>2</small></sup></p>
                                 <p>Изготовление
                                     <span id="productionCost">0</span>
                                     грн
                                 </p>
-                                <p>Снятие фаски
+                                <p>Форматировние, снятие фаски по периметру
                                     <span id="chamferRemovingCost">0</span>
                                     грн
                                 </p>
@@ -497,6 +478,10 @@
                                     <span id="coveringCost">0</span>
                                     грн
                                 </p>
+                                <p>Упаковка
+                                    <span id="">0</span>
+                                    грн
+                                </p>
                                 <div class="total-sums">
                                     <hr>
                                     <hr>
@@ -510,7 +495,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <div class="discount">* При заказе всего комплекса услуг скидка - 7 %</div>
+                    <div class="discount">* При заказе полного комплекса услуг предоставляется скидка в размере - 7 %</div>
                     <button type="button" id="refresh" class="btn btn-default">Очистить</button>
                     <button type="button" id="submit" class="btn btn btn-success" data-dismiss="modal">Оформить</button>
                     <button type="button" id="continue" class="btn btn-success" disabled>Заказать еще</button>
