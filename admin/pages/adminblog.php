@@ -6,9 +6,9 @@
  * Time: 19:11
  */
 ?>
-<div class="container">
+<div class="container" style="padding: 30px;     overflow: hidden;">
 <h3>Добавить новую статью в блог</h3>
-<form method="POST" enctype="multipart/form-data">
+<form method="POST" enctype="multipart/form-data" style="margin-bottom: 20px">
     <p style="margin-top: 20px;">Введите название статьи</p><input style="width: 100%" type="text" name="title"><br>
     <p style="margin-top: 20px;">Введите короткое описание</p><textarea style="width: 100%"  name="short_descr"></textarea><br>
     <p style="margin-top: 20px;">Введите дату создания статьи</p><input style="" type="date" name="date"><br>
@@ -17,7 +17,7 @@
     <script>
         CKEDITOR.replace('blog');
     </script>
-    <input type="submit" value="Сохранить" formaction="<?= $_SERVER['PHP_SELF'] ?>?page=newblogitem">
+    <input style="margin-top: 20px;" type="submit" value="Сохранить" formaction="<?= $_SERVER['PHP_SELF'] ?>?page=newblogitem">
 </form>
 <h3>Перечень имеющихся статей</h3>
 

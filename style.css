@@ -4446,7 +4446,7 @@ header{
 	top:0px;
 	left:24px;
 	right:0px;
-	bottom:4px;
+	bottom: -2px;
 	border-bottom:1px solid #dd6043;
 	width:30px;
 }
