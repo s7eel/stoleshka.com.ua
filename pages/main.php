@@ -125,7 +125,7 @@
                             <h3>О нас</h3>
                         </div>
                         <p>Проект Stoleshka.com.ua запущен на базе производственного предприятия, занимающегося изготовлением мебельного щита на экспорт с 2005 года. Миссией проекта является предоставление возможности любому клиенту при единичном заказе получить необходимый спектр услуг: а именно, без минимального ограничения по объему, качественно и в срок приобрести изделие из мебельного щита по оптимальной цене. Особое внимание уделяется уровню обслуживания клиентов.</p>
-                        <p>Поскольку большинство наших заказчиков не являются профессионалами в данной отрасли и зачастую имеют смутные понятия об изделиях из натурального дерева, нами разработана упрощенная система выбора продукта и просчета его стоимости. На основании многолетнего опыта из предложения исключены неподходящие для данной продукции породы дерева, некачественные клея, неоправданно дорогие лакокрасочные материалы. Клиенту остается только определиться с рядом основополагающих вопросов эстетического характера, поскольку основные моменты приведены к единому отработанному решению, а все мелкие и незначительные - упразднены. На сегодняшний день, сайт Stoleshka.com.ua предлагает лучшие условия сотрудничества: удобный сервис, демократичные цены, гарантию и  минимально возможные сроки изготовления.
+                        <p>Поскольку большинство наших заказчиков не являются профессионалами в данной отрасли и зачастую имеют смутные понятия об изделиях из натурального дерева, нами разработана упрощенная система выбора продукта и просчета его стоимости. На основании многолетнего опыта из предложения исключены неподходящие для данной продукции породы дерева, некачественные клеи, неоправданно дорогие лакокрасочные материалы. Клиенту остается только определиться с рядом основополагающих вопросов эстетического характера, поскольку основные моменты приведены к единому отработанному решению, а все мелкие и незначительные - упразднены. На сегодняшний день, сайт Stoleshka.com.ua предлагает лучшие условия сотрудничества: удобный сервис, демократичные цены, гарантию и  минимально возможные сроки изготовления.
                         </p>
                     </div>
                 </div>
@@ -137,7 +137,7 @@
     <div class="container">
         <div class="kode_section_hdg heading_2 heading_3 light">
             <!-- <span>24 years of experience</span> -->
-            <h3>Наша продукция</h3>
+            <h3>Наши услуги</h3>
             <p><span>Мы производим изделия из натурального дерева.</span>С чем мы работаем:</p>
         </div>
         <div class="kode_box_service_list">
@@ -146,7 +146,7 @@
                     <div class="kode_box_service_detail">
                         <span class="glyphicon glyphicon-tree-deciduous"></span>
                         <div class="kode_box_servixe_text">
-                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Порода дерева</a></h5>
+                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Подбираем породу дерева</a></h5>
                             <!-- <p>Lorem ipsum dolor sit amet, ludus aliquip mei eu, quando commodo salutatus vis ins.</p> -->
                             <p>Для производства  используем только твердые породы дерева - ясень и дуб .... </p>
                         </div>
@@ -156,7 +156,7 @@
                     <div class="kode_box_service_detail">
                         <span class="glyphicon glyphicon-resize-small"></span>
                         <div class="kode_box_servixe_text">
-                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Склейка</a></h5>
+                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Склеиваем</a></h5>
                             <p>Цельноламельный (склейка только по ширине) и сращенный (склейка по длине и по ширине).</p>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
                     <div class="kode_box_service_detail">
                         <span class="glyphicon glyphicon-tint"></span>
                         <div class="kode_box_servixe_text">
-                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Клей</a></h5>
+                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Применяем клей</a></h5>
                             <p>Работаем как с влагостойким (применяется для улиц), так и с невлагостойким типом клея.</p>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                     <div class="kode_box_service_detail">
                         <span class="fa fa-industry" aria-hidden="true"></span>
                         <div class="kode_box_servixe_text">
-                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Форматирование</a></h5>
+                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Форматируем</a></h5>
                             <p>Форматируем, шлифуем, выполняем фаски необходимого радиуса</p>
                         </div>
                     </div>
@@ -183,7 +183,7 @@
                     <div class="kode_box_service_detail">
                         <span class="glyphicon glyphicon-import"></span>
                         <div class="kode_box_servixe_text">
-                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Покрытие</a></h5>
+                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Покрываем</a></h5>
                             <p>Изготавливаем изделия без покраски, красим, вскрываем лаком, лак плюс тон ... </p>
                         </div>
                     </div>
@@ -192,8 +192,8 @@
                     <div class="kode_box_service_detail">
                         <span class="glyphicon glyphicon-tree-conifer"></span>
                         <div class="kode_box_servixe_text">
-                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Детали сложной формы</a></h5>
-                            <p>Изготавливаем детали с криволинейными поверхностями по чертежу или шаблону ... </p>
+                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Изгатавлеваем детали сложной формы</a></h5>
+                            <p>Детали с криволинейными поверхностями по чертежу ... </p>
                         </div>
                     </div>
                 </li>
@@ -211,7 +211,7 @@
                     <div class="kode_counter2_text">
                         <i class="glyphicon glyphicon-saved"></i>
                         <span class="counter">456</span>
-                        <P>Столешнец</P>
+                        <P>Столешниц</P>
                     </div>
                 </li>
                 <li>
@@ -297,7 +297,7 @@
                 <div class="kode_services_2_des des_3 des_5">
                     <span><i class="glyphicon glyphicon-ok"></i></span>
                     <div class="kode_services_2_content">
-                        <h4><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Отзывчивость</a></h4>
+                        <h4><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Лояльность</a></h4>
                         <p>Отсутствие понятия минимального заказа</p>
                     </div>
                 </div>

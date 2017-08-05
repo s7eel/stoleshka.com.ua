@@ -432,10 +432,10 @@ form p span i {
 }
 table,
 th,
-td {
+/*td {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 }
-
+*/
 table {
 	border-collapse: separate;
 	border-spacing: 0;

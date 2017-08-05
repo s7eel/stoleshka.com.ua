@@ -47,7 +47,11 @@ $(function () {
         '</li>');
     });
 
+
+
     $('#productsList').append('<li><span>Итого: </span><span class="finalSum">'+ finalSum + ' грн</span></li>');
+
+
 
     $productsList.on('click', '.glyphicon-remove', function (e) {
       localStorage.setItem('finalSum', JSON.stringify(finalSum - products[e.target.dataset.key].totalWithDiscount));

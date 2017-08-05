@@ -42,7 +42,7 @@
 }
 
 #calcModal label {
-    color: #4a4a4a;
+    color: #929292;
     display: block;
     font-weight: 400;
     margin-bottom: 10px;
@@ -53,8 +53,10 @@
 }
 
 #calcModal .detailsNumber {
-    width: calc(70% - 14px);
+
     display: inline-block;
+    height: 30px;
+    width: calc(70% - -20px);
 }
 
 #calcModal .detailsNumber + span {
@@ -64,6 +66,8 @@
 #calcModal .size {
     width: 31%;
     display: inline-block;
+    width: 36%;
+    height: 30px;
 }
 
 #calcModal .size + div {
@@ -78,7 +82,10 @@
 #calcModal .discount {
     padding-left: 15px;
     text-align: left;
-}
+    font-size: 11px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-transform: uppercase;}
 
 #calcModal .grey {
     color: lightgrey;
@@ -131,4 +138,13 @@ form .error {
     color: #f76d1d;
     text-align: left;
     padding-left: 10px;
+}
+.control-label{
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #fff !important;
+
+}
+.itemName{
+    border-radius: 0px;
 }

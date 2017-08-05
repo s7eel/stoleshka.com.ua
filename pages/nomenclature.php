@@ -13,8 +13,8 @@
     <div class="kode_pratices_area">
         <div class="container">
             <div class="kode_section_heading">
-                <h6>Рады предложить Вам изделия из натурального дерева</h6>
-                <h3>Выбирите продукцию</h3>
+<!--                <h6>Рады предложить Вам изделия из натурального дерева</h6>-->
+<!--                <h3>Выбирите продукцию</h3>-->
                 <span><i class="fa fa-cogs"></i></span>
             </div>
             <div class="row">
@@ -131,7 +131,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Порода дерева</label>
+                                    <label class="control-label">Порода дерева </label>
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox" name="woodBreed" value="ash">
@@ -328,9 +328,9 @@
                     </div>
                     <div class="col-sm-5 col-sm-offset-2">
                         <div id="images">
-                            <img src="http://thecatapi.com/api/images/get?size=small&format=src&type=jpg&results_per_page=2"
+                            <img src="/images/calc_foto/wite_dub_masive.png"
                                  alt="">
-                            <img src="http://thecatapi.com/api/images/get?size=small&format=src&type=gif&results_per_page=2"
+                            <img src="/images/calc_foto/wite_dub_masive.png"
                                  alt="">
                         </div>
                         <div id="calculatedSums" class="calculated-sums modal-fixed">

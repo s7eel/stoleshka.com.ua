@@ -119,18 +119,18 @@
     <div class="modal-dialog">
     
       <!-- Modal content-->
-      <div class="modal-content">
+      <div class="modal-content" >
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Ваш Заказ</h4>
         </div>
         <div class="modal-body" id="basketList">
 
-           <ul id="productsList">Корзина пуста</ul>
+           <ul id="productsList" style="margin-bottom: 10px">Корзина пуста</ul>
 
            <form id="orderForm" class="quote_form_list" action="" hidden>
-                       <div class="col-md-6 col-sm-6">
-                           <div class="kode_quote_commet_field">
+                       <div class="col-md-6 col-sm-6" >
+                           <div class="kode_quote_commet_field" >
                                <input placeholder="Ваше Имя" name="name" id="name" type="text" data-default="Name*" size="30">
                            </div>
                        </div>
@@ -229,7 +229,7 @@
     <!-- TRYING TO DO CALCULATOR-->
     <div class="modal fade" tabindex="-1" role="dialog" id="calcModal" data-backdrop="static">
         <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
+            <div class="modal-content" style="border-radius: 0px; background: #545454;">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
@@ -321,20 +321,21 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label" for="detailsNumber">Количество деталей</label>
+                                        <label class="control-label" for="detailsNumber">Количество деталей, шт</label>
                                         <input name="detailsNumber" id="detailsNumber" type="number" min="0" step="1"
                                                class="form-control detailsNumber" required>
-                                        <span>шт.</span>
+<!--                                        <span>шт.</span>-->
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label">Габаритные размеры</label>
+                                        <label class="control-label">Габаритные размеры, мм</label>
                                         <input name="length" type="number" placeholder="длина"
                                                class="form-control size" required>
                                         <input name="width" type="number" placeholder="ширина"
-                                               class="form-control size" required> <div>мм</div>
+                                               class="form-control size" required>
+<!--                                        <div>мм</div>-->
                                     </div>
-                                    <button id="showAdditionalRequirements" class="btn btn-info">
+                                    <button id="showAdditionalRequirements" class="btn btn-info" style="    margin-top: 15px;">
                                         Показать дополнительные услуги
                                     </button>
                                 </div>
@@ -451,45 +452,47 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col-sm-5 col-sm-offset-2">
-                            <div id="images">
-                                <img src="http://thecatapi.com/api/images/get?size=small&format=src&type=gif&results_per_page=2"
-                                     alt="">
-                            </div>
-                            <div id="calculatedSums" class="calculated-sums modal-fixed">
-                                <p><span id="">столешница</span>&nbsp из &nbsp<span id="">дуба</span>:	&nbsp<span id="">1</span>шт,&nbsp <span id="">1,5</span>&nbsp м<sup><small>2</small></sup></p>
-                                <p>Изготовление
-                                    <span id="productionCost">0</span>
-                                    грн
-                                </p>
-                                <p>Форматировние, снятие фаски по периметру
-                                    <span id="chamferRemovingCost">0</span>
-                                    грн
-                                </p>
-                                <p>Криволинейное форматирование
-                                    <span id="complexRadiusCost">0</span>
-                                    грн
-                                </p>
-                                <p>Подготовка к покраске
-                                    <span id="coveringPreparationCost">0</span>
-                                    грн
-                                </p>
-                                <p>Покрытие
-                                    <span id="coveringCost">0</span>
-                                    грн
-                                </p>
-                                <p>Упаковка
-                                    <span id="">0</span>
-                                    грн
-                                </p>
-                                <div class="total-sums">
-                                    <hr>
-                                    <hr>
-                                    <p>Итого: <span id="total">0</span> грн</p>
-                                    <p>Скидка: <span id="discount">0</span> грн</p>
-                                    <p>Итого со скидкой: <span id="totalWithDiscount">0</span> грн</p>
-                                    <p>Сумма заказа: <span id="finalSum"></span> грн</p>
+                        <div class="col-sm-5 col-sm-offset-2" >
+
+                            <div id="calculatedSums" class="calculated-sums modal-fixed" style="background: #fff; padding: 30px;">
+                                <div id="images">
+                                    <img src="../../images/calc_foto/wite_dub_masive.png"
+                                         alt="">
                                 </div>
+                                <p id="" style="margin: 10px; text-transform: uppercase;color: #545454;">
+                                    <b><span id="">столешница</span>&nbsp из &nbsp<span id="" class="" >дуба</span>:	&nbsp<span id="">1</span>шт,&nbsp <span id="">1,5</span>&nbsp м<sup><small>2</small></sup></b></p>
+                                <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>Изготовление</td>
+                                    <td><span id="productionCost">0</span>
+                                        грн</td>
+                                </tr>
+                                <tr><td>Форматировние, снятие фаски по периметру</td>
+                                    <td><span id="chamferRemovingCost">0</span> грн</td>
+                                </tr>
+                                <tr><td>Криволинейное форматирование</td>
+                                    <td><span id="complexRadiusCost">0</span> грн</td>
+                                </tr>
+                                <tr><td>Подготовка к покраске</td>
+                                    <td><span id="coveringPreparationCost">0</span>  грн</td>
+                                </tr>
+                                <tr><td>Покрытие</td>
+                                    <td><span id="coveringCost">0</span>  грн</td>
+                                </tr>
+                                <tr><td>Упаковка</td>
+                                    <td> <span id="">0</span> грн</td>
+                                </tr>
+
+<!--                                <div class="total-sums">-->
+                                    <tr> <td><b>Итого:</b></td> <td><span id="total">0</span> грн</td>
+                                    <tr> <td><b>Скидка:</b></td>  <td><span id="discount">0</span> грн</td>
+                                    <tr> <td><b>Итого со скидкой:</b></td>  <td><span id="totalWithDiscount">0</span> грн</td>
+                                    <tr style="margin: 10px; text-transform: uppercase;color: #fff; background-color:  #ffd322"> <td>Сумма заказа:</td> <td> <span id="finalSum"></span> грн</td>
+<!--                                </div>-->
+
+                                </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
