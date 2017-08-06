@@ -36,20 +36,31 @@ $(function () {
     $orderForm.show();
     $('#makeOrder').show();
 
-    products.forEach(function (product, key) {
-      $('#productsList').append('<li>' +
-        '<span class="itemName">' + dictionary[product.itemName] + '</span>' +
-        '<span class="woodBreed">' + (dictionary[product.woodBreed] || '') + '</span>' +
-        '<span class="options">' + (product.length || 0) + 'x' + (product.width || 0) + '</span>' +
-        '<span class="productNumber">' + (product.detailsNumber || 0) + '</span>' +
-        '<span class="totalWithDiscount">' + (product.totalWithDiscount || '') + '</span>' +
-        '<span class="glyphicon glyphicon-remove" data-key="' + key + '"></span>' +
-        '</li>');
-    });
+    // products.forEach(function (product, key) {
+    //   $('#productsList').append('<li>' +
+    //     '<span class="itemName">' + dictionary[product.itemName] + '</span>' +
+    //     '<span class="woodBreed">' + (dictionary[product.woodBreed] || '') + '</span>' +
+    //     '<span class="options">' + (product.length || 0) + 'x' + (product.width || 0) + '</span>' +
+    //     '<span class="productNumber">' + (product.detailsNumber || 0) + '</span>' +
+    //     '<span class="totalWithDiscount">' + (product.totalWithDiscount || '') + '</span>' +
+    //     '<span class="glyphicon glyphicon-remove" data-key="' + key + '"></span>' +
+    //     '</li>');
+    // });
 
 
+      products.forEach(function (product, key) {
+          $('#productsList').append('<tr>' +
+              '<td class="itemName">' + dictionary[product.itemName] + '</td>' +
+              '<td class="woodBreed">' + (dictionary[product.woodBreed] || '') + '</td>' +
+              '<td class="options">' + (product.length || 0) + 'x' + (product.width || 0) + '</td>' +
+              '<td class="productNumber">' + (product.detailsNumber || 0) + '</td>' +
+              '<td class="totalWithDiscount">' + (product.totalWithDiscount || '') + '</td>' +
+              '<td class="glyphicon glyphicon-remove" data-key="' + key + '"></td>' +
+              '</tr>');
+      });
 
-    $('#productsList').append('<li><span>Итого: </span><span class="finalSum">'+ finalSum + ' грн</span></li>');
+
+    $('#productsList').append('<tr class="total_count"><td>Итого: </td><td></td><td> </td><td></td><td class="finalSum">'+ finalSum + ' грн</td><td> </td></tr>');
 
 
 

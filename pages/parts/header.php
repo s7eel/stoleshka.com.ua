@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
     <!--style.css start-->
-    <link href="/style.css" rel="stylesheet">
+
     <link href="/style.css" rel="stylesheet">
     <link href="/css/slick.css" rel="stylesheet">
     <!--swiper.min.css start-->
@@ -125,9 +125,10 @@
           <h4 class="modal-title">Ваш Заказ</h4>
         </div>
         <div class="modal-body" id="basketList">
+            <table class="table">
 
-           <ul id="productsList" style="margin-bottom: 10px">Корзина пуста</ul>
-
+           <tbody id="productsList"></tbody>
+           </table>
            <form id="orderForm" class="quote_form_list" action="" hidden>
                        <div class="col-md-6 col-sm-6" >
                            <div class="kode_quote_commet_field" >
@@ -177,7 +178,7 @@
                        </div>
                        <div class="col-md-12">
                            <div class="kode_quote_textarea">
-                               <textarea placeholder="Примечания/Пожелания" name="message"></textarea>
+                               <textarea placeholder="Примечания/Пожелания" name="message" style="border: 1px solid #d4d4d4;"></textarea>
                            </div>
                        </div>
                        <div class="col-md-12"><button type="submit" class="btn btn-warning" id="makeOrder">Заказать</button></div>
@@ -229,26 +230,27 @@
     <!-- TRYING TO DO CALCULATOR-->
     <div class="modal fade" tabindex="-1" role="dialog" id="calcModal" data-backdrop="static">
         <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content" style="border-radius: 0px; background: #545454;">
+            <div class="modal-content" style="border-radius: 0px; background: #545454; padding-top: 0px;     padding-bottom: 0px;">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-sm-5">
+                        <div class="col-sm-4">
                             <form id="calculator">
                                 <div id="basicRequirements">
-                                    <div class="form-group">
-                                        <label class="control-label" for="itemName">Наименование товара</label>
-                                        <select id="itemName" name="itemName" class="form-control itemName">
-                                            <option value="tabletop">столешница</option>
-                                            <option value="steps">ступени</option>
-                                            <option value="windowsill">подоконник</option>
-                                            <option value="frontFacade">фасад прямой</option>
-                                            <option value="furnitureBoard">мебельный щит</option>
-                                        </select>
-                                    </div>
+
+                                         <div class="kode_quote_commet_field">
+                                            <label class="control-label" for="itemName">Наименование товара</label>
+                                            <select id="itemName" name="itemName" class=" itemName">
+                                               <option class="bbb" value="tabletop">столешница</option>
+                                               <option class="bbb" value="steps">ступени</option>
+                                               <option class="bbb" value="windowsill">подоконник</option>
+                                               <option class="bbb" value="frontFacade">фасад прямой</option>
+                                               <option class="bbb" value="furnitureBoard">мебельный щит</option>
+                                            </select>
+                                        </div>
 
                                     <div class="form-group">
                                         <label class="control-label">Порода дерева</label>
@@ -335,8 +337,8 @@
                                                class="form-control size" required>
 <!--                                        <div>мм</div>-->
                                     </div>
-                                    <button id="showAdditionalRequirements" class="btn btn-info" style="    margin-top: 15px;">
-                                        Показать дополнительные услуги
+                                    <button id="showAdditionalRequirements" class="btn btn-info" style="    margin-top: 5px; width: 100%;">
+                                      дополнительные услуги
                                     </button>
                                 </div>
 
@@ -452,9 +454,9 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col-sm-5 col-sm-offset-2" >
+                        <div class="col-sm-7 col-sm-offset-1 total_culc_bord" >
 
-                            <div id="calculatedSums" class="calculated-sums modal-fixed" style="background: #fff; padding: 30px;">
+                            <div id="calculatedSums" class="calculated-sums modal-fixed" style="">
                                 <div id="images">
                                     <img src="../../images/calc_foto/wite_dub_masive.png"
                                          alt="">
@@ -498,11 +500,21 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <div class="discount">* При заказе полного комплекса услуг предоставляется скидка в размере - 7 %</div>
-                    <button type="button" id="refresh" class="btn btn-default">Очистить</button>
-                    <button type="button" id="submit" class="btn btn btn-success" data-dismiss="modal">Оформить</button>
-                    <button type="button" id="continue" class="btn btn-success" disabled>Заказать еще</button>
-                </div>
+                    <div class="row">
+                            <div class="col-sm-4">
+                                <div class="discount">* При заказе полного комплекса услуг <br> предоставляется скидка в размере - 7 %</div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div style="float: right">
+                                 <button type="button" id="refresh" class="btn btn-default">Очистить</button>
+                                <button type="button" id="submit" class="btn btn btn-success" data-dismiss="modal">Оформить</button>
+                                <button type="button" id="continue" class="btn btn-success" disabled>Заказать еще</button>
+                                </div>
+                     </div>
+
+                    </div>
+
+                    </div>
             </div>
         </div>
     </div>

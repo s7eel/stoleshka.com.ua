@@ -22,7 +22,10 @@
 }
 
 #calcModal .modal-body {
-    padding-left: 30px;
+    padding-left: 20px;
+}
+.modal-body {
+    padding-top: 0px;
 }
 
 #calcModal .total-sums hr {
@@ -49,14 +52,14 @@
 }
 
 #calcModal .itemName {
-    width: 70%;
+    width: 100%;
 }
 
 #calcModal .detailsNumber {
 
     display: inline-block;
     height: 30px;
-    width: calc(70% - -20px);
+    width: 100%;
 }
 
 #calcModal .detailsNumber + span {
@@ -64,10 +67,9 @@
 }
 
 #calcModal .size {
-    width: 31%;
     display: inline-block;
-    width: 36%;
-    height: 30px;
+    width: 47%;
+    height: 35px;
 }
 
 #calcModal .size + div {
@@ -98,7 +100,7 @@
 
     #calcModal .modal-body {
         overflow: auto;
-        height: 80vh;
+        height: 75vh;
     }
 
     #calcModal .modal-fixed {
@@ -127,7 +129,7 @@
 }
 
 #productsList .productNumber:after {
-    content: ' шт.';
+    content: ' шт';
 }
 
 #productsList .totalWithDiscount:after {
@@ -147,4 +149,155 @@ form .error {
 }
 .itemName{
     border-radius: 0px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
+
+.modal-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.total_culc_bord{
+    /*background-color: white !important;*/
+    height: 800px;
+    /*width: 48%;*/
+}
+
+#images{
+height:221px;
+    /*width: calc(84% - -20px);*/
+    overflow: hidden;
+
+
+}
+
+    /*background-position: calc(100% - 20px) 0;*/
+/*: -webkit-calc background-position: calc(100% - 20px) 0;*/
+/*}*/
+
+/*______________________________________*/
+
+#itemName option:hover {
+    background-color: #ffd322 !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+SELECT option:hover {
+    background: #c0d05b!important;
+    color: #fff;
+}
+.bbb:focus{
+    background: #c0d05b!important;
+}
+
+#itemName option[selected]{
+    background: #c0d05b!important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+#calculatedSums{
+    background: #fff;
+    padding: 30px!important;
+    margin-right: 10px;
+    border: none;
+
+}
+
+/*_____________________________*/
+
+
+#productsList .woodBreed{
+    width: 10px;
+}
+
+#productsList .productNumber{
+    width: 75px;
+}
+
+#productsList .woodBreed{
+    width: 10px;
+}
+#productsList td{
+    border: 0px solid #fff;
+    text-align: center;
+}
+#productsList td:first-child{
+    text-align: left;
+}
+.total_count{
+    text-transform: uppercase;
+    font-weight: 800;
+    background-color: #ffd322;
+    color: white;
+}
+
+.modal-content {
+    padding: 20px;
+    /*padding-top: 0px;*/
+}
+
+tbody#productsList {
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    text-transform: uppercase;
+}
+
+.btn-warning {
+    color: #fff;
+    background-color: #ffd322;
+    border-color: #ffd322;
+    text-transform: uppercase;
+}
+
+/*_________________________________________*/
+
+
+@media (min-height: 800px) and (max-height: 933px) {
+    #images {
+        height: 106px;
+    }
+
+}
+
+@media (min-height: 768px) and (max-height: 801px)  {
+    #images {
+        height: 100px;
+    }
+
+}
+
+@media (min-height: 600px) and (max-height: 769px)  {
+    #images {
+        height: 130px;
+    }
+     #calculatedSums table{
+            padding: 0px!important;
+            line-height: 0.4em!important;
+         font-size: 11px;
+        }
+
+    .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+
+        line-height: 0.5;
+
+    }
+    #calculatedSums{
+    padding: 10px!important;
+        padding-bottom: 0px!important;
+}
+    #calcModal .modal-body {
+
+        height: 65vh;
+    }
+
+
+
+}
+
+
+
+
