@@ -5,7 +5,9 @@ var dictionary = {
   frontFacade: 'фасад прямой',
   furnitureBoard: 'мебельный щит',
   ash: 'ясень',
-  oak: 'дуб'
+  oak: 'дуб',
+  fromash: 'из ясеня',
+  fromoak: 'из дуба'
 };
 
 $(function () {
@@ -17,24 +19,24 @@ $(function () {
     imgs = [
       'ash-glued-noCovering',
       'ash-glued-polish',
-      'ash-glued-light',
-      'ash-glued-white',
-      'ash-glued-dark',
+      'ash-glued-polishWithColor-light',
+      'ash-glued-polishWithColor-white',
+      'ash-glued-polishWithColor-dark',
       'ash-spliced-noCovering',
       'ash-spliced-polish',
-      'ash-spliced-light',
-      'ash-spliced-white',
-      'ash-spliced-dark',
+      'ash-spliced-polishWithColor-light',
+      'ash-spliced-polishWithColor-white',
+      'ash-spliced-polishWithColor-dark',
       'oak-spliced-noCovering',
       'oak-spliced-polish',
-      'oak-spliced-light',
-      'oak-spliced-white',
-      'oak-spliced-dark',
+      'oak-spliced-polishWithColor-light',
+      'oak-spliced-polishWithColor-white',
+      'oak-spliced-polishWithColor-dark',
       'oak-glued-noCovering',
       'oak-glued-polish',
-      'oak-glued-light',
-      'oak-glued-white',
-      'oak-glued-dark'
+      'oak-glued-polishWithColor-light',
+      'oak-glued-polishWithColor-white',
+      'oak-glued-polishWithColor-dark'
     ];
 
   setFinalSum();
@@ -52,7 +54,10 @@ $(function () {
     var button = $(event.relatedTarget);
     var itemName = button.data('itemName');
 
-    itemName && $('#itemName').val(itemName);
+    if(itemName && $('#itemName').val(itemName)){
+      inputData.itemName = itemName;
+      manageProductInformation(inputData);
+    }
   });
 
   $('#submit').on('click', function () {
@@ -78,6 +83,7 @@ $(function () {
 
   $form.find('input[type="number"]').on('input', handleInput.bind(this));
   $form.find('input[type="checkbox"]').on('change', handleInput.bind(this));
+  $form.find('#itemName').on('change', handleInput.bind(this));
 
   function sendFormData (url) {
     $.ajax({
@@ -111,8 +117,10 @@ $(function () {
   }
 
   function manageProductInformation (inputData) {
-
-    debugger;
+    $('#productName').html(dictionary[inputData.itemName]);
+    $('#productMaterial').html(dictionary['from' + inputData.woodBreed] || '');
+    $('#productSize').html(inputData.size || '0');
+    $('#productNumber').html(inputData.detailsNumber || '0');
   }
 
   function toggleAdditionalBlock () {
@@ -124,8 +132,10 @@ $(function () {
     $form[0].reset();
     $requirementBtn.show();
     $('#additionalRequirements').hide();
-    $form.find('input[type="checkbox"]').trigger('change');
-    $form.find('input[type="number"]').trigger('input');
+    //$form.find('input[type="checkbox"]').trigger('change');
+    //$form.find('input[type="number"]').trigger('input');
+    inputData = {itemName: 'tabletop'};
+    manageProductInformation(inputData);
   }
 
   function changeCheckboxBehavior () {

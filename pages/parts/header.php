@@ -458,11 +458,15 @@
 
                             <div id="calculatedSums" class="calculated-sums modal-fixed" style="">
                                 <div id="images">
-                                    <img src="../../images/calc_foto/wite_dub_masive.png"
+                                    <img src="/images/tabletop.jpg"
                                          alt="">
                                 </div>
-                                <p id="" style="margin: 10px; text-transform: uppercase;color: #545454;">
-                                    <b><span id="">столешница</span>&nbsp из &nbsp<span id="" class="" >дуба</span>:	&nbsp<span id="">1</span>шт,&nbsp <span id="">1,5</span>&nbsp м<sup><small>2</small></sup></b></p>
+                                <p id="productInformation" style="margin: 10px; text-transform: uppercase;color: #545454;">
+                                    <b><span id="productName">столешница</span>
+                                    <span id="productMaterial"></span>:	&nbsp
+                                    <span id="productNumber">0</span>шт,&nbsp
+                                    <span id="productSize">0</span>&nbsp м<sup><small>2</small></sup></b>
+                                </p>
                                 <table class="table">
                                 <tbody>
                                 <tr>
