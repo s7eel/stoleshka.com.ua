@@ -155,12 +155,13 @@ $(function () {
       var imageName = [
         inputData.woodBreed,
         inputData.bondingType,
-        inputData.covering || 'noCovering'
+        (inputData.covering === 'polishWithColor' && !inputData.toningColor) || !inputData.covering? 'noCovering': inputData.covering
       ];
+
       inputData.toningColor && imageName.push(inputData.toningColor);
       imageName = imageName.join('-');
 
-      if(imgs.indexOf(imageName) >= 0) {
+      if (imgs.indexOf(imageName) >= 0) {
         $productImg.attr('src', '/images/products/' + imageName + '.jpg')
       }
     } else {
