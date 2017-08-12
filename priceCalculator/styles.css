@@ -168,8 +168,10 @@ form .error {
 height:221px;
     /*width: calc(84% - -20px);*/
     overflow: hidden;
+}
 
-
+#images img {
+    max-width: 440px;
 }
 
     /*background-position: calc(100% - 20px) 0;*/

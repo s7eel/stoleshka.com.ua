@@ -16,28 +16,29 @@ $(function () {
     $requirementBtn = $('#showAdditionalRequirements'),
     $covering = $('.covering'),
     $toningColor = $('.toningColor'),
-    imgs = [
-      'ash-glued-noCovering',
-      'ash-glued-polish',
-      'ash-glued-polishWithColor-light',
-      'ash-glued-polishWithColor-white',
-      'ash-glued-polishWithColor-dark',
-      'ash-spliced-noCovering',
-      'ash-spliced-polish',
-      'ash-spliced-polishWithColor-light',
-      'ash-spliced-polishWithColor-white',
-      'ash-spliced-polishWithColor-dark',
-      'oak-spliced-noCovering',
-      'oak-spliced-polish',
-      'oak-spliced-polishWithColor-light',
-      'oak-spliced-polishWithColor-white',
-      'oak-spliced-polishWithColor-dark',
-      'oak-glued-noCovering',
-      'oak-glued-polish',
-      'oak-glued-polishWithColor-light',
-      'oak-glued-polishWithColor-white',
-      'oak-glued-polishWithColor-dark'
-    ];
+    $productImg = $('#images').find('img');
+  imgs = [
+    'ash-glued-noCovering',
+    'ash-glued-polish',
+    'ash-glued-polishWithColor-light',
+    'ash-glued-polishWithColor-white',
+    'ash-glued-polishWithColor-dark',
+    'ash-spliced-noCovering',
+    'ash-spliced-polish',
+    'ash-spliced-polishWithColor-light',
+    'ash-spliced-polishWithColor-white',
+    'ash-spliced-polishWithColor-dark',
+    'oak-spliced-noCovering',
+    'oak-spliced-polish',
+    'oak-spliced-polishWithColor-light',
+    'oak-spliced-polishWithColor-white',
+    'oak-spliced-polishWithColor-dark',
+    'oak-glued-noCovering',
+    'oak-glued-polish',
+    'oak-glued-polishWithColor-light',
+    'oak-glued-polishWithColor-white',
+    'oak-glued-polishWithColor-dark'
+  ];
 
   setFinalSum();
   changeCheckboxBehavior();
@@ -54,7 +55,7 @@ $(function () {
     var button = $(event.relatedTarget);
     var itemName = button.data('itemName');
 
-    if(itemName && $('#itemName').val(itemName)){
+    if (itemName && $('#itemName').val(itemName)) {
       inputData.itemName = itemName;
       manageProductInformation(inputData);
     }
@@ -112,8 +113,8 @@ $(function () {
       }
     }
     checkSubmitBtn(sums.productionCost);
-    manageProductInformation(inputData);
     checkRelatedItems();
+    manageProductInformation(inputData);
   }
 
   function manageProductInformation (inputData) {
@@ -121,6 +122,8 @@ $(function () {
     $('#productMaterial').html(dictionary['from' + inputData.woodBreed] || '');
     $('#productSize').html(inputData.size || '0');
     $('#productNumber').html(inputData.detailsNumber || '0');
+
+    manageProductImg();
   }
 
   function toggleAdditionalBlock () {
@@ -145,6 +148,28 @@ $(function () {
       $(group).prop("checked", false);
       $box.prop("checked", true);
     });
+  }
+
+  function manageProductImg () {
+    if (inputData.woodBreed && inputData.bondingType) {
+      var imageName = [
+        inputData.woodBreed,
+        inputData.bondingType,
+        inputData.covering || 'noCovering'
+      ];
+      inputData.toningColor && imageName.push(inputData.toningColor);
+      imageName = imageName.join('-');
+
+      if(imgs.indexOf(imageName) >= 0) {
+        $productImg.attr('src', '/images/products/' + imageName + '.jpg')
+      }
+    } else {
+      changeProductImg();
+    }
+  }
+
+  function changeProductImg () {
+    $productImg.attr('src', '/images/' + inputData.itemName + '.jpg')
   }
 
   function checkSubmitBtn (productionCost) {
