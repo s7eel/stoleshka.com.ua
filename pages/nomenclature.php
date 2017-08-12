@@ -21,7 +21,7 @@
                 <div class="col-md-4">
                     <div class="kode_pratices_content">
                         <figure>
-                            <img src="/images/area.jpg" alt="">
+                            <img src="/images/tabletop.jpg" alt="">
                             <figcaption>
                                 <h4>Столешницы</h4>
                                 <p>Могут иметь различную форму, в том числе и неправильную, применяются для оформления различных помещений  </p>
@@ -34,7 +34,7 @@
                 <div class="col-md-4">
                     <div class="kode_pratices_content">
                         <figure>
-                            <img src="/images/area1.jpg" alt="">
+                            <img src="/images/steps.jpg" alt="">
                             <figcaption>
                                 <h4>Ступени
                                 </h4>
@@ -48,7 +48,7 @@
                 <div class="col-md-4">
                     <div class="kode_pratices_content">
                         <figure>
-                            <img src="/images/area2.jpg" alt="">
+                            <img src="/images/windowsill.jpg" alt="">
                             <figcaption>
                                 <h4>
                                     Подоконники
@@ -63,7 +63,7 @@
                 <div class="col-md-4">
                     <div class="kode_pratices_content">
                         <figure>
-                            <img src="/images/area3.jpg" alt="">
+                            <img src="/images/frontFacade.jpg" alt="">
                             <figcaption>
                                 <h4>Прямые фасады</h4>
                                 <p>Деревянные фасады из массива благородных пород дерева - ясень, дуб</p>
@@ -76,7 +76,7 @@
                 <div class="col-md-4">
                     <div class="kode_pratices_content">
                         <figure>
-                            <img src="/images/area4.jpg" alt="">
+                            <img src="/images/furnitureBoard.jpg" alt="">
                             <figcaption>
                                 <h4>Мебельный щит</h4>
                                 <p>Это листовой древесный материал квадратной или прямоугольной формы, изготовленный с помощью склеивания между собой  деревянных строганых брусков</p>
