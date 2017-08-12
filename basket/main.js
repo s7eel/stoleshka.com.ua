@@ -1,21 +1,10 @@
 $(function () {
   var products,
     finalSum,
-    dictionary,
     $productsList = $('#productsList'),
     order,
     $closeBtn = $('#basketModal').find('.close'),
     $orderForm = $('#orderForm');
-
-  dictionary = {
-    tabletop: 'столешница',
-    steps: 'ступени',
-    windowsill: 'подоконник',
-    frontFacade: 'фасад прямой',
-    furnitureBoard: 'мебельный щит',
-    ash: 'ясень',
-    oak: 'дуб'
-  };
 
   $('#basket').on('basket:update', updateData);
 

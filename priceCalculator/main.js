@@ -1,9 +1,41 @@
+var dictionary = {
+  tabletop: 'столешница',
+  steps: 'ступени',
+  windowsill: 'подоконник',
+  frontFacade: 'фасад прямой',
+  furnitureBoard: 'мебельный щит',
+  ash: 'ясень',
+  oak: 'дуб'
+};
+
 $(function () {
   var inputData = {itemName: 'tabletop'},
     $form = $('#calculator'),
     $requirementBtn = $('#showAdditionalRequirements'),
     $covering = $('.covering'),
-    $toningColor = $('.toningColor');
+    $toningColor = $('.toningColor'),
+    imgs = [
+      'ash-glued-noCovering',
+      'ash-glued-polish',
+      'ash-glued-light',
+      'ash-glued-white',
+      'ash-glued-dark',
+      'ash-spliced-noCovering',
+      'ash-spliced-polish',
+      'ash-spliced-light',
+      'ash-spliced-white',
+      'ash-spliced-dark',
+      'oak-spliced-noCovering',
+      'oak-spliced-polish',
+      'oak-spliced-light',
+      'oak-spliced-white',
+      'oak-spliced-dark',
+      'oak-glued-noCovering',
+      'oak-glued-polish',
+      'oak-glued-light',
+      'oak-glued-white',
+      'oak-glued-dark'
+    ];
 
   setFinalSum();
   changeCheckboxBehavior();
@@ -57,6 +89,7 @@ $(function () {
         resetForm();
       },
       error: function (e) {
+        resetForm();
       }
     });
   }
@@ -73,7 +106,13 @@ $(function () {
       }
     }
     checkSubmitBtn(sums.productionCost);
+    manageProductInformation(inputData);
     checkRelatedItems();
+  }
+
+  function manageProductInformation (inputData) {
+
+    debugger;
   }
 
   function toggleAdditionalBlock () {
