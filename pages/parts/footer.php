@@ -44,11 +44,14 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="kode_top_info2 widget">
+                                            <div class="kode_top_info2 widget" >
                                                 <span><i class="fa fa-phone"></i></span>
                                                 <div class="kode_top_info_text">
                                                     <p>+38 (093) 842 42 44<br>
-                                                    +38 (067) 638 41 81</p>
+                                                    +38 (067) 638 41 81<br>
+                                                        +38 (095) 0 069 049
+
+                                                    </p>
                                                  <!--    <a href="index.html">+1234 (4563) 7894</a> -->
                                                 </div>
                                             </div>
@@ -57,7 +60,7 @@
                                             <div class="kode_top_info2 widget">
                                                 <span><i class="fa fa-envelope-o"></i></span>
                                                 <div class="kode_top_info_text">
-                                                    <p style="margin-top: 4px;" >stoleshka.com.ua@gmail.com</p>
+                                                    <p style="margin-top: 4px;" >zakaz@stoleshka.com.ua</p>
                                                   <!--   <a href="index.html">stoleshka.com.ua@gmail.com</a> -->
                                                 </div>
                                             </div>
@@ -76,16 +79,17 @@
                                                 <i class="fa fa-clock-o"></i>
                                                 <div class="kode_top_info_text">
                                                     <p>Понедельник - Пятница</p>
-                                                    <span> &#32;  &#32;с 8-00 до 16-00</span>
+                                                    <p> &#32;  &#32;с 8-00 до 16-30</p>
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="kode_top_info2 widget widget2">
+                                            <div class="kode_top_info2 widget widget2" style="margin-top: 12px">
                                                 <i class="fa fa-clock-o"></i>
                                                 <div class="kode_top_info_text">
-                                                    <p>Суббота и Воскресенье</p>
-                                                    <span> &#32;  &#32;Выходной</span>
+                                                    <p>Суббота,  Воскресенье,</p>
+                                                    <p>Праздничные дни - </p>
+                                                    <p> &#32;  &#32;Выходной</p>
                                                 </div>
                                             </div>
                                         </li>

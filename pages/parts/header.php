@@ -108,18 +108,19 @@
                                     <a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map" >ул. Саранская 91Д   </a>
                                 </div>
                             </div>
+
+                            <div class="kode_top_info2">
+                                <span><i class="glyphicon glyphicon-earphone"></i></span>
+                                <div class="kode_top_info_text">
+                                    <a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map">+38 (067)1-493-493</a>
+                                    <a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map">+38 (095)0-069-049</a>
+                                </div>
+                            </div>
                             <div class="kode_top_info2">
                                 <span><i class="glyphicon glyphicon-envelope"></i></span>
                                 <div class="kode_top_info_text">
                                     <a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map">info@stoleshka.com.ua</a>
-                                    <a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map">stoleshka.com.ua@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="kode_top_info2">
-                                <span><i class="glyphicon glyphicon-earphone"></i></span>
-                                <div class="kode_top_info_text">
-                                    <a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map">+38 (067)149 34 93</a>
-                                    <a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map">+38 (095)006 90 49</a>
+                                    <a href="<?=$_SERVER['PHP_SELF']?>?page=mainpage#map">zakaz@stoleshka.com.ua</a>
                                 </div>
                             </div>
                         </div>
@@ -350,7 +351,7 @@
                                                class="form-control size" required>
 <!--                                        <div>мм</div>-->
                                     </div>
-                                    <button id="showAdditionalRequirements" class="btn btn-info" style="    margin-top: 5px; width: 100%;">
+                                    <button id="showAdditionalRequirements" class="btn btn-info" >
                                       дополнительные услуги
                                     </button>
                                 </div>
@@ -522,7 +523,7 @@
                                 <div class="discount">* При заказе полного комплекса услуг <br> предоставляется скидка в размере - 7 %</div>
                             </div>
                             <div class="col-sm-8">
-                                <div style="float: right">
+                                <div class="calc_button_panel">
                                  <button type="button" id="refresh" class="btn btn-default">Очистить</button>
                                 <button type="button" id="submit" class="btn btn btn-success" data-dismiss="modal">Оформить</button>
                                 <button type="button" id="continue" class="btn btn-success" disabled>Заказать еще</button>

@@ -26,12 +26,17 @@
 		font-size:22px;
 	}
 	.kode_service2_text p{
-		padding:0px 0px;
+		padding:-1px 0px;
 	}
 }
 
 /*============	Media 940Px Start ============ */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
+	.slider_board{
+		width: 700px;
+	}
+
+
 	.kode_top_navigation li{
 		margin-right:4px;
 	}
@@ -163,7 +168,10 @@
 	}
 	.kode_box_service_list ul li {
 		margin: 0 9px 20px;
-		width: 31.3%;
+		width: 29.3%;
+	}
+	.kode_services_2_des.des_3.des_5 {
+		padding: 60px 17px 56px;
 	}
 	.kode_box_service_detail{
 		text-align:center;
@@ -521,7 +529,10 @@
 		width: 20%;
 	}
 	.kode_top_info2{
-		margin-right:10px;
+		margin-right: 10px;
+		float: left;
+		margin-left: 80px;
+		margin-bottom: 5px;
 	}
 	.kode_top_row:before{
 		transform:skewX(40deg) translate(-1%);
@@ -910,9 +921,20 @@
 
 /*============	Media 768Px Start ============ */ 
 @media (min-width: 768px) and (max-width: 990px) {
-	
-}
+	.slider_board{
+		width: 550px;
+	}
+	.kode_banner2_text {
+		top: 10%;
+	}
 
+
+}
+@media (max-width: 620px){
+	.kode_banner2{
+		display: none;
+	}
+}
 /*============ Media 767Px Start ============ */
 @media (max-width: 767px) {
 	.kode_top_search_wraper:before,
@@ -1181,7 +1203,10 @@
 		margin-bottom: 0;
 	}
 	.kode_banner2_text {
-		margin-left:-70px;
+		/*margin-left:-70px;*/
+		left: 0%;
+		width: 180px;
+		top:10%;
 	}
 	.kode_banner2_text h1{
 		margin-bottom:9px;
@@ -1258,7 +1283,7 @@
 		font-size:25px;
 	}
 	.kode_box_service_list ul li {
-		width: 47%;
+		width: 44%;
 	}
 	.kode_box_service_detail{
 		text-align:center;

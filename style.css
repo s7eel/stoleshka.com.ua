@@ -147,6 +147,41 @@ header{
 .kode_top_navi_wraper .dl-menuwrapper {
     display: none;
 }
+
+.slider_board{
+	width: 800px;
+	margin-right: 50px;
+}
+.slider_ul {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 12px;
+	font-weight: 800;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+
+/*@media (min-width: 991px) and (max-width: 1200px)  {*/
+	/*.slider_board{*/
+		/*width: 700px;*/
+	/*}*/
+/*}*/
+/*@media (min-width: 768px) and (max-width: 990px)  {*/
+	/*.slider_board{*/
+		/*width: 550px;*/
+	/*}*/
+		/*.kode_banner2_text {*/
+			/*top: 10%;*/
+		/*}*/
+
+
+
+/*}*/
+
+
+
+
+
 /*
 	=========================================================
 			CONTENT WRAPER START
@@ -2479,7 +2514,7 @@ header{
 	right: 20px;
     position: absolute;
     top: 50%;
-    z-index: 9999;
+    z-index: 1;
 	background:none;
 	color:transparent;
 	line-height:70px;
@@ -2490,7 +2525,7 @@ header{
     left:20px;
     position: absolute;
     top: 50%;
-    z-index: 9999;
+    z-index: 1;
 	background:none;
 	color:transparent;
 	line-height:65px;
@@ -4441,14 +4476,14 @@ header{
 }
 
 .kode_blog_grid_content.content_2 h6:before{
-	position:absolute;
-	content:"";
-	top:0px;
-	left:24px;
-	right:0px;
-	bottom: -2px;
-	border-bottom:1px solid #dd6043;
-	width:30px;
+	position: absolute;
+	content: "";
+	top: 0px;
+	left: 37px;
+	right: 0px;
+	bottom: -3px;
+	border-bottom: 1px solid #dd6043;
+	width: 36px;
 }
 .kode_blog_medium figcaption a {
     border: 1px solid #fff;
@@ -5714,11 +5749,11 @@ header{
 	margin:0px 0px;
 }
 .kode_service2_text{
-	background-image:url("images/servicess1.png");
-	background-position:center;
-	background-repeat:no-repeat;
-	background-size:cover;
-	padding:20px 25px 24px;
+	/*background-image:url("images/servicess1.png");*/
+	/*background-position:center;*/
+	/*background-repeat:no-repeat;*/
+	/*background-size:cover;*/
+	padding:20px 24px 24px;
 	position:relative;
 	z-index:999;
 	text-align:center;
@@ -8081,3 +8116,6 @@ header{
 .kode_service2_text h3{
 	font-size:22px;
 }
+
+
+

@@ -3,16 +3,15 @@
         <figure>
             <img src="images/b.jpg" alt="">
             <div class="kode_banner2_text">
-                <div style="width: 800px; margin-right: 50px;">
+                <div class="slider_board">
                     <p>Изготавливаем под заказ</p>
-                    <h1><span> мебельный щит </span> </h1>
+                    <h1><span> Мебельный  щит </span> </h1>
 
-                    <h3 style="color: rgba(255, 255, 255, 0.35)">по вашим индивидуальным размерам,<br> а также готовые изделия из него:</h3>
-                    <ul style="margin-top: 20px; margin-bottom: 20px; font-size: 12px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; ">
-                        <li>- столешницы</li>
-                        <li>- ступени</li>
-                        <li>- подоконники</li>
-                        <li>- прямые фасады</li>
+<!--                    <h3 style="color: rgba(255, 255, 255, 0.35)">по вашим индивидуальным размерам,<br> а также готовые изделия из него:</h3>-->
+                    <ul class="slider_ul">
+                        <li>по вашим индивидуальным размерам,</li>
+                        <li> а также готовые изделия из него:</li>
+                        <li>столешницы, ступени, подоконники, прямые фасады </li>
                     </ul>
                     <a class="kode-button-style-1 kode-theme-color-bg-color" href="#" data-toggle="modal" data-target="#calcModal">Подсчитать стоимость</a>
                 </div>
@@ -21,10 +20,10 @@
         <figure>
             <img src="images/b1.jpg" alt="">
             <div class="kode_banner2_text">
-                <div style="width: 800px; margin-right: 50px;">
+                <div class="slider_board" >
                     <p>Выполняем заказы в</p>
                     <h1><span> кратчайшие<br> сроки</span> </h1>
-                    <ul style="margin-top: 20px; margin-bottom: 20px; font-size: 12px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; ">
+                    <ul class="slider_ul">
                         <li>- ме6ельный щит 3-4 рабочих дня</li>
                         <li>- готовые изделия с покраской 5-6 дней</li>
                     </ul>
@@ -35,10 +34,10 @@
         <figure>
             <img src="images/b3.jpg" alt="">
             <div class="kode_banner2_text">
-                <div style="width: 850px; margin-right: 50px;">
+                <div  class="slider_board">
                     <p>гарантируем </p>
                     <h1><span>качество </span> продукции</h1>
-                    <ul style="margin-top: 20px; margin-bottom: 20px; font-size: 12px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; ">
+                    <ul class="slider_ul">
                         <li>- контроль технологии производства</li>
                         <li>- материалы от лучших производителей</li>
                         <li>- гарантия от изготовителя</li>
@@ -50,10 +49,10 @@
         <figure>
             <img src="images/b2.jpg" alt="">
             <div class="kode_banner2_text">
-                <div style="width: 850px; margin-right: 50px;">
+                <div  class="slider_board">
                     <p> Ваши деньги </p>
                     <h1><span>Экономим на </span> логистике</h1>
-                    <ul style="margin-top: 20px; margin-bottom: 20px; font-size: 12px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; ">
+                    <ul class="slider_ul">
                         <li>- оптимизируем затраты транспортной компании</li>
                         <li>- выполняем качественную упаковку на предприятии</li>
                     </ul>
@@ -81,7 +80,7 @@
                 <div class="kode_service2_text active">
                     <span><i class="glyphicon glyphicon-signal"></i></span>
                     <h3>ступени</h3>
-                    <p>Изготавливаем продукцию в кратчайшие сроки. От 3 до 7  дней </p>
+                    <p>Изготавливаем продукцию в кратчайшие сроки. От 3 до 7 рабочих дней </p>
                     <a class="kode-button-style-1 kode-theme-color-bg-color" href="#" data-toggle="modal" data-target="#calcModal" data-item-name="steps">Заказать</a>
                 </div>
             </div>
@@ -125,7 +124,7 @@
                             <h3>О нас</h3>
                         </div>
                         <p>Проект Stoleshka.com.ua запущен на базе производственного предприятия, занимающегося изготовлением мебельного щита на экспорт с 2005 года. Миссией проекта является предоставление возможности любому клиенту при единичном заказе получить необходимый спектр услуг: а именно, без минимального ограничения по объему, качественно и в срок приобрести изделие из мебельного щита по оптимальной цене. Особое внимание уделяется уровню обслуживания клиентов.</p>
-                        <p>Поскольку большинство наших заказчиков не являются профессионалами в данной отрасли и зачастую имеют смутные понятия об изделиях из натурального дерева, нами разработана упрощенная система выбора продукта и просчета его стоимости. На основании многолетнего опыта из предложения исключены неподходящие для данной продукции породы дерева, некачественные клеи, неоправданно дорогие лакокрасочные материалы. Клиенту остается только определиться с рядом основополагающих вопросов эстетического характера, поскольку основные моменты приведены к единому отработанному решению, а все мелкие и незначительные - упразднены. На сегодняшний день, сайт Stoleshka.com.ua предлагает лучшие условия сотрудничества: удобный сервис, демократичные цены, гарантию и  минимально возможные сроки изготовления.
+                        <p>Поскольку большинство наших заказчиков не являются профессионалами в данной отрасли и зачастую имеют смутные понятия об изделиях из натурального дерева, нами разработана упрощенная система выбора продукта и просчета его стоимости. На основании многолетнего опыта из предложения исключены неподходящие для данной продукции породы дерева, некачественные клея, неоправданно дорогие лакокрасочные материалы. Клиенту остается только определиться с рядом основополагающих вопросов эстетического характера, поскольку основные моменты приведены к единому отработанному решению, а все мелкие и незначительные - упразднены. На сегодняшний день, сайт Stoleshka.com.ua предлагает лучшие условия сотрудничества: удобный сервис, демократичные цены, гарантию и  минимально возможные сроки изготовления.
                         </p>
                     </div>
                 </div>
@@ -184,7 +183,7 @@
                         <span class="glyphicon glyphicon-import"></span>
                         <div class="kode_box_servixe_text">
                             <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Покрываем</a></h5>
-                            <p>Изготавливаем изделия без покраски, красим, вскрываем лаком, лак плюс тон ... </p>
+                            <p>Изготавливаем изделия без покраски, красим, покрываем лаком, лак плюс тон ... </p>
                         </div>
                     </div>
                 </li>
@@ -192,7 +191,7 @@
                     <div class="kode_box_service_detail">
                         <span class="glyphicon glyphicon-tree-conifer"></span>
                         <div class="kode_box_servixe_text">
-                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Изгатавлеваем детали сложной формы</a></h5>
+                            <h5><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Изготавлеваем детали сложной формы</a></h5>
                             <p>Детали с криволинейными поверхностями по чертежу ... </p>
                         </div>
                     </div>
@@ -237,7 +236,7 @@
                 </li>
                 <li>
                     <div class="kode_counter2_text">
-                        <i class="glyphicon glyphicon-user"></i>
+                        <i class="fa fa-smile-o" aria-hidden="true"></i>
                         <span class="counter" >100</span>
                         <P>% Довольных клиентов</P>
                     </div>
@@ -262,7 +261,7 @@
                     <span><i class="glyphicon glyphicon-ok"></i></span>
                     <div class="kode_services_2_content">
                         <h4><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">без посредников</a></h4>
-                        <p>Вы получайте продукцию от производителя </p>
+                        <p>Вы получаете продукцию от производителя </p>
                     </div>
                 </div>
             </div>
@@ -439,15 +438,17 @@
     </div>
 </div>
 <div class="kode_map2_wrap" id="map">
-    <div id="map-canvas" class="map-canvas"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d785.8480286176598!2d35.00987483371957!3d48.508943050698505!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe208b70a5535%3A0x672c583f821d8e75!2z0LLRg9C70LjRhtGPINCh0LDRgNCw0L3RgdGM0LrQsCwgOTEsINCU0L3RltC_0YDQvsyBLCDQlNC90ZbQv9GA0L7Qv9C10YLRgNC-0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LA!5e0!3m2!1sru!2sru!4v1500154561447" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+    <div id="map-canvas" class="map-canvas">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2643.2542228729267!2d35.005225188875635!3d48.50919108806477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf71068e1c70a5c08!2zNDjCsDMwJzMwLjQiTiAzNcKwMDAnMjQuMSJF!5e0!3m2!1sru!2sua!4v1502909171562" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
     <div class="container">
         <div class="kode_map2_content">
             <div class="kode_map2_service">
                 <h5>Контакты</h5>
                 <ul class="kode_map2_service_detail">
-                    <li><i class="glyphicon glyphicon-home"></i><p><span>г. Днепр, ж/м Фрунзенский </span><br>ул. Саранская 91д </p></li>
-                    <li><i class="glyphicon glyphicon-envelope"></i><p><span>stoleshka.com.ua@gmail.com</span><br>info@stoleshka.com.ua</p></li>
-                    <li style="float: left; width: 100%;"><i class="glyphicon glyphicon-earphone"></i><p><span> +38 067 6 384 181</span><br> +38 093 8 424 244</p></li>
+                    <li><i class="glyphicon glyphicon-home"></i><p><span>г. Днепр, , АНД район </span><br>ул. Саранская 91д </p></li>
+                    <li><i class="glyphicon glyphicon-envelope"></i><p><span>zakaz@stoleshka.com.ua</span><br>info@stoleshka.com.ua</p></li>
+                    <li style="float: left; width: 100%;"><i class="glyphicon glyphicon-earphone"></i><p><span> +38 067 6 384 181</span><br> +38 093 8 424 244<br> +38 095 0 069 049</p></li>
                 </ul>
             </div>
             <ul class="kode_map2_icon">
