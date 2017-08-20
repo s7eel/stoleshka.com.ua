@@ -286,7 +286,7 @@ tbody#productsList {
 }
 
 
-@media (min-height: 600px) and (max-height: 799px)  {
+@media (min-height: 660px) and (max-height: 799px)  {
     #images {
         height: 130px;
     }
@@ -313,14 +313,44 @@ tbody#productsList {
 
 
 }
+@media (min-height: 500px) and (max-height: 659px){
+    #images {
+        height: 0px;
+    }
+    #calculatedSums table{
+        padding: 0px!important;
+        line-height: 0.4em!important;
+        font-size: 10px;
+    }
 
-@media (min-width: 768px) and (max-width: 991px){
+    .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+
+        line-height: 0.5;
+
+    }
+    #calculatedSums{
+        padding: 10px!important;
+        padding-bottom: 0px!important;
+    }
+
+    #calcModal .modal-body {
+
+        height: 60vh;
+    }
+    #calcModal .discount {
+        font-size: 9px;
+    }
+}
+    @media (min-width: 768px) and (max-width: 991px){
 .modal-dialog {
     width: 785px;
 }
     .calc_button_panel {
-        margin-top: 60px;
+        margin-top: 10px;
     }
+        #calcModal .discount {
+            font-size: 9px;
+        }
 }
 
 @media (min-width: 588px) and (max-width: 767px){

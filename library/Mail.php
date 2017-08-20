@@ -10,7 +10,7 @@ class Mail
 {
     public static function sendMail(array $data)
     {
-        $to = 's7eell@gmail.com';
+        $to = 'stoleshka.com.ua@gmail.com';
         $subject = 'Вопрос с заглавной страницы сайта';
         $subject = '=?utf-8?B?'.base64_encode($subject).'?=';
         $headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -34,7 +34,7 @@ class Mail
     }
     public static function sendMailProductOrder(array $data, array $clientData, $discountForAllProducts, $totalPriceForAllProducts)
     {
-        $to = 's7eell@gmail.com';
+        $to = 'stoleshka.com.ua@gmail.com';
         $subject = 'Заказ продукции';
         $subject = '=?utf-8?B?'.base64_encode($subject).'?=';
         $headers  = 'MIME-Version: 1.0' . "\r\n";
