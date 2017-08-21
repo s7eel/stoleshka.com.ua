@@ -13,7 +13,8 @@ class Mail
         $to = 'stoleshka.com.ua@gmail.com';
         $subject = 'Вопрос с заглавной страницы сайта';
         $subject = '=?utf-8?B?'.base64_encode($subject).'?=';
-        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers = 'From: zakaz@stoleshka.com.ua' . "\r\n";
+        $headers .= 'MIME-Version: 1.0' . "\r\n";
         $headers .= "Content-type: text/html; charset=\"UTF-8\"; format=flowed \r\n";
         if($data['name']==NULL){
             $data['name']='Клиент не представился';
@@ -37,7 +38,8 @@ class Mail
         $to = 'stoleshka.com.ua@gmail.com';
         $subject = 'Заказ продукции';
         $subject = '=?utf-8?B?'.base64_encode($subject).'?=';
-        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers = 'From: zakaz@stoleshka.com.ua' . "\r\n";
+        $headers .= 'MIME-Version: 1.0' . "\r\n";
         $headers .= "Content-type: text/html; charset=\"UTF-8\"; format=flowed \r\n";
 
         $message = 'Имя клиента:' . $clientData['clientName'] . '<br>'
