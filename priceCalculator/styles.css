@@ -286,7 +286,7 @@ tbody#productsList {
 }
 
 
-@media (min-height: 660px) and (max-height: 799px)  {
+@media (min-height: 737px) and (max-height: 799px)  {
     #images {
         height: 130px;
     }
@@ -308,19 +308,20 @@ tbody#productsList {
 
     #calcModal .modal-body {
 
-        height: 65vh;
+        /*height: 65vh;*/
     }
 
 
 }
-@media (min-height: 500px) and (max-height: 659px){
+
+@media (min-height: 660px) and (max-height: 737px)  {
     #images {
-        height: 0px;
+        height: 130px;
     }
     #calculatedSums table{
         padding: 0px!important;
         line-height: 0.4em!important;
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
@@ -332,15 +333,87 @@ tbody#productsList {
         padding: 10px!important;
         padding-bottom: 0px!important;
     }
-
     #calcModal .modal-body {
 
-        height: 60vh;
+        /*height: 65vh;*/
     }
-    #calcModal .discount {
-        font-size: 9px;
-    }
+
+
+
+
 }
+@media screen and (max-height: 660px){
+    /*#images {*/
+        /*height: 0px;*/
+    /*}*/
+    /*#calculatedSums table{*/
+        /*padding: 0px!important;*/
+        /*line-height: 0.4em!important;*/
+        /*font-size: 10px;*/
+    /*}*/
+
+    /*.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {*/
+
+        /*line-height: 0.5;*/
+
+    /*}*/
+    /*#calculatedSums{*/
+        /*padding: 10px!important;*/
+        /*padding-bottom: 0px!important;*/
+    /*}*/
+
+    /*#calcModal .modal-body {*/
+
+      /*height: auto;*/
+
+    /*}*/
+    /*#calcModal .discount {*/
+        /*font-size: 9px;*/
+    /*}*/
+    #calcModal .modal-body {
+
+        height: auto;
+    }
+
+
+    .col-sm-7 .col-sm-offset-1 .total_culc_bord{
+        width: 100%;
+margin-left:0px;
+
+    }
+    .col-sm-4{
+        width: 100%;
+    }
+
+ .total_culc_bord{
+}
+
+   #calcModal {
+    overflow: auto;
+}
+
+#calcModal .modal-fixed {
+    position: relative;
+    right: 0px;
+    top: 20px;
+    max-width: 436px;
+    overflow: auto;}
+
+.modal-content {
+    padding: 5px;
+    max-width: 500px;
+}
+
+
+
+}
+
+
+
+
+
+
+
     @media (min-width: 768px) and (max-width: 991px){
 .modal-dialog {
     width: 785px;
@@ -474,3 +547,4 @@ tbody#productsList {
 
 
 
+			

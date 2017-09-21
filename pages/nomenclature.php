@@ -3,7 +3,7 @@
     <div class="kode_banner">
         <div class="container">
             <div class="kode_banner_titile">
-                <h2>Рассчёт стоимости</h2>
+                <h2>Расчёт стоимости</h2>
             </div>
         </div>
     </div>
@@ -79,7 +79,7 @@
                             <img src="/images/furnitureBoard.jpg" alt="">
                             <figcaption>
                                 <h4>Мебельный щит</h4>
-                                <p>Это листовой древесный материал квадратной или прямоугольной формы, изготовленный с помощью склеивания между собой  деревянных строганых брусков</p>
+                                <p>изготовленный с помощью склеивания между собой  деревянных строганых брусков</p>
                                 <a class="kode-button-style-2 kode-white-color-bg kode-theme-color-text-color"
                                    href="" data-target="#calcModal" data-toggle="modal" data-item-name="furnitureBoard">Рассчитать</a>
                             </figcaption>

@@ -137,7 +137,7 @@
         <div class="kode_section_hdg heading_2 heading_3 light">
             <!-- <span>24 years of experience</span> -->
             <h3>Наши услуги</h3>
-            <p><span>Мы производим изделия из натурального дерева.</span>С чем мы работаем:</p>
+            <p><span>Мы производим изделия из натурального дерева</span></p>
         </div>
         <div class="kode_box_service_list">
             <ul>
@@ -306,7 +306,7 @@
                     <span><i class="glyphicon glyphicon-ok"></i></span>
                     <div class="kode_services_2_content">
                         <h4><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Ассортимент</a></h4>
-                        <p>Так же работаем с клёном, ольхой, сосной</p>
+                        <p>Дуб, ясень, клён, ольха, сосна</p>
                     </div>
                 </div>
             </div>
@@ -431,7 +431,7 @@
 <div class="kode_video_wrap video_1">
     <div class="container">
         <div class="kode_video_content">
-            <a data-rel="prettyPhoto" href="https://www.youtube.com/embed/j8Ev62i-RiE"><i class="glyphicon glyphicon-play"></i></a>
+            <a data-rel="prettyPhoto" href="https://www.youtube.com/channel/UCr0EEJjROSVMuogSxvLU-_A?view_as=subscriber"><i class="glyphicon glyphicon-play"></i></a>
             <h3>СМОТРИТЕ НАШ КАНАЛ НА YOUTUBE</h3>
             <p>Здесь Вы сможите увидеть все стадии обработки деревянных изделий</p>
         </div>
@@ -439,7 +439,8 @@
 </div>
 <div class="kode_map2_wrap" id="map">
     <div id="map-canvas" class="map-canvas">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2643.2542228729267!2d35.005225188875635!3d48.50919108806477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf71068e1c70a5c08!2zNDjCsDMwJzMwLjQiTiAzNcKwMDAnMjQuMSJF!5e0!3m2!1sru!2sua!4v1502909171562" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+       
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2643.294089847037!2d35.004640356569986!3d48.50842678151813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe20f586585d1%3A0xe69d6435eddeac0b!2z0YHRgtC-0LvQtdGI0LrQsA!5e0!3m2!1sru!2sua!4v1503313755070" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
     <div class="container">
         <div class="kode_map2_content">
@@ -448,7 +449,7 @@
                 <ul class="kode_map2_service_detail">
                     <li><i class="glyphicon glyphicon-home"></i><p><span>г. Днепр, , АНД район </span><br>ул. Саранская 91д </p></li>
                     <li><i class="glyphicon glyphicon-envelope"></i><p><span>zakaz@stoleshka.com.ua</span><br>info@stoleshka.com.ua</p></li>
-                    <li style="float: left; width: 100%;"><i class="glyphicon glyphicon-earphone"></i><p><span> +38 067 6 384 181</span><br> +38 093 8 424 244<br> +38 095 0 069 049</p></li>
+                    <li style="float: left; width: 100%; color: white"><i class="glyphicon glyphicon-earphone"></i><p><span>+38 067 149 34 93</span><br> +38 095 006 90 49</p></li>
                 </ul>
             </div>
             <ul class="kode_map2_icon">
@@ -460,4 +461,4 @@
         </div>
     </div>
 </div>
-<!--// KODE MAP2 WRAP END //-->
+<!--// KODE MAP2 WRAP END //-->		
