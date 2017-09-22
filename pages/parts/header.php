@@ -502,7 +502,7 @@
                                     <td><span id="coveringCost">0</span>  грн</td>
                                 </tr>
                                 <tr><td>Упаковка</td>
-                                    <td> <span id="">0</span> грн</td>
+                                    <td> <span id="packagingCost">0</span> грн</td>
                                 </tr>
 
 <!--                                <div class="total-sums">-->
