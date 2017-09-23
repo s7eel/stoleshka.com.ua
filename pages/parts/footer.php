@@ -9,11 +9,11 @@
                                 <div class="kode_widget3_icon">
                                     <h6>Контакты</h6>
                                     <ul>
-                                        <li><a href="index.html#"><i class="fa fa-facebook"> </i></a></li>
-                                        <li><a href="index.html#"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a href="index.html#"><i class="fa fa-whatsapp"> </i></a></li>
-                                        <li><a href="index.html#"><i class="fa fa-skype">    </i></a></li>
-                                        <li><a href="index.html#"><i class="fa fa-youtube">  </i></a></li>
+                                        <li><a href="https://www.facebook.com/stoleshka.com.ua" target="_blank"><i class="fa fa-facebook"> </i></a></li>
+                                        <li><a href="https://www.instagram.com/stoleshka.com.ua/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="0671493493"><i class="fa fa-whatsapp" target="_blank"> </i></a></li>
+                                       <!--  <li><a href="index.html#"><i class="fa fa-skype">    </i></a></li> -->
+                                        <li><a href="https://www.youtube.com/channel/UCr0EEJjROSVMuogSxvLU-_A?view_as=subscriber" target="_blank"><i class="fa fa-youtube" >  </i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -21,7 +21,7 @@
                         <div class="col-md-3 col-sm-6">
                             <div class="kode_widget3_content">
                                 <h4>Продукция</h4>
-                                <ul class="widget3_services">
+                                <ul class="widget3_services" style="">
                                     <li><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Столешницы</a></li>
                                     <li><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Ступени</a></li>
                                     <li><a href="<?=$_SERVER['PHP_SELF']?>?page=productions">Подоконники</a></li>
@@ -36,7 +36,7 @@
                                 <div class="kode_widget_contact" >
                                     <ul style="line-height: 1.5em;">
                                         <li>
-                                            <div class="kode_top_info2 widget">
+                                            <div class="kode_top_info2 widget" style="margin-bottom: 10px">
                                                 <span><i class="fa fa-paper-plane-o"></i></span>
                                                 <div class="kode_top_info_text">
                                                     <p>г. Днепр, ул. Саранская, 91д</p>
@@ -47,10 +47,9 @@
                                             <div class="kode_top_info2 widget" >
                                                 <span><i class="fa fa-phone"></i></span>
                                                 <div class="kode_top_info_text">
-                                                    <p>+38 (093) 842 42 44<br>
-                                                    +38 (067) 638 41 81<br>
-                                                        +38 (095) 0 069 049
-
+                                                        +38 (067) 149 34 93<br>
+                                                        +38 (095) 006 90 49<br>
+                                                        +38 (067) 638 41 81
                                                     </p>
                                                  <!--    <a href="index.html">+1234 (4563) 7894</a> -->
                                                 </div>

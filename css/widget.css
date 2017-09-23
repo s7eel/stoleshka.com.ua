@@ -524,6 +524,7 @@
 .kode_top_info2.widget .kode_top_info_text{
 	float:none;
 	overflow:hidden;
+	color: #e5e5e5;
 }
 .kode_top_info2.widget .kode_top_info_text p{
 	color:#fff;

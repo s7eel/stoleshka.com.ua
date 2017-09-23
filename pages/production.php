@@ -19,10 +19,10 @@
                         <figure>
                             <img src="images/enginer.jpg" alt="">
                             <ul class="kode_enginer_social">
-                                <li><a href="enginer.html#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="enginer.html#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="enginer.html#"><i class="fa fa-whatsapp"></i></a></li>
-                                <li><a href="enginer.html#"><i class="fa fa-skype">  </i></a></li>
+                                <li><a href="https://www.facebook.com/stoleshka.com.ua" target="_blank"><i class="fa fa-facebook" ></i></a></li>
+                                <li><a href="https://www.instagram.com/stoleshka.com.ua" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="0671493493"><i class="fa fa-whatsapp" target="_blank"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCr0EEJjROSVMuogSxvLU-_A?view_as=subscriber" target="_blank"><i class="fa fa-skype">  </i></a></li>
                             </ul>
                         </figure>
                     </div>
