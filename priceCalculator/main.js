@@ -59,6 +59,8 @@ $(function () {
       inputData.itemName = itemName;
       manageProductInformation(inputData);
     }
+
+    setFinalSum();
   });
 
   $('#submit').on('click', function () {
@@ -135,10 +137,10 @@ $(function () {
     $form[0].reset();
     $requirementBtn.show();
     $('#additionalRequirements').hide();
-    //$form.find('input[type="checkbox"]').trigger('change');
     //$form.find('input[type="number"]').trigger('input');
     inputData = {itemName: 'tabletop'};
     manageProductInformation(inputData);
+    handleInput({currentTarget: {name:'mock'}});
   }
 
   function changeCheckboxBehavior () {
@@ -175,6 +177,7 @@ $(function () {
 
   function checkSubmitBtn (productionCost) {
     $('#continue').prop("disabled", !Boolean(productionCost));
+    $('#submit').prop("disabled", !Boolean(productionCost));
   }
 
   function checkRelatedItems () {

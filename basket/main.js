@@ -62,6 +62,20 @@ $(function () {
     })
   }
 
+  $('#closeBasket').on('click', function () {
+    products && products.length ?
+      $('#basketConfirmModal').modal('show'):
+      $('#basketModal').modal('hide');
+  });
+
+  $('#clearBasket').on('click', function () {
+    localStorage.clear();
+    products = [];
+    updateData();
+    $('#basketConfirmModal').modal('hide');
+    $('#basketModal').modal('hide')
+  });
+
   function getDataFromLS () {
     products = JSON.parse(localStorage.getItem('products'));
     finalSum = localStorage.getItem('finalSum');
@@ -128,17 +142,12 @@ $(function () {
             type: 'post',
             dataType: 'json',
             data: JSON.stringify(order),
-            success: function (data) {
+            complete: function () {
               resetForm();
               localStorage.removeItem('products');
               localStorage.removeItem('finalSum');
               renderSuccessMsg();
-            },
-            error: function (e) {
-              resetForm();
-              localStorage.removeItem('products');
-              localStorage.removeItem('finalSum');
-              renderSuccessMsg();
+              getDataFromLS();
             }
           });
         }

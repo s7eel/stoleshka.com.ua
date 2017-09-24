@@ -178,6 +178,10 @@ height:221px;
     width:100%;
 }
 
+.basket-confirm {
+    padding: 20px 0 10px;
+}
+
     /*background-position: calc(100% - 20px) 0;*/
 /*: -webkit-calc background-position: calc(100% - 20px) 0;*/
 /*}*/
@@ -415,7 +419,7 @@ margin-left:0px;
 
 
     @media (min-width: 768px) and (max-width: 991px){
-.modal-dialog {
+.modal-dialog.modal-lg {
     width: 785px;
 }
     .calc_button_panel {

@@ -136,7 +136,8 @@
       <!-- Modal content-->
       <div class="modal-content" >
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <button type="button" class="close" id="closeBasket">&times;</button>
+
           <h4 class="modal-title">Ваш Заказ</h4>
         </div>
         <div class="modal-body" id="basketList">
@@ -526,7 +527,7 @@
                             <div class="col-sm-8">
                                 <div class="calc_button_panel">
                                  <button type="button" id="refresh" class="btn btn-default">Очистить</button>
-                                <button type="button" id="submit" class="btn btn btn-success" data-dismiss="modal">Оформить</button>
+                                <button type="button" id="submit" class="btn btn btn-success" data-dismiss="modal" disabled>Оформить</button>
                                 <button type="button" id="continue" class="btn btn-success" disabled>Заказать еще</button>
                                 </div>
                      </div>
@@ -534,6 +535,20 @@
                     </div>
 
                     </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade in" tabindex="-1" role="dialog" id="basketConfirmModal">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content clearfix">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <div class="basket-confirm">Это действие очистит корзину</div>
+                <div class="pull-right">
+                    <button type="button" id="clearBasket" class="btn btn-default">Очистить</button>
+                    <button type="button" class="btn btn btn-success" data-dismiss="modal">Отмена</button>
+                </div>
             </div>
         </div>
     </div>
