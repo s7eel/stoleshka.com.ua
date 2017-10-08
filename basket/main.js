@@ -38,18 +38,18 @@ $(function () {
 
 
       products.forEach(function (product, key) {
-          $('#productsList').append('<tr>' +
-              '<td class="itemName">' + dictionary[product.itemName] + '</td>' +
-              '<td class="woodBreed">' + (dictionary[product.woodBreed] || '') + '</td>' +
-              '<td class="options">' + (product.length || 0) + 'x' + (product.width || 0) + '</td>' +
-              '<td class="productNumber">' + (product.detailsNumber || 0) + '</td>' +
-              '<td class="totalWithDiscount">' + (product.totalWithDiscount || '') + '</td>' +
-              '<td class="glyphicon glyphicon-remove" data-key="' + key + '"></td>' +
-              '</tr>');
+          $('#productsList').append('<div class="basket_table_line">' +
+              '<div class="itemName">' + dictionary[product.itemName] + '</div>' +
+              '<div class="woodBreed">' + (dictionary[product.woodBreed] || '') + '</div>' +
+              '<div class="options">' + (product.length || 0) + 'x' + (product.width || 0) + '</div>' +
+              '<div class="productNumber">' + (product.detailsNumber || 0) + '</div>' +
+              '<div class="totalWithDiscount">' + (product.totalWithDiscount || '') + '</div>' +
+              '<div class="glyphicon glyphicon-remove" data-key="' + key + '"></div>' +
+              '</div>');
       });
 
 
-    $('#productsList').append('<tr class="total_count"><td>Итого: </td><td></td><td> </td><td></td><td class="finalSum">'+ finalSum + ' грн</td><td> </td></tr>');
+    $('#productsList').append('<div class="total_count"><div>Итого: </div><div class="finalSum">'+ finalSum + ' грн</div></div>');
 
 
 

@@ -141,10 +141,10 @@
           <h4 class="modal-title">Ваш Заказ</h4>
         </div>
         <div class="modal-body" id="basketList">
-            <table class="table">
+            <div class="table">
 
-           <tbody id="productsList"></tbody>
-           </table>
+           <div id="productsList"></div>
+           </div>
            <form id="orderForm" class="quote_form_list" action="" hidden>
                        <div class="col-md-6 col-sm-6" >
                            <div class="kode_quote_commet_field" >
