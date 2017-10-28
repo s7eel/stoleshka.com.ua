@@ -107,7 +107,7 @@
 .kode_plumber_recent_item li a:hover,
 .kode_plumber_deal_text h3 a:hover
 {
-	color:#ffd322;	
+	color:#ffbe05;	
 }
 
 
@@ -241,7 +241,7 @@
 .kode_top_search_field button,
 .navigation li a.active,
 .navigation li a:hover{
-	background-color:#ffd322;	
+	background-color:#ffbe05;	
 }
 
 
@@ -309,7 +309,7 @@
 .kode_plumber_recent_item li a:before,
 .kode_top_search_field input:focus
 {
-	border-color:#ffd322;	
+	border-color:#ffbe05;	
 }
 
 
@@ -620,8 +620,8 @@ input, textarea,
 	background-color:#fff;
 }
 .kode-theme-color-text-color{
-	color:#ffd322;
+	color:#ffbe05;
 }
 .kode-theme-color-bg-color{
-	background-color:#ffd322;
+	background-color: #ffbe05 !important;
 }

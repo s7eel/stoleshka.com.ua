@@ -474,8 +474,7 @@
 
                             <div id="calculatedSums" class="calculated-sums modal-fixed" style="">
                                 <div id="images">
-                                    <img src="/images/tabletop.jpg"
-                                         alt="">
+                                    <img src="/images/tabletop.jpg" alt="">
                                 </div>
                                 <p id="productInformation" style="margin: 10px; text-transform: uppercase;color: #545454;">
                                     <b><span id="productName">столешница</span>
@@ -524,7 +523,7 @@
                             <div class="col-sm-4">
                                 <div class="discount">* При заказе полного комплекса услуг <br> предоставляется скидка в размере - 7 %</div>
                             </div>
-                            <div class="col-sm-8">
+                            <div class="col-sm-8" style="width: 100%">
                                 <div class="calc_button_panel">
                                  <button type="button" id="refresh" class="btn btn-default">Очистить</button>
                                 <button type="button" id="submit" class="btn btn btn-success" data-dismiss="modal" disabled>Оформить</button>

@@ -283,7 +283,7 @@ header{
 }
 /*NAVIGATION STRAT*/
 .kode_top_navi_wraper{
-	background-color:#ffd322;
+	background-color:#ffbe05;
 }
 .navigation ul li{
 	display:inline-block;
@@ -3783,7 +3783,7 @@ header{
 	width:100%; 
 }
 .kode_video_wrap{
-	padding:188px 0px 184px;
+/*padding:188px 0px 184px;*/
 	background-image:url("images/video1.png");
 	background-position:center;
 	background-repeat:no-repeat;
@@ -6620,6 +6620,7 @@ header{
 .kode_map2_wrap .map-canvas{
 	height:460px;
 	width:100%;
+        background-color: #333333;
 }
 .kode_map2_wrap:before{
 	position:absolute;
@@ -6632,14 +6633,16 @@ header{
 	background-color:rgba(0,0,0,0.5);
 }
 .kode_map2_content{
-	float:right;
-	width:340px;
-	padding:50px 0px;
-	position:absolute;
-	top:0px;
-	right:0px;
-	bottom:0px;
-	left:auto;
+    float: right;
+    width: 340px;
+    padding: 73px 0px;
+    position: absolute;
+    /* top: 500px; */
+    right: 0px;
+    bottom: 31px;
+    left: auto;
+background-color: #f0c412 !important;
+
 }
 .kode_map2_service{
 	padding:0px 30px 30px;
@@ -8119,3 +8122,4 @@ header{
 
 
 
+	

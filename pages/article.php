@@ -23,8 +23,8 @@
                         </ul>
                         <ul class="kode_addres_icon">
                             <li><a href="https://www.facebook.com/stoleshka.com.ua"  data-toggle="tooltip" data-placement="bottom" title="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://www.instagram.com/stoleshka.com.ua/" data-placement="bottom" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="0671493493"  data-toggle="tooltip" data-placement="bottom" title="whatsapp"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="https://www.instagram.com/stoleshka.com.ua/" data-toggle="tooltip" data-placement="bottom" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.olx.ua/i2/account/?ref%5B0%5D%5Baction%5D=myaccount&ref%5B0%5D%5Bmethod%5D=index"  data-toggle="tooltip" data-placement="bottom" title="olx"><i class="fa fa-olx">olx</i></a></li>
                             <li><a href="https://www.youtube.com/channel/UCr0EEJjROSVMuogSxvLU-_A?view_as=subscriber"  data-toggle="tooltip" data-placement="bottom" title="youtube" target="_blank"><i class="fa fa-youtube"></i></a></li>
                         </ul>
                     </div>

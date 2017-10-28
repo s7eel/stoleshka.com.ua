@@ -429,36 +429,41 @@
 
 <!--// KODE VIDEO WRAP START //-->
 <div class="kode_video_wrap video_1">
-    <div class="container">
+    
+<iframe width="100%" height="640" src="https://www.youtube.com/embed/K4H4y6A-kks" frameborder="0" allowfullscreen></iframe>
+
+
+<!--<div class="container">
         <div class="kode_video_content">
-            <a data-rel="prettyPhoto" href="https://www.youtube.com/channel/UCr0EEJjROSVMuogSxvLU-_A?view_as=subscriber"><i class="glyphicon glyphicon-play"></i></a>
+            <a data-rel="prettyPhoto" href="https://youtu.be/K4H4y6A-kks"><i class="glyphicon glyphicon-play"></i></a>
             <h3>СМОТРИТЕ НАШ КАНАЛ НА YOUTUBE</h3>
             <p>Здесь Вы сможите увидеть все стадии обработки деревянных изделий</p>
         </div>
-    </div>
+</div>-->
 </div>
 <div class="kode_map2_wrap" id="map">
     <div id="map-canvas" class="map-canvas">
        
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2643.294089847037!2d35.004640356569986!3d48.50842678151813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe20f586585d1%3A0xe69d6435eddeac0b!2z0YHRgtC-0LvQtdGI0LrQsA!5e0!3m2!1sru!2sua!4v1503313755070" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
+
     <div class="container">
         <div class="kode_map2_content">
             <div class="kode_map2_service">
                 <h5>Контакты</h5>
                 <ul class="kode_map2_service_detail">
-                    <li><i class="glyphicon glyphicon-home"></i><p><span>г. Днепр, , АНД район </span><br>ул. Саранская 91д </p></li>
+                    <li><i class="glyphicon glyphicon-home"></i><p><span>49021 г. Днепр, , АНД район </span><br>ул. Саранская 91д </p></li>
                     <li><i class="glyphicon glyphicon-envelope"></i><p><span>zakaz@stoleshka.com.ua</span><br>info@stoleshka.com.ua</p></li>
-                    <li style="float: left; width: 100%; color: white"><i class="glyphicon glyphicon-earphone"></i><p><span>+38 067 149 34 93</span><br> +38 095 006 90 49</p></li>
+                    <li style="float: left; width: 100%; color: white"><i class="glyphicon glyphicon-earphone"></i><p><span>+38 (067) 1-493-493</span><br> +38 (095) 0-069-049</p></li>
                 </ul>
             </div>
             <ul class="kode_map2_icon">
-                <li><a href="index.html#"> <i class="fa fa-facebook"></i></a></li>
-                <li><a href="index.html#"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="index.html#"><i class="fa fa-skype"></i></a></li>
-                <li><a href="index.html#"><i class="fa fa-whatsapp"></i></a></li>
+                <li><a href="https://www.facebook.com/stoleshka.com.ua"> <i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/stoleshka.com.ua/"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.olx.ua/i2/account/?ref%5B0%5D%5Baction%5D=myaccount&ref%5B0%5D%5Bmethod%5D=index"><i class="fa fa-olx">olx</i></a></li>
+                <li><a href="https://www.youtube.com/watch?v=K4H4y6A-kks"><i class="fa fa-youtube"></i></a></li>
             </ul>
         </div>
     </div>
+</div>
 </div>
 <!--// KODE MAP2 WRAP END //-->		
